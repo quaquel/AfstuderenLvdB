@@ -1,0 +1,2473 @@
+{UTF-8}
+CO2 emissions of Oil=
+	80.85
+	~	t/bbtu
+	~		|
+
+CO2 emmissions of coal=
+	103.565
+	~	t/bbtu
+	~		|
+
+CO2 emissions=
+	CO2 emissions of natural gas*"Resource consumption - Gas"+CO2 emissions of Oil*"Resource consumption - Oil"\
+		+CO2 emmissions of coal*"Resource consumption - Coal"
+	~	t/year
+	~		|
+
+CO2 emissions of natural gas=
+	53.06
+	~	t/bbtu
+	~		|
+
+"Functional Energy Price - Coal"=
+	"Energy Price - Coal" + CO2 emmissions of coal*Costs CO2 emmissions
+	~	Dollar/bbtu
+	~		|
+
+"Functional Energy Price - Oil"=
+	"Energy Price - Oil" + Costs CO2 emmissions*CO2 emissions of Oil
+	~	Dollar/bbtu
+	~		|
+
+"Resource consumption - Gas"=
+	MIN(Available Gas, "Energy Demand - Gas")
+	~	bbtu/year
+	~		|
+
+Costs CO2 emmissions=
+	30
+	~	Dollar/t
+	~		|
+
+"Functional Energy Price - Gas"=
+	"Energy Price - Gas" + Costs CO2 emmissions*CO2 emissions of natural gas
+	~	Dollar/bbtu
+	~		|
+
+"Undiscovered resources - Oil"= INTEG (
+	-"Increase in discovered and technically recoverable resources - Oil",
+		"Initial Undiscovered resources - Oil")
+	~	bbtu
+	~		|
+
+"Initial Undiscovered resources - Coal"=
+	1.90307e+07*0.9*30*10
+	~	bbtu
+	~		|
+
+"Initial Undiscovered resources - Gas"=
+	10*6.38386e+07*0.9*30
+	~	bbtu
+	~		|
+
+"Initial Undiscovered resources - Oil"=
+	9.74533e+07*0.9*30*10
+	~	bbtu
+	~		|
+
+"Discovered resources reserve base - Gas"= INTEG (
+	Increase in discovered and technically recoverable gas-Non stockpiled gas extraction\
+		,
+		"Initial reserve base - Gas")
+	~	bbtu
+	~		|
+
+"Undiscovered resources - Gas"= INTEG (
+	-Increase in discovered and technically recoverable gas,
+		"Initial Undiscovered resources - Gas")
+	~	bbtu
+	~		|
+
+"Undiscovered resources - Coal"= INTEG (
+	-"Increase in discovered and technically recoverable resources - Coal",
+		"Initial Undiscovered resources - Coal")
+	~	bbtu
+	~		|
+
+Preference for Gas=
+	1/"Functional Energy Price - Gas"
+	~	bbtu/Dollar
+	~		|
+
+Effect of Supply Shortage on Decoupling= INTEG (
+	Decoupling Effect Materializing-Decrease in Shortage Effect,
+		Initial Effect of Supply Shortage on Decoupling)
+	~	1/year
+	~		|
+
+"Extraction capacity installed - Gas"= INTEG (
+	"Completing new extraction capacity - Gas"+"Recommissioning of capacity - Gas"-"Mothballing of capacity - Gas"\
+		,
+		"Initial extraction capacity - Gas")
+	~	bbtu/year
+	~		|
+
+Preference for other Renewables=
+	1/"Functional Energy Price - other Renewables"
+	~	bbtu/Dollar
+	~		|
+
+Initial Effect of Supply Shortage on Decoupling=
+	0
+	~	1/year
+	~		|
+
+Normalized Preference Coal=
+	Preference for Coal/total preferences
+	~	Dmnl
+	~		|
+
+"Initial Energy stocks - Biofuels"=
+	674000*0.9*0.5
+	~	bbtu
+	~		|
+
+"Initial Energy stocks - Coal"=
+	1.90307e+07*0.9*0.5
+	~	bbtu
+	~		|
+
+"Initial Energy stocks - Oil"=
+	9.74533e+07*0.9*0.5
+	~	bbtu
+	~		|
+
+Normalized Preferenced other Renewables=
+	Preference for other Renewables/total preferences
+	~	Dmnl
+	~		|
+
+"Functional Energy Price - Nuclear"=
+	"Energy Price - Nuclear"
+	~	Dollar/bbtu
+	~		|
+
+"Functional Energy Price - other Renewables"=
+	"Energy Price - other Renewables"
+	~	Dollar/bbtu
+	~		|
+
+"Ideal Energy Demand Distribution - Nuclear"=
+	Normalized Preference Nuclear
+	~	Dmnl
+	~		|
+
+Preference for Biofuels=
+	1/"Functional Energy Price - Biofuels"
+	~	bbtu/Dollar
+	~		|
+
+Preference for Coal=
+	1/"Functional Energy Price - Coal"
+	~	bbtu/Dollar
+	~		|
+
+"Initial mothballed capacity - Gas"=
+	6.38386e+07*0.1
+	~	bbtu/year
+	~		|
+
+Preference for Nuclear=
+	1/"Functional Energy Price - Nuclear"
+	~	bbtu/Dollar
+	~		|
+
+Preference for Oil=
+	1/"Functional Energy Price - Oil"
+	~	bbtu/Dollar
+	~		|
+
+"Ideal Energy Demand Distribution - Coal"=
+	Normalized Preference Coal
+	~	Dmnl
+	~		|
+
+Normalized Preference Biofuels=
+	Preference for Biofuels/total preferences
+	~	Dmnl
+	~		|
+
+total preferences=
+	Preference for Biofuels+Preference for Coal+Preference for Gas+Preference for Nuclear\
+		+Preference for Oil+Preference for other Renewables
+	~	bbtu/Dollar
+	~		|
+
+"Mothballed capacity - Coal"= INTEG (
+	"Mothballing of capacity - Coal"-"Deterioration of unused capacity - Coal"-"Recommissioning of capacity - Coal"\
+		,
+		"Initial mothballed capacity - Coal")
+	~	bbtu/year
+	~		|
+
+"Initial mothballed capacity - Coal"=
+	1.90307e+07*0.1
+	~	bbtu/year
+	~		|
+
+"Mothballed capacity - Oil"= INTEG (
+	"Mothballing of capacity - Oil"-"Deterioration of unused capacity - Oil"-"Recommissioning of capacity - Oil"\
+		,
+		"Initial mothballed capacity - Oil")
+	~	bbtu/year
+	~		|
+
+"Initial mothballed capacity - Oil"=
+	9.74533e+07*0.9
+	~	bbtu/year
+	~		|
+
+"Ideal Energy Demand Distribution - Biofuels"=
+	Normalized Preference Biofuels
+	~	Dmnl
+	~		|
+
+"Ideal Energy Demand Distribution - other Renewables"=
+	Normalized Preferenced other Renewables
+	~	Dmnl
+	~		|
+
+"Ideal Energy Demand Distribution - Gas"=
+	Normalized Preference Gas
+	~	Dmnl
+	~		|
+
+"Ideal Energy Demand Distribution - Oil"=
+	Normalized Preference Oil
+	~	Dmnl
+	~		|
+
+"Mothballed capacity - Gas"= INTEG (
+	"Mothballing of capacity - Gas"-"Deterioration of unused capacity - Gas"-"Recommissioning of capacity - Gas"\
+		,
+		"Initial mothballed capacity - Gas")
+	~	bbtu/year
+	~		|
+
+"Energy stocks - Coal"= INTEG (
+	"Energy import - Coal"+"Resource extraction - Coal"-"Energy export - Coal"-"Resource consumption - Coal"\
+		,
+		"Initial Energy stocks - Coal")
+	~	bbtu
+	~		|
+
+"Energy stocks - Oil"= INTEG (
+	"Energy import - Oil"+"Resource extraction - Oil"-"Energy export - Oil"-"Resource consumption - Oil"\
+		,
+		"Initial Energy stocks - Oil")
+	~	bbtu
+	~		|
+
+Normalized Preference Gas=
+	Preference for Gas/total preferences
+	~	Dmnl
+	~		|
+
+"Energy stocks - Biofuels"= INTEG (
+	"Energy import - Biofuels"+Production of biofuels-"Energy export - Biofuels"-"Resource consumption - Biofuels"\
+		,
+		"Initial Energy stocks - Biofuels")
+	~	bbtu
+	~		|
+
+Normalized Preference Oil=
+	Preference for Oil/total preferences
+	~	Dmnl
+	~		|
+
+Normalized Preference Nuclear=
+	Preference for Nuclear/total preferences
+	~	Dmnl
+	~		|
+
+"Functional Energy Price - Biofuels"=
+	"Energy Price - Biofuels"
+	~	Dollar/bbtu
+	~		|
+
+Gas to trade=
+	Non stockpiled gas extraction-"Energy Demand - Gas"
+	~	bbtu/year
+	~		|
+
+"Energy Price - Biofuels"=
+	42000
+	~	Dollar/bbtu
+	~		|
+
+"Energy Price - Coal"=
+	3767
+	~	Dollar/bbtu
+	~		|
+
+"Energy Price - Gas"=
+	8895
+	~	Dollar/bbtu
+	~		|
+
+"Energy Price - Nuclear"=
+	17500
+	~	Dollar/bbtu
+	~		|
+
+"Energy Price - Oil"=
+	14106.4
+	~	Dollar/bbtu
+	~		|
+
+"Energy Price - other Renewables"=
+	21982
+	~	Dollar/bbtu
+	~		|
+
+total ideal demand distribution=
+	"Ideal Energy Demand Distribution - Biofuels"+"Ideal Energy Demand Distribution - Coal"\
+		+"Ideal Energy Demand Distribution - Gas"+"Ideal Energy Demand Distribution - Nuclear"\
+		+"Ideal Energy Demand Distribution - Oil"+"Ideal Energy Demand Distribution - other Renewables"
+	~	1
+	~		|
+
+"Current Energy Demand - Oil"=
+	"Current Energy Supply Distribution - Oil"*Energy Demand
+	~	bbtu/year
+	~		|
+
+"Current Energy Demand - other Renewables"=
+	Energy Demand*"Current Energy Supply Distribution - other Renewables"
+	~	bbtu/year
+	~		|
+
+"Energy Demand - Biofuels"=
+	"New Energy Demand - Biofuels"
+	~	bbtu/year
+	~		|
+
+"Energy Demand - Coal"=
+	"New Energy Demand - Coal"
+	~	bbtu/year
+	~		|
+
+"Energy Demand - Gas"=
+	"New Energy Demand - Gas"
+	~	bbtu/year
+	~		|
+
+"Energy Demand - Nuclear"=
+	"New Energy Demand - Nuclear"
+	~	bbtu/year
+	~		|
+
+"Energy Demand - Oil"=
+	"New Energy Demand - Oil"
+	~	bbtu/year
+	~		|
+
+"New Energy Demand - Biofuels"=
+	(1-Maximum Change in Demand)*"Current Energy Demand - Biofuels"+"Ideal Energy Demand - Biofuels"\
+		*Maximum Change in Demand
+	~	bbtu/year
+	~		|
+
+Maximum Change in Demand=
+	0.05
+	~	Dmnl
+	~		|
+
+"Current Energy Demand - Biofuels"=
+	Energy Demand*"Current Energy Supply Distribution - Biofuels"
+	~	bbtu/year
+	~		|
+
+"Current Energy Demand - Coal"=
+	Energy Demand*"Current Energy Supply Distribution - Coal"
+	~	bbtu/year
+	~		|
+
+"Current Energy Demand - Gas"=
+	Energy Demand*"Current Energy Supply Distribution - Gas"
+	~	bbtu/year
+	~		|
+
+"Energy Demand - other Renewables"=
+	"New Energy Demand - other Renewables"
+	~	bbtu/year
+	~		|
+
+"New Energy Demand - Coal"=
+	(1-Maximum Change in Demand)*"Current Energy Demand - Coal"+"Ideal Energy Demand - Coal"\
+		*Maximum Change in Demand
+	~	bbtu/year
+	~		|
+
+"New Energy Demand - Gas"=
+	(1-Maximum Change in Demand)*"Current Energy Demand - Gas"+Maximum Change in Demand*\
+		"Ideal Energy Demand - Gas"
+	~	bbtu/year
+	~		|
+
+"New Energy Demand - Nuclear"=
+	(1-Maximum Change in Demand)*"Current Energy Demand - Nuclear"+Maximum Change in Demand\
+		*"Ideal Energy Demand - Nuclear"
+	~	bbtu/year
+	~		|
+
+"New Energy Demand - Oil"=
+	(1-Maximum Change in Demand)*"Current Energy Demand - Oil"+"Ideal Energy Demand - Oil"\
+		*Maximum Change in Demand
+	~	bbtu/year
+	~		|
+
+"New Energy Demand - other Renewables"=
+	(1-Maximum Change in Demand)*"Current Energy Demand - other Renewables"+"Ideal Energy Demand - other Renewables"
+	*Maximum Change in Demand
+	~	bbtu/year
+	~		|
+
+"Current Energy Demand - Nuclear"=
+	Energy Demand*"Current Energy Supply Distribution - Nuclear"
+	~	bbtu/year
+	~		|
+
+"Ideal Energy Demand - Gas"=
+	Energy Demand*"Ideal Energy Demand Distribution - Gas"
+	~	bbtu/year
+	~		|
+
+"Ideal Energy Demand - Biofuels"=
+	Energy Demand*"Ideal Energy Demand Distribution - Biofuels"
+	~	bbtu/year
+	~		|
+
+"Ideal Energy Demand - Coal"=
+	Energy Demand*"Ideal Energy Demand Distribution - Coal"
+	~	bbtu/year
+	~		|
+
+"Ideal Energy Demand - Oil"=
+	Energy Demand*"Ideal Energy Demand Distribution - Oil"
+	~	bbtu/year
+	~		|
+
+"Ideal Energy Demand - other Renewables"=
+	Energy Demand*"Ideal Energy Demand Distribution - other Renewables"
+	~	bbtu/year
+	~		|
+
+Total New Energy Demand=
+	"New Energy Demand - Biofuels"+"New Energy Demand - Coal"+"New Energy Demand - Gas"+\
+		"New Energy Demand - Nuclear"+"New Energy Demand - Oil"+"New Energy Demand - other Renewables"
+	~	bbtu/year
+	~		|
+
+"Ideal Energy Demand - Nuclear"=
+	Energy Demand*"Ideal Energy Demand Distribution - Nuclear"
+	~	bbtu/year
+	~		|
+
+"New long term supply- Nuclear"=
+	MAX("Ideal Energy Demand Distribution - Nuclear"-"Current Energy Supply Distribution - Nuclear"\
+		, 0)/One Year
+	~	1/year
+	~		|
+
+"Current Energy Supply Distribution - Nuclear"=
+	"Extraction capacity installed- Nuclear"/Total Energy Supply
+	~	Dmnl
+	~		|
+
+"Available resources from stocks - Biofuels"=
+	"Energy stocks - Biofuels"/"Average throughput time stocks - Biofuels"
+	~	bbtu/year
+	~		|
+
+"Available resources from stocks - Coal"=
+	"Energy stocks - Coal"/"Average throughput time stocks - Coal"
+	~	bbtu/year
+	~		|
+
+"Available resources from stocks - Oil"=
+	"Energy stocks - Oil"/"Average throughput time stocks - Oil"
+	~	bbtu/year
+	~		|
+
+Biofuels Shortage=
+	"Energy Demand - Biofuels"-"Available resources from stocks - Biofuels"
+	~	bbtu/year
+	~		|
+
+"Change in short term supply - Biofuels"=
+	0.1*Relative Biofuels Shortage/One Year
+	~	1/year
+	~		|
+
+"Change in short term supply - Coal"=
+	0.1*Relative Coal Shortage/One Year
+	~	1/year
+	~		|
+
+"Change in short term supply - Gas"=
+	0.1*"Relative Shortage - Gas"/One Year
+	~	1/year
+	~		|
+
+"Change in short term supply - Oil"=
+	0.1*"Relative Shortages - Oil"/One Year
+	~	1/year
+	~		|
+
+"Change in short term supply - other Renewables"=
+	0.1*Relative other Renewables Shortage/One Year
+	~	1/year
+	~		|
+
+"Change in short term supply- Nuclear"=
+	0.1*"Relative Shortage - Nuclear"/One Year
+	~	1/year
+	~		|
+
+Coal Shortage=
+	"Energy Demand - Coal"-"Available resources from stocks - Coal"
+	~	bbtu/year
+	~		|
+
+Relative Biofuels Shortage=
+	Biofuels Shortage/"Available resources from stocks - Biofuels"
+	~	Dmnl
+	~		|
+
+decrease factor=
+	Effect of Supply Shortage on Decoupling
+	~	1/year
+	~		|
+
+Relative Coal Shortage=
+	Coal Shortage/"Available resources from stocks - Coal"
+	~	Dmnl
+	~		|
+
+Relative other Renewables Shortage=
+	other Renewables Shortage/"Extraction capacity installed - other Renewables"
+	~	Dmnl
+	~		|
+
+"Current Energy Supply Distribution - Biofuels"=
+	"Available resources from stocks - Biofuels"/Total Energy Supply
+	~	Dmnl
+	~		|
+
+"Current Energy Supply Distribution - Coal"=
+	"Available resources from stocks - Coal"/Total Energy Supply
+	~	Dmnl
+	~		|
+
+"Current Energy Supply Distribution - Gas"=
+	Available Gas/Total Energy Supply
+	~	Dmnl
+	~		|
+
+"Relative Shortages - Oil"=
+	Oil Shortages/"Available resources from stocks - Oil"
+	~	Dmnl
+	~		|
+
+"Current Energy Supply Distribution - Oil"=
+	"Available resources from stocks - Oil"/Total Energy Supply
+	~	Dmnl
+	~		|
+
+"Current Energy Supply Distribution - other Renewables"=
+	"Extraction capacity installed - other Renewables"/Total Energy Supply
+	~	Dmnl
+	~		|
+
+Decoupling Effect Materializing=
+	DELAY N(Future Shortage Effect, Delay Time Decoupling due to Shortage, Future Effect of Shortage on Decoupling\
+		/Delay Time Decoupling due to Shortage, Delay Order Decoupling due to Shortage)
+	~	1/(year*year)
+	~		|
+
+"Resource consumption reduction factor - Biofuels"=
+	"Energy stocks - Biofuels"/("Average throughput time stocks - Biofuels"*"Energy Demand - Biofuels"\
+		)
+	~	Dmnl
+	~		|
+
+Gas Shortage=
+	"Energy Demand - Gas"-Available Gas
+	~	bbtu/year
+	~		|
+
+Decrease in Shortage Effect=
+	Effect of Supply Shortage on Decoupling/Delay Time Decoupling due to Shortage
+	~	1/(year*year)
+	~		|
+
+Delay Order Decoupling due to Shortage=
+	3
+	~	Dmnl
+	~		|
+
+Nuclear Shortage=
+	"Energy Demand - Nuclear"-"Extraction capacity installed- Nuclear"
+	~	bbtu/year
+	~		|
+
+Oil Shortages=
+	"Energy Demand - Oil"-"Available resources from stocks - Oil"
+	~	bbtu/year
+	~		|
+
+"New long term supply - Coal"=
+	MAX("Ideal Energy Demand Distribution - Coal"-"Current Energy Supply Distribution - Coal"\
+		, 0)/One Year
+	~	1/year
+	~		|
+
+Factor limiting Economic Growth due to Energy Shortage=
+	0.1
+	~	1/year
+	~		|
+
+Delay Time Decoupling due to Shortage=
+	10
+	~	year
+	~		|
+
+Future Shortage Effect=
+	Relative Supply Shortage*Effect of Energy Shortage on Future Decoupling/Delay Time Decoupling due to Shortage
+	~	1/(year*year)
+	~		|
+
+Total Energy Supply=
+	Available Gas+"Available resources from stocks - Biofuels"+"Available resources from stocks - Coal"\
+		+"Available resources from stocks - Oil"+"Extraction capacity installed - other Renewables"\
+		+"Extraction capacity installed- Nuclear"
+	~	bbtu/year
+	~		|
+
+Total Energy Supply Distribution=
+	"Current Energy Supply Distribution - Biofuels"+"Current Energy Supply Distribution - Coal"\
+		+"Current Energy Supply Distribution - Gas"+"Current Energy Supply Distribution - Nuclear"\
+		+"Current Energy Supply Distribution - Oil"+"Current Energy Supply Distribution - other Renewables"
+	~	Dmnl
+	~		|
+
+"New long term supply - Biofuels"=
+	MAX("Ideal Energy Demand Distribution - Biofuels"-"Current Energy Supply Distribution - Biofuels"\
+		, 0)/One Year
+	~	1/year
+	~		|
+
+"New long term supply - Gas"=
+	MAX("Ideal Energy Demand Distribution - Gas"-"Current Energy Supply Distribution - Gas"\
+		, 0)/One Year
+	~	1/year
+	~		|
+
+"New long term supply - Oil"=
+	MAX("Ideal Energy Demand Distribution - Oil"-"Current Energy Supply Distribution - Oil"\
+		, 0)/One Year
+	~	1/year
+	~		|
+
+"New long term supply - other Renewables"=
+	MAX("Ideal Energy Demand Distribution - other Renewables"-"Current Energy Supply Distribution - other Renewables"\
+		, 0)/One Year
+	~	1/year
+	~		|
+
+Relative Supply Shortage=
+	MAX(Energy Shortage/Total Energy Supply,0)
+	~	Dmnl
+	~		|
+
+"Resource consumption reduction factor - Oil"=
+	"Energy stocks - Oil"/("Average throughput time stocks - Oil"*"Energy Demand - Oil")
+	~	Dmnl
+	~		|
+
+Effect of Energy Shortage on Future Decoupling=
+	0.5
+	~	1/year
+	~		|
+
+"Resource consumption - Oil"=
+	MIN("Energy Demand - Oil", "Energy Demand - Oil"*"Resource consumption reduction factor - Oil"
+	)
+	~	bbtu/year
+	~		|
+
+"Resource consumption reduction factor - Coal"=
+	"Energy stocks - Coal"/("Average throughput time stocks - Coal"*"Energy Demand - Coal"\
+		)
+	~	Dmnl
+	~		|
+
+other Renewables Shortage=
+	"Energy Demand - other Renewables"-"Extraction capacity installed - other Renewables"
+	~	bbtu/year
+	~		|
+
+"Relative Shortage - Nuclear"=
+	Nuclear Shortage/"Extraction capacity installed- Nuclear"
+	~	Dmnl
+	~		|
+
+Limitations Economic Growth due to Energy Shortage=
+	Relative Supply Shortage*Factor limiting Economic Growth due to Energy Shortage
+	~	1/year
+	~		|
+
+"Resource consumption - Coal"=
+	MIN("Energy Demand - Coal", "Energy Demand - Coal"*"Resource consumption reduction factor - Coal"
+	)
+	~	bbtu/year
+	~		|
+
+Increase in GDP=
+	GDP*(Autonomous Economic Growth-Limitations Economic Growth due to Energy Shortage)
+	~	Dollar/year
+	~		|
+
+"Relative Shortage - Gas"=
+	Gas Shortage/Available Gas
+	~	Dmnl
+	~		|
+
+"Resource consumption - Biofuels"=
+	MIN("Energy Demand - Biofuels", "Energy Demand - Biofuels"*"Resource consumption reduction factor - Biofuels"
+	)
+	~	bbtu/year
+	~		|
+
+Future Effect of Shortage on Decoupling= INTEG (
+	Future Shortage Effect-Decoupling Effect Materializing,
+		Initial Shortage Effect on Decoupling)
+	~	1/year
+	~		|
+
+Energy Shortage=
+	Energy Demand-Total Energy Supply
+	~	bbtu/year
+	~		|
+
+Initial Shortage Effect on Decoupling=
+	0
+	~	1/year
+	~		|
+
+Autonomous Economic Growth=
+	0.029
+	~	1/year
+	~		|
+
+Available Gas=
+	Non stockpiled gas extraction+Gas Import-Gas Export
+	~	bbtu/year
+	~		|
+
+Initial Energy Intensity GDP=
+	1/157500
+	~	bbtu/Dollar
+	~		|
+
+Energy Demand=
+	GDP*Energy Intensity GDP/One Year
+	~	bbtu/year
+	~		|
+
+Gas Export=
+	0
+	~	bbtu/year
+	~		|
+
+Initial GDP=
+	2.06942e+13
+	~	Dollar
+	~		|
+
+GDP= INTEG (
+	Increase in GDP,
+		Initial GDP)
+	~	Dollar
+	~		|
+
+One Year=
+	1
+	~	year
+	~		|
+
+Energy Intensity GDP= INTEG (
+	-Decrease Energy Intensity GDP,
+		Initial Energy Intensity GDP)
+	~	bbtu/Dollar
+	~		|
+
+Gas Import=
+	220500
+	~	bbtu/year
+	~		|
+
+Decrease Energy Intensity GDP=
+	Energy Intensity GDP*decrease factor
+	~	bbtu/(year*Dollar)
+	~		|
+
+"Average Rb over P - Coal"=
+	30
+	~	year
+	~		|
+
+"Average Rb over P - Oil"=
+	30
+	~	year
+	~		|
+
+Average Rb over P gas=
+	30
+	~	year
+	~		|
+
+"Average throughput time stocks - Biofuels"=
+	0.5
+	~	year
+	~		|
+
+"Average throughput time stocks - Coal"=
+	0.5
+	~	year
+	~		|
+
+"Average throughput time stocks - Oil"=
+	0.5
+	~	year
+	~		|
+
+"Completing new extraction capacity - Biofuels"= 
+	DELAY N("New extraction capacity proposed - Biofuels", "Delay time new capacity - Biofuels"\
+		, "Extraction capacity in preparation - Biofuels"/"Delay time new capacity - Biofuels"\
+		, "Delay order new capacity - Biofuels")
+	~	bbtu/(year*year)
+	~		|
+
+"Completing new extraction capacity - Coal"= 
+	DELAY N("New extraction capacity proposed - Coal", "Delay time new capacity - Coal",\
+		 "Extraction capacity in preparation - Coal"/"Delay time new capacity - Coal", "Delay order new capacity - Coal"\
+		)
+	~	bbtu/(year*year)
+	~		|
+
+"Completing new extraction capacity - Gas"= 
+	DELAY N("New extraction capacity proposed - Gas", "Delay time new capacity - Gas", "Extraction capacity in preparation - Gas"\
+		/"Delay time new capacity - Gas", "Delay order new capacity - Gas")
+	~	bbtu/(year*year)
+	~		|
+
+"Completing new extraction capacity - Oil"= 
+	DELAY N("New extraction capacity proposed - Oil", "Delay time new capacity - Oil", "Extraction capacity in preparation - Oil"\
+		/"Delay time new capacity - Oil", "Delay order new capacity - Oil")
+	~	bbtu/(year*year)
+	~		|
+
+"Completing new extraction capacity - other Renewables"= 
+	DELAY N("New extraction capacity proposed - other Renewables", "Delay time new capacity - other Renewables"\
+		, "Extraction capacity in preparation - other Renewables"/"Delay time new capacity - other Renewables"\
+		, "Delay order new capacity - other Renewables")
+	~	bbtu/(year*year)
+	~		|
+
+"Completing new extraction capacity- Nuclear"= 
+	DELAY N("New extraction capacity proposed- Nuclear", "Delay time new capacity- Nuclear"\
+		, "Extraction capacity in preparation- Nuclear"/"Delay time new capacity- Nuclear",\
+		 "Delay order new capacity- Nuclear")
+	~	bbtu/(year*year)
+	~		|
+
+"Delay order new capacity - Biofuels"=
+	3
+	~	Dmnl
+	~		|
+
+"Delay order new capacity - Coal"=
+	3
+	~	Dmnl
+	~		|
+
+"Delay order new capacity - Gas"=
+	3
+	~	Dmnl
+	~		|
+
+"Delay order new capacity - Oil"=
+	3
+	~	Dmnl
+	~		|
+
+"Delay order new capacity - other Renewables"=
+	3
+	~	Dmnl
+	~		|
+
+"Delay order new capacity- Nuclear"=
+	3
+	~	Dmnl
+	~		|
+
+"Delay time new capacity - Biofuels"=
+	15
+	~	year
+	~		|
+
+"Delay time new capacity - Coal"=
+	15
+	~	year
+	~		|
+
+"Delay time new capacity - Gas"=
+	15
+	~	year
+	~		|
+
+"Delay time new capacity - Oil"=
+	15
+	~	year
+	~		|
+
+"Delay time new capacity - other Renewables"=
+	15
+	~	year
+	~		|
+
+"Delay time new capacity- Nuclear"=
+	15
+	~	year
+	~		|
+
+"Deterioration of unused capacity - Biofuels"=
+	"Mothballed capacity - Biofuels"/"Time for deteriation of unused capacity - Biofuels"
+	~	bbtu/(year*year)
+	~		|
+
+"Deterioration of unused capacity - Coal"=
+	"Mothballed capacity - Coal"/"Time for deteriation of unused capacity - Coal"
+	~	bbtu/(year*year)
+	~		|
+
+"Deterioration of unused capacity - Gas"=
+	"Mothballed capacity - Gas"/"Time for deteriation of unused capacity - Gas"
+	~	bbtu/(year*year)
+	~		|
+
+"Deterioration of unused capacity - Oil"=
+	"Mothballed capacity - Oil"/"Time for deteriation of unused capacity - Oil"
+	~	bbtu/(year*year)
+	~		|
+
+"Deterioration of unused capacity - other Renewables"=
+	"Mothballed capacity - other Renewables"/"Time for deteriation of unused capacity - other Renewables"
+	~	bbtu/(year*year)
+	~		|
+
+"Deterioration of unused capacity- Nuclear"=
+	"Mothballed capacity- Nuclear"/"Time for deteriation of unused capacity- Nuclear"
+	~	bbtu/(year*year)
+	~		|
+
+"Discovered resources reserve base - Coal"= INTEG (
+	"Increase in discovered and technically recoverable resources - Coal"-"Resource extraction - Coal"\
+		,
+		"Initial reserve base - Coal")
+	~	bbtu
+	~		|
+
+"Discovered resources reserve base - Oil"= INTEG (
+	"Increase in discovered and technically recoverable resources - Oil"-"Resource extraction - Oil"\
+		,
+		"Initial reserve base - Oil")
+	~	bbtu
+	~		|
+
+"Energy export - Biofuels"=
+	"Total export - Biofuels"
+	~	bbtu/year
+	~		|
+
+"Energy export - Coal"=
+	"Total export - Coal"
+	~	bbtu/year
+	~		|
+
+"Energy export - Oil"=
+	"Total export - Oil"
+	~	bbtu/year
+	~		|
+
+"Energy import - Biofuels"= 
+	"Total import - Biofuels"
+	~	bbtu/year
+	~		|
+
+"Energy import - Coal"= 
+	"Total import - Coal"
+	~	bbtu/year
+	~		|
+
+"Energy import - Oil"= 
+	"Total import - Oil"
+	~	bbtu/year
+	~		|
+
+"Extraction capacity in preparation - Biofuels"= INTEG (
+	"New extraction capacity proposed - Biofuels"-"Completing new extraction capacity - Biofuels"\
+		,
+		"Initial extraction capacity in preparation - Biofuels")
+	~	bbtu/year
+	~		|
+
+"Extraction capacity in preparation - Coal"= INTEG (
+	"New extraction capacity proposed - Coal"-"Completing new extraction capacity - Coal"\
+		,
+		"Initial extraction capacity in preparation - Coal")
+	~	bbtu/year
+	~		|
+
+"Extraction capacity in preparation - Gas"= INTEG (
+	"New extraction capacity proposed - Gas"-"Completing new extraction capacity - Gas",
+		"Initial extraction capacity in preparation - Gas")
+	~	bbtu/year
+	~		|
+
+"Extraction capacity in preparation - Oil"= INTEG (
+	"New extraction capacity proposed - Oil"-"Completing new extraction capacity - Oil",
+		"Initial extraction capacity in preparation - Oil")
+	~	bbtu/year
+	~		|
+
+"Extraction capacity in preparation - other Renewables"= INTEG (
+	"New extraction capacity proposed - other Renewables"-"Completing new extraction capacity - other Renewables"\
+		,
+		"Initial extraction capacity in preparation - other Renewables")
+	~	bbtu/year
+	~		|
+
+"Extraction capacity in preparation- Nuclear"= INTEG (
+	"New extraction capacity proposed- Nuclear"-"Completing new extraction capacity- Nuclear"\
+		,
+		"Initial extraction capacity in preparation- Nuclear")
+	~	bbtu/year
+	~		|
+
+"Extraction capacity installed - Biofuels"= INTEG (
+	"Completing new extraction capacity - Biofuels"+"Recommissioning of capacity - Biofuels"\
+		-"Mothballing of capacity - Biofuels",
+		"Initial extraction capacity - Biofuels"
+		)
+	~	bbtu/year
+	~		|
+
+"Extraction capacity installed - Coal"= INTEG (
+	"Completing new extraction capacity - Coal"+"Recommissioning of capacity - Coal"-"Mothballing of capacity - Coal"\
+		,
+		"Initial extraction capacity - Coal")
+	~	bbtu/year
+	~		|
+
+"Extraction capacity installed - Oil"= INTEG (
+	"Completing new extraction capacity - Oil"+"Recommissioning of capacity - Oil"-"Mothballing of capacity - Oil"\
+		,
+		"Initial extraction capacity - Oil")
+	~	bbtu/year
+	~		|
+
+"Extraction capacity installed - other Renewables"= INTEG (
+	"Completing new extraction capacity - other Renewables"+"Recommissioning of capacity - other Renewables"\
+		-"Mothballing of capacity - other Renewables",
+		"Initial extraction capacity - other Renewables")
+	~	bbtu/year
+	~		|
+
+"Extraction capacity installed- Nuclear"= INTEG (
+	"Completing new extraction capacity- Nuclear"+"Recommissioning of capacity- Nuclear"\
+		-"Mothballing of capacity- Nuclear",
+		"Initial extraction capacity- Nuclear")
+	~	bbtu/year
+	~		|
+
+Increase in discovered and technically recoverable gas=
+	-"Relative change in costs due to learning - Gas"*"Initial relation between reserve base and resource size - Gas"\
+		*"Undiscovered resources - Gas"
+	~	bbtu/year
+	~		|
+
+"Increase in discovered and technically recoverable resources - Coal"=
+	-"Relative change in costs due to learning - Coal"*"Initial relation between reserve base and resource size - Coal"\
+		*"Undiscovered resources - Coal"
+	~	bbtu/year
+	~		|
+
+"Increase in discovered and technically recoverable resources - Oil"=
+	-"Relative change in costs due to learning - Oil"*"Initial relation between reserve base and resource size - Oil"\
+		*"Undiscovered resources - Oil"
+	~	bbtu/year
+	~		|
+
+"Initial mothballed capacity - Biofuels"=
+	0.1*674000
+	~	bbtu/year
+	~		|
+
+"Initial mothballed capacity - other Renewables"=
+	0.1*1.203e+07
+	~	bbtu/year
+	~		|
+
+"Initial mothballed capacity- Nuclear"=
+	0.1*1.134e+07
+	~	bbtu/year
+	~		|
+
+"Initial extraction capacity - Biofuels"=
+	0.9*674000
+	~	bbtu/year
+	~		|
+
+"Initial extraction capacity - Coal"=
+	1.90307e+07*0.9
+	~	bbtu/year
+	~		|
+
+"Initial extraction capacity - Gas"=
+	6.38386e+07*0.9
+	~	bbtu/year
+	~		|
+
+"Initial extraction capacity - Oil"=
+	9.74533e+07*0.9
+	~	bbtu/year
+	~		|
+
+"Initial extraction capacity - other Renewables"=
+	1.203e+07*0.9
+	~	bbtu/year
+	~		|
+
+"Initial extraction capacity in preparation - Biofuels"=
+	64010
+	~	bbtu/year
+	~		|
+
+"Initial extraction capacity in preparation - Coal"=
+	0
+	~	bbtu/year
+	~		|
+
+"Initial extraction capacity in preparation - Gas"=
+	0
+	~	bbtu/year
+	~		|
+
+"Initial extraction capacity in preparation - Oil"=
+	0
+	~	bbtu/year
+	~		|
+
+"Initial extraction capacity in preparation - other Renewables"=
+	3.105e+06
+	~	bbtu/year
+	~		|
+
+"Initial extraction capacity in preparation- Nuclear"=
+	0
+	~	bbtu/year
+	~		|
+
+"Initial extraction capacity- Nuclear"=
+	1.134e+07*0.9
+	~	bbtu/year
+	~		|
+
+"Initial relation between reserve base and resource size - Coal"=
+	10
+	~	Dmnl
+	~		|
+
+"Initial relation between reserve base and resource size - Gas"=
+	10
+	~	Dmnl
+	~		|
+
+"Initial relation between reserve base and resource size - Oil"=
+	10
+	~	Dmnl
+	~		|
+
+"Initial reserve base - Coal"=
+	1.90307e+07*0.9*30
+	~	bbtu
+	~		|
+
+"Initial reserve base - Gas"=
+	6.38386e+07*0.9*30
+	~	bbtu
+	~		|
+
+"Initial reserve base - Oil"=
+	9.74533e+07*0.9*30
+	~	bbtu
+	~		|
+
+"Mothballed capacity - Biofuels"= INTEG (
+	"Mothballing of capacity - Biofuels"-"Deterioration of unused capacity - Biofuels"-"Recommissioning of capacity - Biofuels"\
+		,
+		"Initial mothballed capacity - Biofuels")
+	~	bbtu/year
+	~		|
+
+"Mothballed capacity - other Renewables"= INTEG (
+	"Mothballing of capacity - other Renewables"-"Deterioration of unused capacity - other Renewables"\
+		-"Recommissioning of capacity - other Renewables",
+		"Initial mothballed capacity - other Renewables")
+	~	bbtu/year
+	~		|
+
+"Mothballed capacity- Nuclear"= INTEG (
+	"Mothballing of capacity- Nuclear"-"Deterioration of unused capacity- Nuclear"-"Recommissioning of capacity- Nuclear"\
+		,
+		"Initial mothballed capacity- Nuclear")
+	~	bbtu/year
+	~		|
+
+"Mothballing of capacity - Biofuels"=
+	MAX(-"Change in short term supply - Biofuels", 0)*"Extraction capacity installed - Biofuels"
+	~	bbtu/(year*year)
+	~		|
+
+"Mothballing of capacity - Coal"=
+	MAX(-"Change in short term supply - Coal", 0)*"Extraction capacity installed - Coal"
+	~	bbtu/(year*year)
+	~		|
+
+"Mothballing of capacity - Gas"=
+	MAX(-"Change in short term supply - Gas", 0)*"Extraction capacity installed - Gas"
+	~	bbtu/(year*year)
+	~		|
+
+"Mothballing of capacity - Oil"=
+	MAX(-"Change in short term supply - Oil", 0)*"Extraction capacity installed - Oil"
+	~	bbtu/(year*year)
+	~		|
+
+"Mothballing of capacity - other Renewables"=
+	MAX(-"Change in short term supply - other Renewables", 0)*"Extraction capacity installed - other Renewables"
+	~	bbtu/(year*year)
+	~		|
+
+"Mothballing of capacity- Nuclear"=
+	MAX(-"Change in short term supply- Nuclear", 0)*"Extraction capacity installed- Nuclear"
+	~	bbtu/(year*year)
+	~		|
+
+"New extraction capacity proposed - Biofuels"=
+	"New long term supply - Biofuels"*"Extraction capacity installed - Biofuels"
+	~	bbtu/(year*year)
+	~		|
+
+"New extraction capacity proposed - Coal"=
+	"New long term supply - Coal"*"Extraction capacity installed - Coal"
+	~	bbtu/(year*year)
+	~		|
+
+"New extraction capacity proposed - Gas"=
+	"New long term supply - Gas"*"Extraction capacity installed - Gas"
+	~	bbtu/(year*year)
+	~		|
+
+"New extraction capacity proposed - Oil"=
+	"New long term supply - Oil"*"Extraction capacity installed - Oil"
+	~	bbtu/(year*year)
+	~		|
+
+"New extraction capacity proposed - other Renewables"=
+	"New long term supply - other Renewables"*"Extraction capacity installed - other Renewables"
+	~	bbtu/(year*year)
+	~		|
+
+"New extraction capacity proposed- Nuclear"=
+	"New long term supply- Nuclear"*"Extraction capacity installed- Nuclear"
+	~	bbtu/(year*year)
+	~		|
+
+Non stockpiled gas extraction=
+	MIN("Extraction capacity installed - Gas", "Extraction capacity installed - Gas"*("Discovered resources reserve base - Gas"\
+		/("Extraction capacity installed - Gas"*Average Rb over P gas)))
+	~	bbtu/year
+	~		|
+
+Production of biofuels=
+	"Extraction capacity installed - Biofuels"
+	~	bbtu/year
+	~		|
+
+"Recommissioning of capacity - Biofuels"=
+	MAX("Change in short term supply - Biofuels", 0)*"Mothballed capacity - Biofuels"
+	~	bbtu/(year*year)
+	~		|
+
+"Recommissioning of capacity - Coal"=
+	MAX("Change in short term supply - Coal", 0)*"Mothballed capacity - Coal"
+	~	bbtu/(year*year)
+	~		|
+
+"Recommissioning of capacity - Gas"=
+	MAX("Change in short term supply - Gas", 0)*"Mothballed capacity - Gas"
+	~	bbtu/(year*year)
+	~		|
+
+"Recommissioning of capacity - Oil"=
+	MAX("Change in short term supply - Oil", 0)*"Mothballed capacity - Oil"
+	~	bbtu/(year*year)
+	~		|
+
+"Recommissioning of capacity - other Renewables"=
+	MAX("Change in short term supply - other Renewables", 0)*"Mothballed capacity - other Renewables"
+	~	bbtu/(year*year)
+	~		|
+
+"Recommissioning of capacity- Nuclear"=
+	MAX("Change in short term supply- Nuclear", 0)*"Mothballed capacity- Nuclear"
+	~	bbtu/(year*year)
+	~		|
+
+"Relative change in costs due to learning - Coal"=
+	-0.0005
+	~	1/year
+	~		|
+
+"Relative change in costs due to learning - Gas"=
+	-0.0005
+	~	1/year
+	~		|
+
+"Relative change in costs due to learning - Oil"=
+	-0.0005
+	~	1/year
+	~		|
+
+"Resource extraction - Coal"=
+	MIN("Extraction capacity installed - Coal", "Extraction capacity installed - Coal"*(\
+		"Discovered resources reserve base - Coal"/("Extraction capacity installed - Coal"*\
+		"Average Rb over P - Coal")))
+	~	bbtu/year
+	~		|
+
+"Resource extraction - Oil"=
+	MIN("Extraction capacity installed - Oil", "Extraction capacity installed - Oil"*("Discovered resources reserve base - Oil"\
+		/("Extraction capacity installed - Oil"*"Average Rb over P - Oil")))
+	~	bbtu/year
+	~		|
+
+"Time for deteriation of unused capacity - Biofuels"=
+	25
+	~	year
+	~		|
+
+"Time for deteriation of unused capacity - Coal"=
+	25
+	~	year
+	~		|
+
+"Time for deteriation of unused capacity - Gas"=
+	25
+	~	year
+	~		|
+
+"Time for deteriation of unused capacity - Oil"=
+	25
+	~	year
+	~		|
+
+"Time for deteriation of unused capacity - other Renewables"=
+	25
+	~	year
+	~		|
+
+"Time for deteriation of unused capacity- Nuclear"=
+	25
+	~	year
+	~		|
+
+"Total export - Biofuels"=
+	0
+	~	bbtu/year
+	~		|
+
+"Total export - Coal"=
+	0
+	~	bbtu/year
+	~		|
+
+"Total export - Oil"=
+	3.259e+07
+	~	bbtu/year
+	~		|
+
+"Total import - Biofuels"=
+	0
+	~	bbtu/year
+	~		|
+
+"Total import - Coal"=
+	3.087e+06
+	~	bbtu/year
+	~		|
+
+"Total import - Oil"=
+	0
+	~	bbtu/year
+	~		|
+
+********************************************************
+	.Control
+********************************************************~
+		Simulation Control Parameters
+	|
+
+FINAL TIME  = 2050
+	~	year
+	~	The final time for the simulation.
+	|
+
+INITIAL TIME  = 2010
+	~	year
+	~	The initial time for the simulation.
+	|
+
+SAVEPER  = 
+        TIME STEP
+	~	year [0,?]
+	~	The frequency with which output is stored.
+	|
+
+TIME STEP  = 0.0625
+	~	year [0,?]
+	~	The time step for the simulation.
+	|
+
+\\\---/// Sketch information - do not modify anything except names
+V300  Do not put anything below this section - it will be ignored
+*CLD
+$192-192-192,0,Times New Roman|12||0-0-0|0-0-0|0-0-255|-1--1--1|-1--1--1|96,96,5,0
+12,1,0,1935,1255,37,11,8,7,0,4,-1,0,0,0,-1--1--1,64-160-98,|12||0-0-0
+Gas Export
+12,2,0,1737,1253,37,11,8,7,0,4,-1,0,0,0,-1--1--1,64-160-98,|12||0-0-0
+Gas Import
+12,3,0,2068,1441,43,11,8,7,0,4,-1,0,0,0,-1--1--1,255-160-0,|12||0-0-0
+Gas Shortage
+12,4,0,2287,1465,42,11,8,7,0,0,-1,0,0,0
+Gas Demand
+12,5,0,1847,1353,37,11,8,7,0,0,-1,0,0,0
+Gas Supply
+1,6,5,3,1,0,45,0,2,192,0,-1--1--1,|12||0-0-0,1|(1946,1403)|
+1,7,4,3,1,0,43,0,2,192,0,-1--1--1,|12||0-0-0,1|(2184,1463)|
+1,8,2,5,1,0,43,0,2,192,0,-1--1--1,|12||0-0-0,1|(1795,1327)|
+1,9,1,5,1,0,45,0,2,192,0,-1--1--1,|12||0-0-0,1|(1877,1334)|
+12,10,0,1693,1463,44,19,8,71,0,0,-1,0,0,0
+Capacity Gas Production
+1,11,10,5,1,0,43,0,2,192,0,-1--1--1,|12||0-0-0,1|(1763,1398)|
+12,12,0,1708,1623,47,19,8,71,0,0,-1,0,0,0
+Capacity other Fossil Fuels
+12,13,0,1697,1776,39,19,8,71,0,0,-1,0,0,0
+Capacity Renewables
+12,14,0,2611,1612,51,11,8,71,0,0,-1,0,0,0
+Energy Demand
+12,15,0,2780,1952,31,11,8,7,0,0,-1,0,0,0
+Economy
+12,16,0,2590,1760,51,19,8,71,0,0,-1,0,0,0
+Engery Intensity Economy
+12,17,0,2425,1849,36,19,8,7,0,0,-1,0,0,0
+Decoupling Economy
+12,18,0,2398,1988,58,19,8,7,0,0,-1,0,0,0
+Limitation to Economic Growth
+1,19,18,15,1,0,45,0,2,192,0,-1--1--1,|12||0-0-0,1|(2560,1991)|
+1,20,17,16,1,0,45,0,2,192,0,-1--1--1,|12||0-0-0,1|(2514,1824)|
+1,21,16,14,1,0,43,0,2,192,0,-1--1--1,|12||0-0-0,1|(2640,1692)|
+1,22,15,14,1,0,43,0,2,192,0,-1--1--1,|12||0-0-0,1|(2790,1759)|
+1,23,14,4,0,0,43,0,2,192,0,-1--1--1,|12||0-0-0,1|(2455,1541)|
+1,24,3,10,1,0,43,0,2,192,0,-1--1--1,|12||0-0-0,1|(1856,1503)|
+12,25,0,2294,1626,53,19,8,7,0,0,-1,0,0,0
+other Fossil Fuel Demand
+12,26,0,2312,1736,39,19,8,7,0,0,-1,0,0,0
+Renewables Demand
+12,27,0,2105,1615,53,19,8,7,0,4,-1,0,0,0,-1--1--1,255-160-0,|0||0-0-0
+other Fossil Fuel Shortage
+12,28,0,2142,1745,36,19,8,7,0,0,-1,0,0,0
+Renewable Shortage
+1,29,14,25,0,0,43,0,2,192,0,-1--1--1,|12||0-0-0,1|(2460,1618)|
+1,30,14,26,0,0,43,0,2,192,0,-1--1--1,|12||0-0-0,1|(2474,1668)|
+1,31,25,27,0,0,43,0,2,192,0,-1--1--1,|12||0-0-0,1|(2206,1620)|
+1,32,26,28,0,0,43,0,2,192,0,-1--1--1,|12||0-0-0,1|(2232,1740)|
+1,33,12,27,1,0,45,0,2,192,0,-1--1--1,|12||0-0-0,1|(1891,1657)|
+1,34,13,28,1,0,45,0,2,192,0,-1--1--1,|12||0-0-0,1|(1914,1844)|
+12,35,0,2138,1962,52,11,8,71,0,0,-1,0,0,0
+Energy Shortage
+1,36,35,17,0,0,43,0,2,192,0,-1--1--1,|12||0-0-0,1|(2270,1909)|
+1,37,35,18,0,0,43,0,2,192,0,-1--1--1,|12||0-0-0,1|(2258,1973)|
+1,38,28,35,1,0,43,0,2,192,0,-1--1--1,|12||0-0-0,1|(2168,1846)|
+1,39,27,35,1,0,43,0,2,192,0,-1--1--1,|12||0-0-0,1|(2067,1778)|
+1,40,3,35,1,0,43,0,2,192,0,-1--1--1,|12||0-0-0,1|(1976,1844)|
+12,41,0,2445,1369,32,11,8,7,0,4,-1,0,0,0,-1--1--1,64-160-98,|12||0-0-0
+Price Gas
+12,42,0,2564,1408,59,19,8,7,0,4,-1,0,0,0,-1--1--1,64-160-98,|12||0-0-0
+Price other Fossiel Fuels
+12,43,0,2665,1454,53,11,8,7,0,4,-1,0,0,0,-1--1--1,64-160-98,|12||0-0-0
+Price Renwables
+1,44,41,4,0,0,45,0,2,192,0,-1--1--1,|12||0-0-0,1|(2371,1413)|
+1,45,43,26,0,0,45,0,2,192,0,-1--1--1,|12||0-0-0,1|(2498,1586)|
+1,46,42,25,0,0,45,0,2,192,0,-1--1--1,|12||0-0-0,1|(2434,1512)|
+1,47,27,12,1,0,43,0,2,192,0,-1--1--1,|12||0-0-0,1|(1840,1527)|
+1,48,28,13,1,0,43,0,2,192,0,-1--1--1,|12||0-0-0,1|(1835,1686)|
+12,49,0,2624,1864,20,20,5,7,0,0,-1,0,0,0
+-
+12,50,0,2431,1741,20,20,5,7,0,0,-1,0,0,0
+-
+12,51,0,1862,1570,20,20,5,7,0,0,-1,0,0,0
+-
+12,52,0,1853,1739,20,20,5,7,0,0,-1,0,0,0
+-
+12,53,0,1849,1415,20,20,4,7,0,0,-1,0,0,0
+-
+12,54,0,2631,1910,62,19,8,7,0,16,-1,0,0,0,-1--1--1,0-0-0,|0|I|0-0-0
+Limited Economic Growth
+12,55,0,2432,1788,39,19,8,7,0,16,-1,0,0,0,-1--1--1,0-0-0,|0|I|0-0-0
+Decoupling Economy
+12,56,0,2188,1536,49,11,8,7,0,0,-1,0,0,0
+CO2 Emissions
+1,57,4,56,0,0,43,0,2,192,0,-1--1--1,|0||-1--1--1,1|(2243,1496)|
+1,58,25,56,0,0,43,0,2,192,0,-1--1--1,|0||-1--1--1,1|(2241,1581)|
+1,59,3,56,0,0,45,0,2,192,0,-1--1--1,|0||-1--1--1,1|(2121,1484)|
+1,60,27,56,0,0,45,0,2,192,0,-1--1--1,|0||-1--1--1,1|(2144,1576)|
+12,61,0,1850,1462,67,19,8,7,0,16,-1,0,0,0,-1--1--1,0-0-0,|0|I|0-0-0
+Balancing Capacity Gas Production
+12,62,0,1867,1620,67,19,8,7,0,16,-1,0,0,0,-1--1--1,0-0-0,|0|I|0-0-0
+Balancing Capacity other Fossil Fuels
+12,63,0,1856,1787,67,19,8,7,0,16,-1,0,0,0,-1--1--1,0-0-0,|0|I|0-0-0
+Balancing Capacity Renewables
+\\\---/// Sketch information - do not modify anything except names
+V300  Do not put anything below this section - it will be ignored
+*Extraction capacity
+$192-192-192,0,Times New Roman|12||0-0-0|0-0-0|0-0-255|-1--1--1|-1--1--1|96,96,100,0
+10,1,"Extraction capacity installed - Gas",-95,-706,66,72,3,131,0,0,0,0,0,0
+10,2,"Extraction capacity in preparation - Gas",-450,-713,80,39,3,131,0,0,0,0,0,0
+10,3,"Mothballed capacity - Gas",342,-708,77,76,3,131,0,0,0,0,0,0
+12,4,48,-772,-720,10,8,0,3,0,0,-1,0,0,0
+1,5,7,2,4,0,0,22,0,0,0,-1--1--1,,1|(-585,-720)|
+1,6,7,4,100,0,0,22,0,0,0,-1--1--1,,1|(-707,-720)|
+11,7,48,-646,-720,6,8,34,3,0,0,1,0,0,0
+10,8,"New extraction capacity proposed - Gas",-646,-684,65,28,40,3,0,0,-1,0,0,0
+1,9,11,1,4,0,0,22,0,0,0,-1--1--1,,1|(-209,-713)|
+1,10,11,2,100,0,0,22,0,0,0,-1--1--1,,1|(-320,-713)|
+11,11,3308,-263,-713,6,8,34,3,0,0,1,0,0,0
+10,12,"Completing new extraction capacity - Gas",-263,-686,80,19,40,3,0,0,-1,0,0,0
+1,13,15,3,4,0,0,22,0,0,0,-1--1--1,,1|(194,-753)|
+1,14,15,1,100,0,0,22,0,0,0,-1--1--1,,1|(41,-753)|
+11,15,508,118,-753,6,8,34,3,0,0,1,0,0,0
+10,16,"Mothballing of capacity - Gas",118,-726,47,19,40,3,0,0,-1,0,0,0
+1,17,19,1,4,0,0,22,0,0,0,-1--1--1,,1|(41,-681)|
+1,18,19,3,100,0,0,22,0,0,0,-1--1--1,,1|(194,-681)|
+11,19,540,118,-681,6,8,34,3,0,0,1,0,0,0
+10,20,"Recommissioning of capacity - Gas",118,-654,64,19,40,3,0,0,-1,0,0,0
+12,21,48,675,-703,10,8,0,3,0,0,-1,0,0,0
+1,22,24,21,4,0,0,22,0,0,0,-1--1--1,,1|(607,-704)|
+1,23,24,3,100,0,0,22,0,0,0,-1--1--1,,1|(478,-704)|
+11,24,48,543,-704,6,8,34,3,0,0,1,0,0,0
+10,25,"Deterioration of unused capacity - Gas",543,-677,71,19,40,3,0,0,-1,0,0,0
+1,26,8,12,1,0,0,0,2,129,0,-1--1--1,|12||0-0-0,1|(-452,-643)|
+1,27,1,8,1,0,0,0,0,128,0,-1--1--1,,1|(-463,-785)|
+10,28,"New long term supply - Gas",-736,-808,48,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||255-0-255
+1,29,28,8,0,0,0,0,0,128,0,-1--1--1,,1|(-698,-757)|
+10,30,"Initial extraction capacity in preparation - Gas",-457,-818,79,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+1,31,30,2,0,0,0,0,0,128,1,-1--1--1,,1|(-454,-783)|
+10,32,"Delay order new capacity - Gas",-386,-585,54,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,33,"Delay time new capacity - Gas",-243,-583,49,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+1,34,32,12,0,0,0,0,0,128,1,-1--1--1,,1|(-331,-632)|
+1,35,33,12,0,0,0,0,0,128,0,-1--1--1,,1|(-252,-628)|
+1,36,2,12,0,0,0,0,0,128,1,-1--1--1,,1|(-364,-702)|
+10,37,"Initial extraction capacity - Gas",7,-884,50,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,38,"Time for deteriation of unused capacity - Gas",560,-861,71,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+1,39,38,25,0,0,0,0,0,128,0,-1--1--1,,1|(552,-776)|
+1,40,3,25,0,0,0,0,0,128,0,-1--1--1,,1|(438,-694)|
+10,41,"Change in short term supply - Gas",-3,-582,66,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||255-0-255
+1,42,3,20,0,0,0,0,0,128,0,-1--1--1,,1|(230,-682)|
+1,43,1,16,0,0,0,0,0,128,0,-1--1--1,,1|(14,-717)|
+1,44,41,16,1,0,0,0,0,128,0,-1--1--1,,1|(22,-667)|
+1,45,41,20,0,0,0,0,0,128,0,-1--1--1,,1|(50,-615)|
+10,46,"Undiscovered resources - Gas",-682,-367,63,24,3,131,0,0,0,0,0,0
+10,47,"Discovered resources reserve base - Gas",-308,-373,78,30,3,131,0,0,0,0,0,0
+1,48,50,47,4,0,0,22,0,0,0,-1--1--1,,1|(-442,-367)|
+1,49,50,46,100,0,0,22,0,0,0,-1--1--1,,1|(-564,-367)|
+11,50,236,-503,-367,6,8,34,3,0,0,1,0,0,0
+10,51,Increase in discovered and technically recoverable gas,-503,-340,85,19,40,3,0,0,-1,0,0,0
+1,52,46,51,1,0,0,0,0,128,0,-1--1--1,,1|(-621,-324)|
+10,53,"Initial relation between reserve base and resource size - Gas",-748,-487,83,28,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+1,54,53,51,0,0,0,0,0,128,0,-1--1--1,,1|(-624,-413)|
+10,55,"Initial reserve base - Gas",-411,-452,59,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,56,"Relative change in costs due to learning - Gas",-512,-261,75,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||255-0-0
+1,57,56,51,0,0,0,0,0,128,0,-1--1--1,,1|(-508,-294)|
+12,58,48,71,-373,10,8,0,3,0,0,-1,0,0,0
+1,59,61,58,4,0,0,22,0,0,0,-1--1--1,,1|(-9,-373)|
+1,60,61,47,100,0,0,22,0,0,0,-1--1--1,,1|(-161,-373)|
+11,61,48,-85,-373,6,8,34,3,0,0,1,0,0,0
+10,62,Non stockpiled gas extraction,-85,-346,62,19,40,3,0,0,-1,0,0,0
+1,63,1,62,0,0,0,0,0,128,0,-1--1--1,,1|(-90,-507)|
+1,64,47,62,0,0,0,0,0,128,0,-1--1--1,,1|(-196,-360)|
+10,65,Average Rb over P gas,-193,-459,55,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+1,66,65,62,0,0,0,0,0,128,0,-1--1--1,,1|(-145,-408)|
+1,67,55,47,0,0,0,0,0,128,1,-1--1--1,,1|(-374,-423)|
+10,68,"Initial extraction capacity - Gas",-358,-525,55,19,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+10,69,"Extraction capacity installed - Oil",-223,46,66,72,3,131,0,0,0,0,0,0
+10,70,"Extraction capacity in preparation - Oil",-578,39,80,39,3,131,0,0,0,0,0,0
+10,71,"Mothballed capacity - Oil",214,44,77,76,3,131,0,0,0,0,0,0
+12,72,48,-900,32,10,8,0,3,0,0,-1,0,0,0
+1,73,75,70,4,0,0,22,0,0,0,-1--1--1,,1|(-713,32)|
+1,74,75,72,100,0,0,22,0,0,0,-1--1--1,,1|(-835,32)|
+11,75,48,-774,32,6,8,34,3,0,0,1,0,0,0
+10,76,"New extraction capacity proposed - Oil",-774,68,76,19,40,3,0,0,-1,0,0,0
+1,77,79,69,4,0,0,22,0,0,0,-1--1--1,,1|(-337,39)|
+1,78,79,70,100,0,0,22,0,0,0,-1--1--1,,1|(-447,39)|
+11,79,3388,-391,39,6,8,34,3,0,0,1,0,0,0
+10,80,"Completing new extraction capacity - Oil",-391,66,77,19,40,3,0,0,-1,0,0,0
+1,81,83,71,4,0,0,22,0,0,0,-1--1--1,,1|(66,-1)|
+1,82,83,69,100,0,0,22,0,0,0,-1--1--1,,1|(-87,-1)|
+11,83,3372,-10,-1,6,8,34,3,0,0,1,0,0,0
+10,84,"Mothballing of capacity - Oil",-10,26,46,19,40,3,0,0,-1,0,0,0
+1,85,87,69,4,0,0,22,0,0,0,-1--1--1,,1|(-86,66)|
+1,86,87,71,100,0,0,22,0,0,0,-1--1--1,,1|(67,66)|
+11,87,1068,-9,66,6,8,34,3,0,0,1,0,0,0
+10,88,"Recommissioning of capacity - Oil",-9,93,64,19,40,3,0,0,-1,0,0,0
+12,89,48,547,49,10,8,0,3,0,0,-1,0,0,0
+1,90,92,89,4,0,0,22,0,0,0,-1--1--1,,1|(479,48)|
+1,91,92,71,100,0,0,22,0,0,0,-1--1--1,,1|(350,48)|
+11,92,48,415,48,6,8,34,3,0,0,1,0,0,0
+10,93,"Deterioration of unused capacity - Oil",415,75,68,19,40,3,0,0,-1,0,0,0
+1,94,76,80,1,0,0,0,2,129,0,-1--1--1,|12||0-0-0,1|(-580,109)|
+1,95,69,76,1,0,0,0,0,128,0,-1--1--1,,1|(-591,-33)|
+10,96,"New long term supply - Oil",-864,-56,48,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||255-0-255
+1,97,96,76,0,0,0,0,0,128,0,-1--1--1,,1|(-823,0)|
+10,98,"Initial extraction capacity in preparation - Oil",-585,-66,79,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+1,99,98,70,0,0,0,0,0,128,1,-1--1--1,,1|(-582,-31)|
+10,100,"Delay order new capacity - Oil",-514,167,54,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,101,"Delay time new capacity - Oil",-373,174,49,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+1,102,100,80,0,0,0,0,0,128,1,-1--1--1,,1|(-458,120)|
+1,103,101,80,0,0,0,0,0,128,0,-1--1--1,,1|(-381,126)|
+1,104,70,80,0,0,0,0,0,128,1,-1--1--1,,1|(-489,51)|
+10,105,"Initial extraction capacity - Oil",-121,-132,50,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+1,106,105,69,0,0,0,0,0,128,1,-1--1--1,,1|(-153,-76)|
+10,107,"Time for deteriation of unused capacity - Oil",432,-109,71,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+1,108,107,93,0,0,0,0,0,128,0,-1--1--1,,1|(424,-24)|
+1,109,71,93,0,0,0,0,0,128,0,-1--1--1,,1|(312,58)|
+10,110,"Change in short term supply - Oil",-131,170,66,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||255-0-255
+1,111,71,88,0,0,0,0,0,128,0,-1--1--1,,1|(102,67)|
+1,112,69,84,0,0,0,0,0,128,0,-1--1--1,,1|(-114,35)|
+1,113,110,84,1,0,0,0,0,128,0,-1--1--1,,1|(-106,85)|
+1,114,110,88,0,0,0,0,0,128,0,-1--1--1,,1|(-77,135)|
+10,115,"Undiscovered resources - Oil",-810,385,63,24,3,131,0,0,0,0,0,0
+10,116,"Discovered resources reserve base - Oil",-436,379,78,30,3,131,0,0,0,0,0,0
+1,117,119,116,4,0,0,22,0,0,0,-1--1--1,,1|(-569,385)|
+1,118,119,115,100,0,0,22,0,0,0,-1--1--1,,1|(-692,385)|
+11,119,3836,-631,385,6,8,34,3,0,0,1,0,0,0
+10,120,"Increase in discovered and technically recoverable resources - Oil",-631,412,85,28,40,3,0,0,-1,0,0,0
+1,121,115,120,1,0,0,0,0,128,0,-1--1--1,,1|(-749,428)|
+10,122,"Initial relation between reserve base and resource size - Oil",-876,265,83,28,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+1,123,122,120,0,0,0,0,0,128,0,-1--1--1,,1|(-759,334)|
+10,124,"Initial reserve base - Oil",-492,300,43,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,125,"Relative change in costs due to learning - Oil",-765,492,75,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||255-0-0
+1,126,125,120,0,0,0,0,0,128,0,-1--1--1,,1|(-711,460)|
+10,127,"Average Rb over P - Oil",-321,293,55,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+1,128,124,116,0,0,0,0,0,128,1,-1--1--1,,1|(-472,328)|
+10,129,"Initial extraction capacity - Oil",-486,227,55,19,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+10,130,"Energy stocks - Oil",-21,377,73,35,3,131,0,0,0,0,0,0
+1,131,133,130,4,0,0,22,0,0,0,-1--1--1,,1|(-157,378)|
+1,132,133,116,100,0,0,22,0,0,0,-1--1--1,,1|(-295,378)|
+11,133,1356,-226,378,6,8,34,3,0,0,1,0,0,0
+10,134,"Resource extraction - Oil",-226,405,48,19,40,3,0,0,-1,0,0,0
+12,135,48,-63,211,10,8,0,3,0,0,-1,0,0,0
+1,136,138,135,4,0,0,22,0,0,0,-1--1--1,,1|(-63,245)|
+1,137,138,130,100,0,0,22,0,0,0,-1--1--1,,1|(-63,313)|
+11,138,48,-63,278,8,6,33,3,0,0,2,0,0,0
+10,139,"Energy export - Oil",-116,278,50,19,40,3,0,0,-1,0,0,0
+12,140,48,20,212,10,8,0,3,0,0,-1,0,0,0
+1,141,143,130,4,0,0,22,0,0,0,-1--1--1,,1|(21,312)|
+1,142,143,140,100,0,0,22,0,0,0,-1--1--1,,1|(21,245)|
+11,143,48,21,276,8,6,33,3,0,0,4,0,0,0
+10,144,"Energy import - Oil",79,276,50,19,40,3,0,2,-1,0,0,0,-1--1--1,0-0-0,|12||255-0-0
+12,145,48,304,375,10,8,0,3,0,0,-1,0,0,0
+1,146,148,145,4,0,0,22,0,0,0,-1--1--1,,1|(236,375)|
+1,147,148,130,100,0,0,22,0,0,0,-1--1--1,,1|(109,375)|
+11,148,48,173,375,6,8,34,3,0,0,1,0,0,0
+10,149,"Resource consumption - Oil",173,402,57,19,40,3,0,2,-1,0,0,0,-1--1--1,0-0-0,|12||255-0-0
+1,150,116,134,0,0,0,0,0,128,0,-1--1--1,,1|(-323,392)|
+1,151,127,134,0,0,0,0,0,128,0,-1--1--1,,1|(-279,343)|
+1,152,69,134,1,0,0,0,0,128,0,-1--1--1,,1|(-245,245)|
+10,153,"Total export - Oil",-140,235,55,11,8,3,0,4,0,0,0,0,-1--1--1,0-128-0,|12||255-0-0
+10,154,"Total import - Oil",87,207,55,11,8,3,0,4,0,0,0,0,-1--1--1,0-128-0,|12||255-0-0
+1,155,153,139,0,0,0,0,0,128,0,-1--1--1,,1|(-134,246)|
+1,156,154,144,0,0,0,0,0,128,0,-1--1--1,,1|(84,230)|
+10,157,"Resource consumption reduction factor - Oil",208,474,72,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||255-0-0
+10,158,"Average throughput time stocks - Oil",208,554,63,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+1,159,130,157,0,0,0,0,0,128,0,-1--1--1,,1|(101,428)|
+1,160,158,157,0,0,0,0,0,128,0,-1--1--1,,1|(208,521)|
+1,161,157,149,0,0,0,0,0,128,0,-1--1--1,,1|(193,444)|
+10,162,"Delay order new capacity - Oil",216,250,58,19,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+10,163,"Average throughput time stocks - Oil",210,173,68,19,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+10,164,"Extraction capacity installed - Coal",-194,855,66,72,3,131,0,0,0,0,0,0
+10,165,"Extraction capacity in preparation - Coal",-549,848,80,39,3,131,0,0,0,0,0,0
+10,166,"Mothballed capacity - Coal",243,853,77,76,3,131,0,0,0,0,0,0
+12,167,48,-871,841,10,8,0,3,0,0,-1,0,0,0
+1,168,170,165,4,0,0,22,0,0,0,-1--1--1,,1|(-684,841)|
+1,169,170,167,100,0,0,22,0,0,0,-1--1--1,,1|(-806,841)|
+11,170,48,-745,841,6,8,34,3,0,0,1,0,0,0
+10,171,"New extraction capacity proposed - Coal",-745,877,65,28,40,3,0,0,-1,0,0,0
+1,172,174,164,4,0,0,22,0,0,0,-1--1--1,,1|(-308,848)|
+1,173,174,165,100,0,0,22,0,0,0,-1--1--1,,1|(-419,848)|
+11,174,3244,-362,848,6,8,34,3,0,0,1,0,0,0
+10,175,"Completing new extraction capacity - Coal",-362,875,65,28,40,3,0,0,-1,0,0,0
+1,176,178,166,4,0,0,22,0,0,0,-1--1--1,,1|(95,808)|
+1,177,178,164,100,0,0,22,0,0,0,-1--1--1,,1|(-58,808)|
+11,178,3228,19,808,6,8,34,3,0,0,1,0,0,0
+10,179,"Mothballing of capacity - Coal",19,835,49,19,40,3,0,0,-1,0,0,0
+1,180,182,164,4,0,0,22,0,0,0,-1--1--1,,1|(-57,875)|
+1,181,182,166,100,0,0,22,0,0,0,-1--1--1,,1|(96,875)|
+11,182,988,20,875,6,8,34,3,0,0,1,0,0,0
+10,183,"Recommissioning of capacity - Coal",20,902,64,19,40,3,0,0,-1,0,0,0
+12,184,48,576,858,10,8,0,3,0,0,-1,0,0,0
+1,185,187,184,4,0,0,22,0,0,0,-1--1--1,,1|(508,857)|
+1,186,187,166,100,0,0,22,0,0,0,-1--1--1,,1|(379,857)|
+11,187,48,444,857,6,8,34,3,0,0,1,0,0,0
+10,188,"Deterioration of unused capacity - Coal",444,884,74,19,40,3,0,0,-1,0,0,0
+1,189,171,175,1,0,0,0,2,129,0,-1--1--1,|12||0-0-0,1|(-551,918)|
+1,190,164,171,1,0,0,0,0,128,0,-1--1--1,,1|(-562,776)|
+10,191,"New long term supply - Coal",-840,754,48,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||255-0-255
+1,192,191,171,0,0,0,0,0,128,0,-1--1--1,,1|(-800,805)|
+10,193,"Initial extraction capacity in preparation - Coal",-556,743,79,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+1,194,193,165,0,0,0,0,0,128,1,-1--1--1,,1|(-553,778)|
+10,195,"Delay order new capacity - Coal",-485,976,54,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,196,"Delay time new capacity - Coal",-344,983,49,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+1,197,195,175,0,0,0,0,0,128,1,-1--1--1,,1|(-435,934)|
+1,198,196,175,0,0,0,0,0,128,0,-1--1--1,,1|(-352,940)|
+1,199,165,175,0,0,0,0,0,128,1,-1--1--1,,1|(-455,860)|
+10,200,"Initial extraction capacity - Coal",-92,677,50,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+1,201,200,164,0,0,0,0,0,128,1,-1--1--1,,1|(-124,733)|
+10,202,"Time for deteriation of unused capacity - Coal",461,700,73,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+1,203,202,188,0,0,0,0,0,128,0,-1--1--1,,1|(453,785)|
+1,204,166,188,0,0,0,0,0,128,0,-1--1--1,,1|(338,866)|
+10,205,"Change in short term supply - Coal",-102,979,66,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||255-0-255
+1,206,166,183,0,0,0,0,0,128,0,-1--1--1,,1|(131,876)|
+1,207,164,179,0,0,0,0,0,128,0,-1--1--1,,1|(-86,844)|
+1,208,205,179,1,0,0,0,0,128,0,-1--1--1,,1|(-77,894)|
+1,209,205,183,0,0,0,0,0,128,0,-1--1--1,,1|(-48,944)|
+10,210,"Undiscovered resources - Coal",-781,1194,63,24,3,131,0,0,0,0,0,0
+10,211,"Discovered resources reserve base - Coal",-407,1188,78,30,3,131,0,0,0,0,0,0
+1,212,214,211,4,0,0,22,0,0,0,-1--1--1,,1|(-540,1194)|
+1,213,214,210,100,0,0,22,0,0,0,-1--1--1,,1|(-663,1194)|
+11,214,3804,-602,1194,6,8,34,3,0,0,1,0,0,0
+10,215,"Increase in discovered and technically recoverable resources - Coal",-602,1221,85,28,40,3,0,0,-1,0,0,0
+1,216,210,215,1,0,0,0,0,128,0,-1--1--1,,1|(-720,1237)|
+10,217,"Initial relation between reserve base and resource size - Coal",-847,1074,83,28,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+1,218,217,215,0,0,0,0,0,128,0,-1--1--1,,1|(-730,1143)|
+10,219,"Initial reserve base - Coal",-463,1109,59,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,220,"Relative change in costs due to learning - Coal",-736,1301,75,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||255-0-0
+1,221,220,215,0,0,0,0,0,128,0,-1--1--1,,1|(-682,1269)|
+10,222,"Average Rb over P - Coal",-292,1102,55,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+1,223,219,211,0,0,0,0,0,128,1,-1--1--1,,1|(-443,1137)|
+10,224,"Initial extraction capacity - Coal",-457,1036,55,19,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+10,225,"Energy stocks - Coal",9,1181,73,35,3,131,0,0,0,0,0,0
+1,226,228,225,4,0,0,22,0,0,0,-1--1--1,,1|(-128,1187)|
+1,227,228,211,100,0,0,22,0,0,0,-1--1--1,,1|(-266,1187)|
+11,228,1276,-197,1187,6,8,34,3,0,0,1,0,0,0
+10,229,"Resource extraction - Coal",-197,1214,54,19,40,3,0,0,-1,0,0,0
+12,230,48,-34,1020,10,8,0,3,0,0,-1,0,0,0
+1,231,233,230,4,0,0,22,0,0,0,-1--1--1,,1|(-34,1054)|
+1,232,233,225,100,0,0,22,0,0,0,-1--1--1,,1|(-34,1119)|
+11,233,48,-34,1087,8,6,33,3,0,0,2,0,0,0
+10,234,"Energy export - Coal",-87,1087,50,19,40,3,0,0,-1,0,0,0
+12,235,48,49,1021,10,8,0,3,0,0,-1,0,0,0
+1,236,238,225,4,0,0,22,0,0,0,-1--1--1,,1|(50,1118)|
+1,237,238,235,100,0,0,22,0,0,0,-1--1--1,,1|(50,1054)|
+11,238,48,50,1085,8,6,33,3,0,0,4,0,0,0
+10,239,"Energy import - Coal",108,1085,50,19,40,3,0,2,-1,0,0,0,-1--1--1,0-0-0,|12||255-0-0
+12,240,48,333,1184,10,8,0,3,0,0,-1,0,0,0
+1,241,243,240,4,0,0,22,0,0,0,-1--1--1,,1|(265,1184)|
+1,242,243,225,100,0,0,22,0,0,0,-1--1--1,,1|(139,1184)|
+11,243,48,202,1184,6,8,34,3,0,0,1,0,0,0
+10,244,"Resource consumption - Coal",202,1211,63,19,40,3,0,0,-1,0,0,0
+1,245,211,229,0,0,0,0,0,128,0,-1--1--1,,1|(-297,1201)|
+1,246,222,229,0,0,0,0,0,128,0,-1--1--1,,1|(-250,1152)|
+1,247,164,229,1,0,0,0,0,128,0,-1--1--1,,1|(-216,1054)|
+10,248,"Total export - Coal",-111,1044,45,19,8,3,0,4,0,0,0,0,-1--1--1,0-128-0,|12||255-0-0
+10,249,"Total import - Coal",104,1023,45,19,8,3,0,4,0,0,0,0,-1--1--1,0-128-0,|12||255-0-0
+1,250,248,234,0,0,0,0,0,128,0,-1--1--1,,1|(-104,1059)|
+1,251,249,239,0,0,0,0,0,128,0,-1--1--1,,1|(105,1047)|
+10,252,"Resource consumption reduction factor - Coal",237,1283,73,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||255-0-0
+10,253,"Average throughput time stocks - Coal",237,1363,63,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+1,254,225,252,0,0,0,0,0,128,0,-1--1--1,,1|(131,1235)|
+1,255,253,252,0,0,0,0,0,128,0,-1--1--1,,1|(237,1330)|
+1,256,252,244,0,0,0,0,0,128,0,-1--1--1,,1|(222,1253)|
+10,257,"Delay order new capacity - Coal",245,1059,58,19,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+10,258,"Average throughput time stocks - Coal",243,1017,68,19,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+10,259,"Extraction capacity installed- Nuclear",-243,1663,66,72,3,131,0,0,0,0,0,0
+10,260,"Extraction capacity in preparation- Nuclear",-598,1656,80,39,3,131,0,0,0,0,0,0
+10,261,"Mothballed capacity- Nuclear",194,1661,77,76,3,131,0,0,0,0,0,0
+12,262,48,-920,1649,10,8,0,3,0,0,-1,0,0,0
+1,263,265,260,4,0,0,22,0,0,0,-1--1--1,,1|(-733,1649)|
+1,264,265,262,100,0,0,22,0,0,0,-1--1--1,,1|(-855,1649)|
+11,265,48,-794,1649,6,8,34,3,0,0,1,0,0,0
+10,266,"New extraction capacity proposed- Nuclear",-794,1685,78,19,40,3,0,0,-1,0,0,0
+1,267,269,259,4,0,0,22,0,0,0,-1--1--1,,1|(-357,1656)|
+1,268,269,260,100,0,0,22,0,0,0,-1--1--1,,1|(-467,1656)|
+11,269,3548,-411,1656,6,8,34,3,0,0,1,0,0,0
+10,270,"Completing new extraction capacity- Nuclear",-411,1683,63,28,40,3,0,0,-1,0,0,0
+1,271,273,261,4,0,0,22,0,0,0,-1--1--1,,1|(46,1616)|
+1,272,273,259,100,0,0,22,0,0,0,-1--1--1,,1|(-107,1616)|
+11,273,3532,-30,1616,6,8,34,3,0,0,1,0,0,0
+10,274,"Mothballing of capacity- Nuclear",-30,1643,57,19,40,3,0,0,-1,0,0,0
+1,275,277,259,4,0,0,22,0,0,0,-1--1--1,,1|(-106,1683)|
+1,276,277,261,100,0,0,22,0,0,0,-1--1--1,,1|(47,1683)|
+11,277,4252,-29,1683,6,8,34,3,0,0,1,0,0,0
+10,278,"Recommissioning of capacity- Nuclear",-29,1710,64,19,40,3,0,0,-1,0,0,0
+12,279,48,527,1666,10,8,0,3,0,0,-1,0,0,0
+1,280,282,279,4,0,0,22,0,0,0,-1--1--1,,1|(459,1665)|
+1,281,282,261,100,0,0,22,0,0,0,-1--1--1,,1|(330,1665)|
+11,282,48,395,1665,6,8,34,3,0,0,1,0,0,0
+10,283,"Deterioration of unused capacity- Nuclear",395,1692,74,19,40,3,0,0,-1,0,0,0
+1,284,266,270,1,0,0,0,2,129,0,-1--1--1,|12||0-0-0,1|(-600,1726)|
+1,285,259,266,1,0,0,0,0,128,0,-1--1--1,,1|(-611,1584)|
+10,286,"New long term supply- Nuclear",-884,1561,52,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||255-0-255
+1,287,286,266,0,0,0,0,0,128,0,-1--1--1,,1|(-843,1617)|
+10,288,"Initial extraction capacity in preparation- Nuclear",-605,1551,79,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+1,289,288,260,0,0,0,0,0,128,1,-1--1--1,,1|(-602,1586)|
+10,290,"Delay order new capacity- Nuclear",-534,1784,57,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,291,"Delay time new capacity- Nuclear",-393,1791,57,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+1,292,290,270,0,0,0,0,0,128,1,-1--1--1,,1|(-483,1742)|
+1,293,291,270,0,0,0,0,0,128,0,-1--1--1,,1|(-401,1748)|
+1,294,260,270,0,0,0,0,0,128,1,-1--1--1,,1|(-502,1669)|
+10,295,"Initial extraction capacity- Nuclear",-141,1485,57,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,296,"Initial mothballed capacity- Nuclear",30,1479,57,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+1,297,295,259,0,0,0,0,0,128,1,-1--1--1,,1|(-173,1541)|
+1,298,296,261,0,0,0,0,0,128,1,-1--1--1,,1|(81,1536)|
+10,299,"Time for deteriation of unused capacity- Nuclear",412,1508,81,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+1,300,299,283,0,0,0,0,0,128,0,-1--1--1,,1|(404,1593)|
+1,301,261,283,0,0,0,0,0,128,0,-1--1--1,,1|(289,1674)|
+10,302,"Change in short term supply- Nuclear",-151,1787,66,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||255-0-255
+1,303,261,278,0,0,0,0,0,128,0,-1--1--1,,1|(82,1684)|
+1,304,259,274,0,0,0,0,0,128,0,-1--1--1,,1|(-139,1653)|
+1,305,302,274,1,0,0,0,0,128,0,-1--1--1,,1|(-126,1702)|
+1,306,302,278,0,0,0,0,0,128,0,-1--1--1,,1|(-97,1752)|
+10,307,"Extraction capacity installed - Biofuels",-125,2055,66,72,3,131,0,0,0,0,0,0
+10,308,"Extraction capacity in preparation - Biofuels",-480,2048,80,39,3,131,0,0,0,0,0,0
+10,309,"Mothballed capacity - Biofuels",312,2053,77,76,3,131,0,0,0,0,0,0
+12,310,48,-802,2041,10,8,0,3,0,0,-1,0,0,0
+1,311,313,308,4,0,0,22,0,0,0,-1--1--1,,1|(-615,2041)|
+1,312,313,310,100,0,0,22,0,0,0,-1--1--1,,1|(-737,2041)|
+11,313,48,-676,2041,6,8,34,3,0,0,1,0,0,0
+10,314,"New extraction capacity proposed - Biofuels",-676,2077,78,19,40,3,0,0,-1,0,0,0
+1,315,317,307,4,0,0,22,0,0,0,-1--1--1,,1|(-239,2048)|
+1,316,317,308,100,0,0,22,0,0,0,-1--1--1,,1|(-350,2048)|
+11,317,3164,-293,2048,6,8,34,3,0,0,1,0,0,0
+10,318,"Completing new extraction capacity - Biofuels",-293,2075,65,28,40,3,0,0,-1,0,0,0
+1,319,321,309,4,0,0,22,0,0,0,-1--1--1,,1|(164,2008)|
+1,320,321,307,100,0,0,22,0,0,0,-1--1--1,,1|(11,2008)|
+11,321,3148,88,2008,6,8,34,3,0,0,1,0,0,0
+10,322,"Mothballing of capacity - Biofuels",88,2035,59,19,40,3,0,0,-1,0,0,0
+1,323,325,307,4,0,0,22,0,0,0,-1--1--1,,1|(12,2075)|
+1,324,325,309,100,0,0,22,0,0,0,-1--1--1,,1|(165,2075)|
+11,325,4092,89,2075,6,8,34,3,0,0,1,0,0,0
+10,326,"Recommissioning of capacity - Biofuels",89,2102,64,19,40,3,0,0,-1,0,0,0
+12,327,48,645,2058,10,8,0,3,0,0,-1,0,0,0
+1,328,330,327,4,0,0,22,0,0,0,-1--1--1,,1|(577,2057)|
+1,329,330,309,100,0,0,22,0,0,0,-1--1--1,,1|(448,2057)|
+11,330,48,513,2057,6,8,34,3,0,0,1,0,0,0
+10,331,"Deterioration of unused capacity - Biofuels",513,2084,74,19,40,3,0,0,-1,0,0,0
+1,332,314,318,1,0,0,0,2,129,0,-1--1--1,|12||0-0-0,1|(-482,2118)|
+1,333,307,314,1,0,0,0,0,128,0,-1--1--1,,1|(-493,1976)|
+10,334,"New long term supply - Biofuels",-766,1953,54,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||255-0-255
+1,335,334,314,0,0,0,0,0,128,0,-1--1--1,,1|(-725,2009)|
+10,336,"Initial extraction capacity in preparation - Biofuels",-487,1943,79,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+1,337,336,308,0,0,0,0,0,128,1,-1--1--1,,1|(-484,1978)|
+10,338,"Delay order new capacity - Biofuels",-416,2176,59,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,339,"Delay time new capacity - Biofuels",-275,2183,59,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+1,340,338,318,0,0,0,0,0,128,1,-1--1--1,,1|(-366,2134)|
+1,341,339,318,0,0,0,0,0,128,0,-1--1--1,,1|(-283,2140)|
+1,342,308,318,0,0,0,0,0,128,1,-1--1--1,,1|(-387,2060)|
+10,343,"Initial extraction capacity - Biofuels",-23,1877,59,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,344,"Initial mothballed capacity - Biofuels",148,1871,66,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+1,345,343,307,0,0,0,0,0,128,1,-1--1--1,,1|(-55,1933)|
+1,346,344,309,0,0,0,0,0,128,1,-1--1--1,,1|(199,1928)|
+10,347,"Time for deteriation of unused capacity - Biofuels",530,1900,83,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+1,348,347,331,0,0,0,0,0,128,0,-1--1--1,,1|(522,1985)|
+1,349,309,331,0,0,0,0,0,128,0,-1--1--1,,1|(407,2066)|
+10,350,"Change in short term supply - Biofuels",-33,2179,66,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||255-0-255
+1,351,309,326,0,0,0,0,0,128,0,-1--1--1,,1|(200,2076)|
+1,352,307,322,0,0,0,0,0,128,0,-1--1--1,,1|(-22,2045)|
+1,353,350,322,1,0,0,0,0,128,0,-1--1--1,,1|(-8,2094)|
+1,354,350,326,0,0,0,0,0,128,0,-1--1--1,,1|(21,2144)|
+10,355,"Energy stocks - Biofuels",78,2381,73,35,3,131,0,0,0,0,0,0
+12,356,48,35,2220,10,8,0,3,0,0,-1,0,0,0
+1,357,359,356,4,0,0,22,0,0,0,-1--1--1,,1|(35,2254)|
+1,358,359,355,100,0,0,22,0,0,0,-1--1--1,,1|(35,2319)|
+11,359,48,35,2287,8,6,33,3,0,0,2,0,0,0
+10,360,"Energy export - Biofuels",-18,2287,50,19,40,3,0,0,-1,0,0,0
+12,361,48,118,2221,10,8,0,3,0,0,-1,0,0,0
+1,362,364,355,4,0,0,22,0,0,0,-1--1--1,,1|(119,2318)|
+1,363,364,361,100,0,0,22,0,0,0,-1--1--1,,1|(119,2254)|
+11,364,48,119,2285,8,6,33,3,0,0,4,0,0,0
+10,365,"Energy import - Biofuels",177,2285,50,19,40,3,0,2,-1,0,0,0,-1--1--1,0-0-0,|12||255-0-0
+12,366,48,402,2384,10,8,0,3,0,0,-1,0,0,0
+1,367,369,366,4,0,0,22,0,0,0,-1--1--1,,1|(334,2384)|
+1,368,369,355,100,0,0,22,0,0,0,-1--1--1,,1|(208,2384)|
+11,369,48,271,2384,6,8,34,3,0,0,1,0,0,0
+10,370,"Resource consumption - Biofuels",271,2411,72,19,40,3,0,0,-1,0,0,0
+10,371,"Total export - Biofuels",-42,2244,45,19,8,3,0,4,0,0,0,0,-1--1--1,0-128-0,|12||255-0-0
+10,372,"Total import - Biofuels",173,2223,45,19,8,3,0,4,0,0,0,0,-1--1--1,0-128-0,|12||255-0-0
+1,373,371,360,0,0,0,0,0,128,0,-1--1--1,,1|(-35,2259)|
+1,374,372,365,0,0,0,0,0,128,0,-1--1--1,,1|(174,2247)|
+10,375,"Resource consumption reduction factor - Biofuels",306,2483,83,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||255-0-0
+10,376,"Average throughput time stocks - Biofuels",306,2563,69,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+1,377,355,375,0,0,0,0,0,128,0,-1--1--1,,1|(200,2435)|
+1,378,376,375,0,0,0,0,0,128,0,-1--1--1,,1|(306,2530)|
+1,379,375,370,0,0,0,0,0,128,0,-1--1--1,,1|(291,2453)|
+10,380,"Delay order new capacity - Biofuels",314,2259,64,19,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+10,381,"Average throughput time stocks - Biofuels",308,2182,73,19,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+12,382,48,-253,2374,10,8,0,3,0,0,-1,0,0,0
+1,383,385,355,4,0,0,22,0,0,0,-1--1--1,,1|(-54,2374)|
+1,384,385,382,100,0,0,22,0,0,0,-1--1--1,,1|(-184,2374)|
+11,385,48,-119,2374,6,8,34,3,0,0,1,0,0,0
+10,386,Production of biofuels,-119,2401,44,19,40,3,0,0,-1,0,0,0
+1,387,307,386,1,0,0,0,0,128,0,-1--1--1,,1|(-156,2246)|
+10,388,"Extraction capacity installed - other Renewables",-158,2855,66,72,3,131,0,0,0,0,0,0
+10,389,"Extraction capacity in preparation - other Renewables",-513,2848,80,39,3,131,0,0,0,0,0,0
+10,390,"Mothballed capacity - other Renewables",279,2853,77,76,3,131,0,0,0,0,0,0
+12,391,48,-835,2841,10,8,0,3,0,0,-1,0,0,0
+1,392,394,389,4,0,0,22,0,0,0,-1--1--1,,1|(-648,2841)|
+1,393,394,391,100,0,0,22,0,0,0,-1--1--1,,1|(-770,2841)|
+11,394,48,-709,2841,6,8,34,3,0,0,1,0,0,0
+10,395,"New extraction capacity proposed - other Renewables",-709,2877,78,28,40,3,0,0,-1,0,0,0
+1,396,398,388,4,0,0,22,0,0,0,-1--1--1,,1|(-272,2848)|
+1,397,398,389,100,0,0,22,0,0,0,-1--1--1,,1|(-383,2848)|
+11,398,3468,-326,2848,6,8,34,3,0,0,1,0,0,0
+10,399,"Completing new extraction capacity - other Renewables",-326,2875,91,19,40,3,0,0,-1,0,0,0
+1,400,402,390,4,0,0,22,0,0,0,-1--1--1,,1|(131,2808)|
+1,401,402,388,100,0,0,22,0,0,0,-1--1--1,,1|(-22,2808)|
+11,402,3452,55,2808,6,8,34,3,0,0,1,0,0,0
+10,403,"Mothballing of capacity - other Renewables",55,2835,74,19,40,3,0,0,-1,0,0,0
+1,404,406,388,4,0,0,22,0,0,0,-1--1--1,,1|(-21,2875)|
+1,405,406,390,100,0,0,22,0,0,0,-1--1--1,,1|(132,2875)|
+11,406,4204,56,2875,6,8,34,3,0,0,1,0,0,0
+10,407,"Recommissioning of capacity - other Renewables",56,2902,64,28,40,3,0,0,-1,0,0,0
+12,408,48,612,2858,10,8,0,3,0,0,-1,0,0,0
+1,409,411,408,4,0,0,22,0,0,0,-1--1--1,,1|(544,2857)|
+1,410,411,390,100,0,0,22,0,0,0,-1--1--1,,1|(415,2857)|
+11,411,48,480,2857,6,8,34,3,0,0,1,0,0,0
+10,412,"Deterioration of unused capacity - other Renewables",480,2884,74,28,40,3,0,0,-1,0,0,0
+1,413,395,399,1,0,0,0,2,129,0,-1--1--1,|12||0-0-0,1|(-515,2918)|
+1,414,388,395,1,0,0,0,0,128,0,-1--1--1,,1|(-526,2776)|
+10,415,"New long term supply - other Renewables",-799,2753,75,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||255-0-255
+1,416,415,395,0,0,0,0,0,128,0,-1--1--1,,1|(-761,2804)|
+10,417,"Initial extraction capacity in preparation - other Renewables",-520,2743,86,28,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+1,418,417,389,0,0,0,0,0,128,1,-1--1--1,,1|(-517,2783)|
+10,419,"Delay order new capacity - other Renewables",-449,2976,54,28,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,420,"Delay time new capacity - other Renewables",-308,2983,78,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+1,421,419,399,0,0,0,0,0,128,1,-1--1--1,,1|(-388,2925)|
+1,422,420,399,0,0,0,0,0,128,0,-1--1--1,,1|(-316,2935)|
+1,423,389,399,0,0,0,0,0,128,1,-1--1--1,,1|(-432,2859)|
+10,424,"Initial extraction capacity - other Renewables",-56,2677,79,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,425,"Initial mothballed capacity - other Renewables",115,2671,71,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+1,426,424,388,0,0,0,0,0,128,1,-1--1--1,,1|(-88,2733)|
+1,427,425,390,0,0,0,0,0,128,1,-1--1--1,,1|(166,2728)|
+10,428,"Time for deteriation of unused capacity - other Renewables",497,2700,74,28,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+1,429,428,412,0,0,0,0,0,128,0,-1--1--1,,1|(489,2785)|
+1,430,390,412,0,0,0,0,0,128,0,-1--1--1,,1|(374,2866)|
+10,431,"Change in short term supply - other Renewables",-66,2979,85,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||255-0-255
+1,432,390,407,0,0,0,0,0,128,0,-1--1--1,,1|(167,2876)|
+1,433,388,403,0,0,0,0,0,128,0,-1--1--1,,1|(-63,2845)|
+1,434,431,403,1,0,0,0,0,128,0,-1--1--1,,1|(-41,2894)|
+1,435,431,407,0,0,0,0,0,128,0,-1--1--1,,1|(-19,2948)|
+12,436,48,219,-365,10,8,0,3,0,0,-1,0,0,0
+12,437,48,650,-365,10,8,0,3,0,0,-1,0,0,0
+1,438,440,437,4,0,0,22,0,0,0,-1--1--1,,1|(540,-365)|
+1,439,440,436,100,0,0,22,0,0,0,-1--1--1,,1|(328,-365)|
+11,440,48,434,-365,6,8,34,3,0,0,1,0,0,0
+10,441,Available Gas,434,-346,44,11,40,3,0,0,-1,0,0,0
+1,442,62,441,1,0,0,0,0,128,0,-1--1--1,,1|(273,-290)|
+10,443,Gas Import,306,-498,37,11,8,3,0,4,0,0,0,0,-1--1--1,0-128-0,|12||0-0-0
+10,444,Gas Export,518,-503,37,11,8,3,0,4,0,0,0,0,-1--1--1,0-128-0,|12||0-0-0
+1,445,443,441,1,0,0,0,0,128,0,-1--1--1,,1|(337,-430)|
+1,446,444,441,1,0,0,0,0,128,0,-1--1--1,,1|(505,-413)|
+10,447,Total Energy Supply,1718,-9,41,19,8,3,0,0,0,0,0,0
+10,448,"Available resources from stocks - Oil",-17,516,62,19,8,3,0,0,0,0,0,0
+1,449,130,448,0,0,0,0,0,128,0,-1--1--1,,1|(-20,447)|
+1,450,158,448,0,0,0,0,0,128,0,-1--1--1,,1|(101,536)|
+10,451,"Available resources from stocks - Coal",112,1402,62,19,8,3,0,0,0,0,0,0
+1,452,225,451,0,0,0,0,0,128,0,-1--1--1,,1|(61,1293)|
+1,453,253,451,0,0,0,0,0,128,0,-1--1--1,,1|(181,1381)|
+10,454,"Available resources from stocks - Biofuels",104,2546,70,19,8,3,0,0,0,0,0,0
+1,455,355,454,0,0,0,0,0,128,0,-1--1--1,,1|(90,2464)|
+1,456,376,454,0,0,0,0,0,128,0,-1--1--1,,1|(212,2555)|
+10,457,Available Gas,1476,-159,53,11,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+10,458,"Available resources from stocks - Biofuels",1484,89,75,19,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+10,459,"Available resources from stocks - Coal",1479,-41,67,19,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+10,460,"Available resources from stocks - Oil",1472,-107,67,19,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+1,461,460,447,0,0,0,0,0,128,0,-1--1--1,,1|(1591,-60)|
+1,462,457,447,0,0,0,0,0,128,0,-1--1--1,,1|(1584,-92)|
+1,463,459,447,0,0,0,0,0,128,0,-1--1--1,,1|(1604,-25)|
+1,464,458,447,0,0,0,0,0,128,0,-1--1--1,,1|(1596,41)|
+10,465,"Extraction capacity installed - other Renewables",1484,161,66,28,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+10,466,"Extraction capacity installed- Nuclear",1470,22,66,19,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+1,467,466,447,0,0,0,0,0,128,0,-1--1--1,,1|(1599,5)|
+1,468,465,447,0,0,0,0,0,128,0,-1--1--1,,1|(1600,75)|
+10,469,"Energy Demand - Gas",1119,-360,56,19,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+10,470,Gas Shortage,786,-315,43,11,8,3,0,4,0,0,0,0,-1--1--1,255-160-0,|12||0-0-0
+1,471,441,470,1,0,0,0,0,128,0,-1--1--1,,1|(620,-290)|
+1,472,469,470,1,0,0,0,0,128,0,-1--1--1,,1|(961,-296)|
+10,473,"Ideal Energy Demand Distribution - Gas",-736,-949,74,19,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+10,474,"Current Energy Supply Distribution - Gas",-934,-948,78,19,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+1,475,474,28,0,0,0,0,0,128,0,-1--1--1,,1|(-840,-883)|
+1,476,473,28,0,0,0,0,0,128,0,-1--1--1,,1|(-736,-885)|
+10,477,"Relative Shortage - Gas",179,-554,56,19,8,3,0,0,0,0,0,0
+1,478,470,477,1,0,0,0,0,128,0,-1--1--1,,1|(581,-559)|
+1,479,441,477,1,0,0,0,0,128,0,-1--1--1,,1|(191,-464)|
+10,480,One Year,-600,-838,41,11,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+1,481,480,28,0,0,0,0,0,128,0,-1--1--1,,1|(-657,-826)|
+1,482,477,41,0,0,0,0,0,128,0,-1--1--1,,1|(99,-566)|
+10,483,One Year,27,-503,41,11,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+1,484,483,41,0,0,0,0,0,128,0,-1--1--1,,1|(16,-532)|
+10,485,"Energy Demand - Oil",644,289,56,19,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+1,486,485,149,1,0,0,0,0,128,0,-1--1--1,,1|(297,335)|
+1,487,485,157,1,0,0,0,0,128,0,-1--1--1,,1|(355,450)|
+10,488,Oil Shortages,641,519,43,11,8,3,0,0,0,0,0,0
+1,489,485,488,0,0,0,0,0,128,0,-1--1--1,,1|(642,401)|
+1,490,448,488,1,0,0,0,0,128,0,-1--1--1,,1|(299,609)|
+10,491,"Relative Shortages - Oil",453,145,49,19,8,3,0,0,0,0,0,0
+1,492,488,491,0,0,0,0,0,128,0,-1--1--1,,1|(552,342)|
+1,493,448,491,0,0,0,0,0,128,0,-1--1--1,,1|(212,334)|
+1,494,491,110,0,0,0,0,0,128,0,-1--1--1,,1|(176,156)|
+10,495,One Year,38,139,41,11,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+1,496,495,110,0,0,0,0,0,128,0,-1--1--1,,1|(-28,150)|
+10,497,"Current Energy Supply Distribution - Oil",-972,-116,78,19,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+10,498,"Ideal Energy Demand Distribution - Oil",-790,-113,74,19,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+1,499,497,96,0,0,0,0,0,128,0,-1--1--1,,1|(-924,-90)|
+1,500,498,96,0,0,0,0,0,128,0,-1--1--1,,1|(-820,-89)|
+10,501,One Year,-730,-63,41,11,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+1,502,501,96,0,0,0,0,0,128,0,-1--1--1,,1|(-786,-61)|
+10,503,"Energy Demand - Coal",541,1198,56,19,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+1,504,503,244,0,0,0,0,0,128,0,-1--1--1,,1|(381,1203)|
+1,505,503,252,0,0,0,0,0,128,0,-1--1--1,,1|(401,1236)|
+10,506,Coal Shortage,481,1345,49,11,8,3,0,0,0,0,0,0
+1,507,451,506,0,0,0,0,0,128,0,-1--1--1,,1|(296,1373)|
+1,508,503,506,0,0,0,0,0,128,0,-1--1--1,,1|(512,1269)|
+10,509,Relative Coal Shortage,438,995,43,19,8,3,0,0,0,0,0,0
+1,510,506,509,0,0,0,0,0,128,0,-1--1--1,,1|(460,1180)|
+1,511,451,509,0,0,0,0,0,128,0,-1--1--1,,1|(270,1203)|
+1,512,509,205,0,0,0,0,0,128,0,-1--1--1,,1|(186,987)|
+10,513,One Year,37,947,41,11,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+1,514,513,205,0,0,0,0,0,128,0,-1--1--1,,1|(-14,958)|
+10,515,"Ideal Energy Demand Distribution - Coal",-1047,685,74,19,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+10,516,"Current Energy Supply Distribution - Coal",-831,660,78,19,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+10,517,One Year,-706,714,41,11,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+1,518,515,191,0,0,0,0,0,128,0,-1--1--1,,1|(-945,718)|
+1,519,516,191,0,0,0,0,0,128,0,-1--1--1,,1|(-834,700)|
+1,520,517,191,0,0,0,0,0,128,0,-1--1--1,,1|(-760,730)|
+10,521,"Ideal Energy Demand Distribution - Nuclear",-1007,1459,74,19,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+10,522,"Current Energy Supply Distribution - Nuclear",-820,1472,78,19,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+10,523,One Year,-766,1512,41,11,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+1,524,521,286,0,0,0,0,0,128,0,-1--1--1,,1|(-950,1505)|
+1,525,522,286,0,0,0,0,0,128,0,-1--1--1,,1|(-847,1510)|
+1,526,523,286,0,0,0,0,0,128,0,-1--1--1,,1|(-808,1529)|
+10,527,"Energy Demand - Nuclear",658,1659,61,19,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+10,528,Nuclear Shortage,486,1770,55,11,8,3,0,0,0,0,0,0
+1,529,259,528,0,0,0,0,0,128,0,-1--1--1,,1|(120,1715)|
+1,530,527,528,0,0,0,0,0,128,0,-1--1--1,,1|(571,1714)|
+10,531,"Relative Shortage - Nuclear",168,1807,61,19,8,3,0,0,0,0,0,0
+1,532,259,531,0,0,0,0,0,128,0,-1--1--1,,1|(-39,1734)|
+1,533,528,531,0,0,0,0,0,128,0,-1--1--1,,1|(336,1786)|
+10,534,One Year,-25,1806,41,11,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+1,535,531,302,0,0,0,0,0,128,0,-1--1--1,,1|(17,1797)|
+1,536,534,302,0,0,0,0,0,128,0,-1--1--1,,1|(-69,1799)|
+10,537,One Year,-666,1898,41,11,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+10,538,"Ideal Energy Demand Distribution - Biofuels",-799,1842,74,19,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+10,539,"Current Energy Supply Distribution - Biofuels",-967,1879,78,19,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+1,540,539,334,0,0,0,0,0,128,0,-1--1--1,,1|(-873,1913)|
+1,541,538,334,0,0,0,0,0,128,0,-1--1--1,,1|(-784,1890)|
+1,542,537,334,0,0,0,0,0,128,0,-1--1--1,,1|(-702,1918)|
+10,543,"Energy Demand - Biofuels",593,2415,61,19,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+1,544,543,370,0,0,0,0,0,128,0,-1--1--1,,1|(444,2413)|
+1,545,543,375,0,0,0,0,0,128,0,-1--1--1,,1|(465,2444)|
+10,546,Biofuels Shortage,499,2550,55,11,8,3,0,0,0,0,0,0
+1,547,454,546,0,0,0,0,0,128,0,-1--1--1,,1|(302,2547)|
+1,548,543,546,0,0,0,0,0,128,0,-1--1--1,,1|(547,2480)|
+10,549,Relative Biofuels Shortage,470,2205,53,19,8,3,0,0,0,0,0,0
+1,550,546,549,0,0,0,0,0,128,0,-1--1--1,,1|(485,2388)|
+1,551,454,549,0,0,0,0,0,128,0,-1--1--1,,1|(281,2380)|
+1,552,549,350,0,0,0,0,0,128,0,-1--1--1,,1|(231,2192)|
+10,553,One Year,115,2158,41,11,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+1,554,553,350,0,0,0,0,0,64,0,-1--1--1,,1|(60,2164)|
+10,555,One Year,-682,2662,41,11,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+10,556,"Ideal Energy Demand Distribution - other Renewables",-793,2595,74,28,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+10,557,"Current Energy Supply Distribution - other Renewables",-1007,2632,78,28,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+1,558,557,415,0,0,0,0,0,128,0,-1--1--1,,1|(-901,2693)|
+1,559,556,415,0,0,0,0,0,128,0,-1--1--1,,1|(-795,2671)|
+1,560,555,415,0,0,0,0,0,128,0,-1--1--1,,1|(-729,2699)|
+10,561,"Energy Demand - other Renewables",755,2935,62,19,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+10,562,other Renewables Shortage,446,2985,57,19,8,3,0,0,0,0,0,0
+10,563,Relative other Renewables Shortage,207,3000,69,19,8,3,0,0,0,0,0,0
+1,564,563,431,0,0,0,0,0,128,0,-1--1--1,,1|(85,2990)|
+1,565,388,563,0,0,0,0,0,128,0,-1--1--1,,1|(26,2928)|
+1,566,562,563,0,0,0,0,0,128,0,-1--1--1,,1|(339,2991)|
+1,567,388,562,0,0,0,0,0,128,0,-1--1--1,,1|(141,2919)|
+1,568,561,562,0,0,0,0,0,128,0,-1--1--1,,1|(604,2958)|
+10,569,One Year,-9,3038,41,11,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+1,570,569,431,0,0,0,0,0,64,0,-1--1--1,,1|(-29,3017)|
+10,571,Energy Demand,2069,-10,60,11,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+10,572,Energy Shortage,1896,-6,52,11,8,3,0,0,0,0,0,0
+1,573,571,572,0,0,0,0,0,128,0,-1--1--1,,1|(1985,-9)|
+1,574,447,572,0,0,0,0,0,128,0,-1--1--1,,1|(1794,-9)|
+10,575,Gas to trade,701,-221,40,11,8,3,0,0,0,0,0,0
+1,576,62,575,0,0,0,0,0,128,0,-1--1--1,,1|(312,-284)|
+1,577,469,575,0,0,0,0,0,128,0,-1--1--1,,1|(905,-290)|
+1,578,37,1,0,0,0,0,0,128,1,-1--1--1,,1|(-25,-828)|
+10,579,"Initial Energy stocks - Oil",-137,484,42,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+1,580,579,130,0,0,0,0,0,128,1,-1--1--1,,1|(-94,443)|
+10,581,"Initial Energy stocks - Coal",-109,1295,44,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+1,582,581,225,0,0,0,0,0,128,1,-1--1--1,,1|(-65,1250)|
+10,583,"Initial Energy stocks - Biofuels",-97,2492,64,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+1,584,583,355,0,0,0,0,0,128,1,-1--1--1,,1|(-29,2448)|
+10,585,"Initial mothballed capacity - Gas",226,-872,54,19,8,3,0,2,-1,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+1,586,585,3,0,0,0,0,0,64,1,-1--1--1,,1|(259,-825)|
+10,587,"Initial mothballed capacity - Oil",93,-138,54,19,8,3,0,2,-1,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+1,588,587,71,0,0,0,0,0,64,1,-1--1--1,,1|(130,-82)|
+10,589,"Initial mothballed capacity - Coal",101,672,54,19,8,3,0,2,-1,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+1,590,589,166,0,0,0,0,0,64,1,-1--1--1,,1|(144,728)|
+10,591,"Initial Undiscovered resources - Gas",-888,-395,64,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+1,592,591,46,0,0,0,0,0,128,1,-1--1--1,,1|(-791,-383)|
+10,593,"Initial Undiscovered resources - Oil",-1024,366,64,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+1,594,593,115,0,0,0,0,0,128,1,-1--1--1,,1|(-923,374)|
+10,595,"Initial Undiscovered resources - Coal",-1006,1147,64,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+1,596,595,210,0,0,0,0,0,128,1,-1--1--1,,1|(-899,1168)|
+\\\---/// Sketch information - do not modify anything except names
+V300  Do not put anything below this section - it will be ignored
+*Energy Demand
+$192-192-192,0,Times New Roman|12||0-0-0|0-0-0|0-0-255|-1--1--1|-1--1--1|96,96,75,0
+10,1,GDP,813,-274,40,20,3,3,0,0,0,0,0,0
+10,2,Energy Intensity GDP,1799,-2,82,35,3,131,0,0,0,0,0,0
+12,3,48,2135,-13,10,8,0,3,0,0,-1,0,0,0
+1,4,6,3,4,0,0,22,0,0,0,-1--1--1,,1|(2070,-16)|
+1,5,6,2,100,0,0,22,0,0,0,-1--1--1,,1|(1942,-16)|
+11,6,48,2010,-16,6,8,34,3,0,0,1,0,0,0
+10,7,Decrease Energy Intensity GDP,2010,11,55,19,40,3,0,0,-1,0,0,0
+12,8,48,533,-272,10,8,0,3,0,0,-1,0,0,0
+1,9,11,1,4,0,0,22,0,0,0,-1--1--1,,1|(718,-272)|
+1,10,11,8,100,0,0,22,0,0,0,-1--1--1,,1|(597,-272)|
+11,11,48,658,-272,6,8,34,3,0,0,1,0,0,0
+10,12,Increase in GDP,658,-253,52,11,40,3,0,0,-1,0,0,0
+10,13,Energy Demand,791,141,51,11,8,3,0,0,0,0,0,0
+10,14,Initial GDP,805,-322,36,11,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,15,Initial Energy Intensity GDP,1796,-74,45,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-192-255
+10,16,Autonomous Economic Growth,659,-179,58,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,17,decrease factor,2017,-98,49,11,8,3,0,0,0,0,0,0
+10,18,One Year,790,219,32,11,8,3,0,0,0,0,0,0
+1,19,16,12,0,0,0,0,0,128,0,-1--1--1,,1|(658,-213)|
+1,20,14,1,0,0,0,0,0,128,1,-1--1--1,,1|(806,-309)|
+1,21,15,2,0,0,0,0,0,128,1,-1--1--1,,1|(1796,-52)|
+1,22,17,7,0,0,0,0,0,128,0,-1--1--1,,1|(2014,-54)|
+1,23,2,7,0,0,0,0,0,128,0,-1--1--1,,1|(1911,6)|
+1,24,2,13,0,0,0,0,0,128,0,-1--1--1,,1|(1286,71)|
+1,25,1,13,0,0,0,0,0,128,0,-1--1--1,,1|(801,-68)|
+1,26,1,12,1,0,0,0,0,128,0,-1--1--1,,1|(745,-231)|
+1,27,18,13,0,0,0,0,0,128,0,-1--1--1,,1|(790,187)|
+10,28,"Current Energy Supply Distribution - Gas",12,321,73,19,8,3,0,0,0,0,0,0
+10,29,"Current Energy Supply Distribution - Oil",12,405,73,19,8,3,0,0,0,0,0,0
+10,30,"Current Energy Supply Distribution - Coal",17,486,73,19,8,3,0,0,0,0,0,0
+10,31,"Current Energy Supply Distribution - Nuclear",23,573,73,19,8,3,0,0,0,0,0,0
+10,32,"Current Energy Supply Distribution - Biofuels",16,643,73,19,8,3,0,0,0,0,0,0
+10,33,"Current Energy Supply Distribution - other Renewables",21,728,73,28,8,3,0,0,0,0,0,0
+10,34,Available Gas,-280,339,53,11,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+10,35,"Available resources from stocks - Biofuels",-272,636,75,19,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+10,36,"Available resources from stocks - Coal",-280,483,67,19,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+10,37,"Available resources from stocks - Oil",-276,398,67,19,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+10,38,"Extraction capacity installed - other Renewables",-276,731,66,28,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+10,39,"Extraction capacity installed- Nuclear",-276,566,66,19,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+10,40,Total Energy Supply,-532,521,46,19,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+1,41,34,28,0,0,0,0,0,128,0,-1--1--1,,1|(-151,330)|
+1,42,40,28,1,0,0,0,0,128,0,-1--1--1,,1|(-341,328)|
+1,43,40,29,1,0,0,0,0,128,0,-1--1--1,,1|(-299,438)|
+1,44,40,30,1,0,0,0,0,128,0,-1--1--1,,1|(-276,523)|
+1,45,40,31,1,0,0,0,0,128,0,-1--1--1,,1|(-278,603)|
+1,46,40,32,1,0,0,0,0,128,0,-1--1--1,,1|(-286,680)|
+1,47,40,33,1,0,0,0,0,128,0,-1--1--1,,1|(-292,780)|
+1,48,37,29,0,0,0,0,0,128,0,-1--1--1,,1|(-142,400)|
+1,49,36,30,0,0,0,0,0,128,0,-1--1--1,,1|(-142,483)|
+1,50,39,31,0,0,0,0,0,128,0,-1--1--1,,1|(-137,568)|
+1,51,35,32,0,0,0,0,0,128,0,-1--1--1,,1|(-134,638)|
+1,52,38,33,0,0,0,0,0,128,0,-1--1--1,,1|(-138,729)|
+10,53,"Ideal Energy Demand Distribution - Gas",1510,310,69,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||255-0-255
+10,54,"Ideal Energy Demand Distribution - Oil",1513,380,69,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||255-0-255
+10,55,"Ideal Energy Demand Distribution - Coal",1518,461,69,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||255-0-255
+10,56,"Ideal Energy Demand Distribution - Nuclear",1518,550,69,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||255-0-255
+10,57,"Ideal Energy Demand Distribution - Biofuels",1515,630,69,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||255-0-255
+10,58,"Ideal Energy Demand Distribution - other Renewables",1521,712,69,28,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||255-0-255
+10,59,"Energy Demand - Gas",1730,336,57,19,8,3,17,0,0,0,0,0
+10,60,"Energy Demand - Oil",1676,408,57,19,8,3,1,0,0,0,0,0
+10,61,"Energy Demand - Coal",1671,495,57,19,8,3,1,0,0,0,0,0
+10,62,"Energy Demand - Nuclear",1680,578,57,19,8,3,1,0,0,0,0,0
+10,63,"Energy Demand - Biofuels",1705,645,57,19,8,3,1,0,0,0,0,0
+10,64,"Energy Demand - other Renewables",1712,739,57,19,8,3,1,0,0,0,0,0
+10,65,Total Energy Supply Distribution,312,789,65,19,8,3,1,0,0,0,0,0
+1,66,28,65,0,1,0,0,0,128,0,-1--1--1,,1|(157,549)|
+1,67,29,65,0,1,0,0,0,128,0,-1--1--1,,1|(157,591)|
+1,68,30,65,0,1,0,0,0,128,0,-1--1--1,,1|(159,632)|
+1,69,31,65,0,1,0,0,0,128,0,-1--1--1,,1|(161,676)|
+1,70,32,65,0,1,0,0,0,128,0,-1--1--1,,1|(157,712)|
+1,71,33,65,0,1,0,0,0,128,0,-1--1--1,,1|(163,757)|
+10,72,Factor limiting Economic Growth due to Energy Shortage,482,-456,79,28,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,73,Limitations Economic Growth due to Energy Shortage,722,-456,71,28,8,3,0,0,0,0,0,0
+1,74,72,73,0,0,0,0,0,128,0,-1--1--1,,1|(599,-456)|
+1,75,73,12,0,0,0,0,0,128,0,-1--1--1,,1|(689,-352)|
+10,76,Future Effect of Shortage on Decoupling,1454,-384,75,45,3,131,0,0,0,0,0,0
+10,77,Effect of Supply Shortage on Decoupling,1823,-386,73,45,3,131,0,0,0,0,0,0
+1,78,80,77,4,0,0,22,0,0,0,-1--1--1,,1|(1696,-385)|
+1,79,80,76,100,0,0,22,0,0,0,-1--1--1,,1|(1580,-385)|
+11,80,396,1637,-385,6,8,34,3,0,0,1,0,0,0
+10,81,Decoupling Effect Materializing,1637,-358,57,19,40,3,0,0,-1,0,0,0
+12,82,48,1183,-394,10,8,0,3,0,0,-1,0,0,0
+1,83,85,76,4,0,0,22,0,0,0,-1--1--1,,1|(1335,-394)|
+1,84,85,82,100,0,0,22,0,0,0,-1--1--1,,1|(1236,-394)|
+11,85,48,1286,-394,6,8,34,3,0,0,1,0,0,0
+10,86,Future Shortage Effect,1286,-367,52,19,40,3,0,0,-1,0,0,0
+12,87,48,2090,-387,10,8,0,3,0,0,-1,0,0,0
+1,88,90,87,4,0,0,22,0,0,0,-1--1--1,,1|(2050,-389)|
+1,89,90,77,100,0,0,22,0,0,0,-1--1--1,,1|(1952,-389)|
+11,90,48,2015,-389,6,8,34,3,0,0,1,0,0,0
+10,91,Decrease in Shortage Effect,2015,-362,49,19,40,3,0,0,-1,0,0,0
+10,92,Effect of Energy Shortage on Future Decoupling,1279,-478,82,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,93,Initial Shortage Effect on Decoupling,1454,-477,68,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,94,Delay Time Decoupling due to Shortage,1785,-173,74,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,95,Delay Order Decoupling due to Shortage,1601,-262,58,28,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+1,96,92,86,0,0,0,0,0,128,0,-1--1--1,,1|(1281,-429)|
+1,97,93,76,0,0,0,0,0,128,1,-1--1--1,,1|(1454,-450)|
+1,98,77,91,0,0,0,0,0,128,0,-1--1--1,,1|(1924,-373)|
+1,99,94,91,1,0,0,0,0,128,0,-1--1--1,,1|(1925,-227)|
+1,100,94,81,0,0,0,0,0,128,0,-1--1--1,,1|(1715,-260)|
+1,101,94,86,1,0,0,0,0,128,0,-1--1--1,,1|(1489,-230)|
+1,102,86,81,1,0,0,0,0,128,0,-1--1--1,,1|(1479,-317)|
+1,103,95,81,0,0,0,0,0,128,1,-1--1--1,,1|(1617,-307)|
+10,104,Relative Supply Shortage,1006,-381,50,19,8,3,0,0,0,0,0,0
+10,105,Energy Shortage,1107,-455,34,19,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+1,106,105,104,0,0,0,0,0,64,0,-1--1--1,,1|(1062,-422)|
+10,107,Total Energy Supply,988,-463,46,19,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+1,108,104,73,0,0,0,0,0,128,0,-1--1--1,,1|(881,-413)|
+1,109,104,86,0,0,0,0,0,128,0,-1--1--1,,1|(1138,-374)|
+1,110,76,81,0,0,0,0,0,64,1,-1--1--1,,1|(1547,-371)|
+1,111,77,17,1,0,0,0,0,128,0,-1--1--1,,1|(2137,-401)|
+1,112,107,104,0,0,0,0,0,128,0,-1--1--1,,1|(995,-428)|
+10,113,Maximum Change in Demand,1205,198,58,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,114,"Ideal Energy Demand - Gas",1195,318,47,19,8,3,0,0,0,0,0,0
+1,115,13,114,0,0,0,0,0,128,0,-1--1--1,,1|(977,222)|
+1,116,53,114,0,0,0,0,0,128,0,-1--1--1,,1|(1348,313)|
+10,117,"New Energy Demand - Gas",796,320,47,19,8,3,0,0,0,0,0,0
+1,118,113,117,0,0,0,0,0,128,0,-1--1--1,,1|(1002,258)|
+1,119,114,117,0,0,0,0,0,128,0,-1--1--1,,1|(1002,318)|
+10,120,"Ideal Energy Demand - Oil",1190,393,44,19,8,3,0,0,0,0,0,0
+10,121,"Ideal Energy Demand - Coal",1177,476,50,19,8,3,0,0,0,0,0,0
+10,122,"Ideal Energy Demand - Nuclear",1182,557,60,19,8,3,0,0,0,0,0,0
+10,123,"Ideal Energy Demand - Biofuels",1187,640,60,19,8,3,0,0,0,0,0,0
+10,124,"Ideal Energy Demand - other Renewables",1197,718,74,19,8,3,0,0,0,0,0,0
+1,125,13,121,0,0,0,0,0,128,0,-1--1--1,,1|(973,299)|
+1,126,13,120,0,0,0,0,0,128,0,-1--1--1,,1|(977,259)|
+1,127,13,123,0,0,0,0,0,128,0,-1--1--1,,1|(980,381)|
+1,128,13,122,0,0,0,0,0,128,0,-1--1--1,,1|(977,339)|
+1,129,13,124,0,0,0,0,0,128,0,-1--1--1,,1|(986,419)|
+1,130,54,120,0,0,0,0,0,128,0,-1--1--1,,1|(1345,386)|
+1,131,55,121,0,0,0,0,0,128,0,-1--1--1,,1|(1344,468)|
+1,132,56,122,0,0,0,0,0,128,0,-1--1--1,,1|(1352,552)|
+1,133,57,123,0,0,0,0,0,128,0,-1--1--1,,1|(1353,634)|
+1,134,58,124,0,0,0,0,0,128,0,-1--1--1,,1|(1368,714)|
+10,135,"New Energy Demand - Oil",799,397,44,19,8,3,0,0,0,0,0,0
+10,136,"New Energy Demand - Coal",795,478,50,19,8,3,0,0,0,0,0,0
+10,137,"New Energy Demand - Nuclear",802,563,60,19,8,3,0,0,0,0,0,0
+10,138,"New Energy Demand - Biofuels",804,650,60,19,8,3,0,0,0,0,0,0
+10,139,"New Energy Demand - other Renewables",812,727,74,19,8,3,0,0,0,0,0,0
+1,140,113,135,0,0,0,0,0,128,0,-1--1--1,,1|(1008,294)|
+1,141,113,136,0,0,0,0,0,128,0,-1--1--1,,1|(1005,334)|
+1,142,113,137,0,0,0,0,0,128,0,-1--1--1,,1|(1008,375)|
+1,143,113,138,0,0,0,0,0,128,0,-1--1--1,,1|(1009,418)|
+1,144,113,139,0,0,0,0,0,128,0,-1--1--1,,1|(1012,456)|
+1,145,121,136,0,0,0,0,0,128,0,-1--1--1,,1|(993,476)|
+1,146,120,135,0,0,0,0,0,128,0,-1--1--1,,1|(1001,394)|
+1,147,123,138,0,0,0,0,0,128,0,-1--1--1,,1|(1002,644)|
+1,148,122,137,0,0,0,0,0,128,0,-1--1--1,,1|(998,559)|
+1,149,124,139,0,0,0,0,0,128,0,-1--1--1,,1|(1011,721)|
+10,150,Total New Energy Demand,345,193,59,19,8,3,0,0,0,0,0,0
+1,151,139,150,0,0,0,0,0,128,0,-1--1--1,,1|(583,465)|
+1,152,138,150,0,0,0,0,0,128,0,-1--1--1,,1|(579,426)|
+1,153,137,150,0,0,0,0,0,128,0,-1--1--1,,1|(578,382)|
+1,154,136,150,0,0,0,0,0,128,0,-1--1--1,,1|(575,339)|
+1,155,135,150,0,0,0,0,0,128,0,-1--1--1,,1|(578,297)|
+1,156,117,150,0,0,0,0,0,128,0,-1--1--1,,1|(583,259)|
+10,157,"Current Energy Demand - Gas",335,326,49,19,8,3,0,0,0,0,0,0
+10,158,"Current Energy Demand - Oil",328,400,49,19,8,3,0,0,0,0,0,0
+10,159,"Current Energy Demand - Coal",320,476,50,19,8,3,0,0,0,0,0,0
+10,160,"Current Energy Demand - Nuclear",325,562,60,19,8,3,0,0,0,0,0,0
+10,161,"Current Energy Demand - Biofuels",327,642,60,19,8,3,0,0,0,0,0,0
+10,162,"Current Energy Demand - other Renewables",344,728,78,19,8,3,0,0,0,0,0,0
+1,163,28,157,0,0,0,0,0,128,0,-1--1--1,,1|(178,323)|
+1,164,29,158,0,0,0,0,0,128,0,-1--1--1,,1|(175,402)|
+1,165,30,159,0,0,0,0,0,128,0,-1--1--1,,1|(173,480)|
+1,166,31,160,0,0,0,0,0,128,0,-1--1--1,,1|(173,567)|
+1,167,32,161,0,0,0,0,0,128,0,-1--1--1,,1|(171,642)|
+1,168,33,162,0,0,0,0,0,128,0,-1--1--1,,1|(173,728)|
+1,169,13,157,0,0,0,0,0,128,0,-1--1--1,,1|(578,226)|
+1,170,13,158,0,0,0,0,0,128,0,-1--1--1,,1|(572,263)|
+1,171,13,159,0,0,0,0,0,128,0,-1--1--1,,1|(566,300)|
+1,172,13,160,0,0,0,0,0,128,0,-1--1--1,,1|(567,342)|
+1,173,13,161,0,0,0,0,0,128,0,-1--1--1,,1|(567,382)|
+1,174,13,162,0,0,0,0,0,128,0,-1--1--1,,1|(574,424)|
+1,175,157,117,0,0,0,0,0,128,0,-1--1--1,,1|(559,323)|
+1,176,158,135,0,0,0,0,0,128,0,-1--1--1,,1|(559,398)|
+1,177,159,136,0,0,0,0,0,128,0,-1--1--1,,1|(550,476)|
+1,178,160,137,0,0,0,0,0,128,0,-1--1--1,,1|(556,562)|
+1,179,161,138,0,0,0,0,0,128,0,-1--1--1,,1|(558,645)|
+1,180,162,139,0,0,0,0,0,128,0,-1--1--1,,1|(573,727)|
+1,181,117,59,0,17,0,0,0,128,0,-1--1--1,,1|(1251,327)|
+1,182,135,60,0,1,0,0,0,128,0,-1--1--1,,1|(1224,401)|
+1,183,136,61,0,1,0,0,0,128,0,-1--1--1,,1|(1222,485)|
+1,184,137,62,0,1,0,0,0,128,0,-1--1--1,,1|(1235,570)|
+1,185,138,63,0,1,0,0,0,128,0,-1--1--1,,1|(1249,647)|
+1,186,139,64,0,1,0,0,0,128,0,-1--1--1,,1|(1263,732)|
+10,187,"Energy Price - Gas",2696,292,60,11,8,3,0,4,0,0,0,0,-1--1--1,0-128-0,|12||0-0-0
+10,188,"Energy Price - Oil",2705,370,57,11,8,3,0,4,0,0,0,0,-1--1--1,0-128-0,|12||0-0-0
+10,189,"Energy Price - Coal",2698,452,46,19,8,3,0,4,0,0,0,0,-1--1--1,0-128-0,|12||0-0-0
+10,190,"Energy Price - Nuclear",2691,528,46,19,8,3,0,4,0,0,0,0,-1--1--1,0-128-0,|12||0-0-0
+10,191,"Energy Price - Biofuels",2695,598,46,19,8,3,0,4,0,0,0,0,-1--1--1,0-128-0,|12||0-0-0
+10,192,"Energy Price - other Renewables",2698,685,65,19,8,3,0,5,0,0,0,0,0-128-0,0-128-0,|12||0-0-0
+10,193,total ideal demand distribution,1334,857,58,19,8,3,0,0,0,0,0,0
+1,194,53,193,0,1,0,0,0,128,0,-1--1--1,,1|(1424,576)|
+1,195,54,193,0,1,0,0,0,128,0,-1--1--1,,1|(1425,611)|
+1,196,55,193,0,1,0,0,0,128,0,-1--1--1,,1|(1428,652)|
+1,197,56,193,0,1,0,0,0,128,0,-1--1--1,,1|(1429,697)|
+1,198,57,193,0,1,0,0,0,128,0,-1--1--1,,1|(1428,738)|
+1,199,58,193,0,1,0,0,0,128,0,-1--1--1,,1|(1427,784)|
+10,200,"Functional Energy Price - Gas",2338,292,57,19,8,3,0,0,0,0,0,0
+10,201,"Functional Energy Price - Oil",2339,376,57,19,8,3,0,0,0,0,0,0
+10,202,"Functional Energy Price - Coal",2344,459,57,19,8,3,0,0,0,0,0,0
+10,203,"Functional Energy Price - Nuclear",2342,527,57,19,8,3,0,0,0,0,0,0
+10,204,"Functional Energy Price - Biofuels",2348,596,57,19,8,3,0,0,0,0,0,0
+10,205,"Functional Energy Price - other Renewables",2354,671,75,19,8,3,0,0,0,0,0,0
+1,206,187,200,0,0,0,0,0,128,0,-1--1--1,,1|(2523,292)|
+1,207,188,201,0,0,0,0,0,128,0,-1--1--1,,1|(2528,372)|
+1,208,189,202,0,0,0,0,0,128,0,-1--1--1,,1|(2533,454)|
+1,209,190,203,0,0,0,0,0,128,0,-1--1--1,,1|(2529,527)|
+1,210,191,204,0,0,0,0,0,128,0,-1--1--1,,1|(2533,597)|
+1,211,192,205,0,0,0,0,0,128,0,-1--1--1,,1|(2537,678)|
+10,212,Preference for Gas,2079,286,48,19,8,3,0,0,0,0,0,0
+10,213,Preference for Oil,2070,374,56,11,8,3,0,0,0,0,0,0
+10,214,Preference for Coal,2063,440,46,19,8,3,0,0,0,0,0,0
+10,215,Preference for Nuclear,2079,528,46,19,8,3,0,0,0,0,0,0
+10,216,Preference for Biofuels,2073,601,46,19,8,3,0,0,0,0,0,0
+10,217,Preference for other Renewables,2065,677,64,19,8,3,0,0,0,0,0,0
+1,218,200,212,0,0,0,0,0,128,0,-1--1--1,,1|(2210,289)|
+1,219,201,213,0,0,0,0,0,128,0,-1--1--1,,1|(2210,375)|
+1,220,202,214,0,0,0,0,0,128,0,-1--1--1,,1|(2204,450)|
+1,221,203,215,0,0,0,0,0,128,0,-1--1--1,,1|(2212,527)|
+1,222,204,216,0,0,0,0,0,128,0,-1--1--1,,1|(2211,598)|
+1,223,205,217,0,0,0,0,0,128,0,-1--1--1,,1|(2210,673)|
+10,224,total preferences,1969,185,52,19,8,3,0,0,0,0,0,0
+1,225,217,224,0,0,0,0,0,128,0,-1--1--1,,1|(2018,437)|
+1,226,216,224,0,0,0,0,0,128,0,-1--1--1,,1|(2022,399)|
+1,227,215,224,0,0,0,0,0,128,0,-1--1--1,,1|(2026,363)|
+1,228,214,224,0,0,0,0,0,128,0,-1--1--1,,1|(2018,319)|
+1,229,213,224,0,0,0,0,0,128,0,-1--1--1,,1|(2025,289)|
+1,230,212,224,0,0,0,0,0,128,0,-1--1--1,,1|(2029,240)|
+10,231,Normalized Preference Gas,1739,304,67,19,8,3,0,0,0,0,0,0
+10,232,Normalized Preference Oil,1750,365,46,19,8,3,0,0,0,0,0,0
+10,233,Normalized Preference Coal,1744,440,52,19,8,3,0,0,0,0,0,0
+10,234,Normalized Preference Nuclear,1765,524,62,19,8,3,0,0,0,0,0,0
+10,235,Normalized Preference Biofuels,1780,599,62,19,8,3,0,0,0,0,0,0
+10,236,Normalized Preferenced other Renewables,1777,696,78,19,8,3,0,0,0,0,0,0
+1,237,212,231,0,0,0,0,0,128,0,-1--1--1,,1|(1925,293)|
+1,238,213,232,0,0,0,0,0,128,0,-1--1--1,,1|(1911,369)|
+1,239,214,233,0,0,0,0,0,128,0,-1--1--1,,1|(1913,440)|
+1,240,215,234,0,0,0,0,0,128,0,-1--1--1,,1|(1936,526)|
+1,241,216,235,0,0,0,0,0,128,0,-1--1--1,,1|(1941,600)|
+1,242,217,236,0,0,0,0,0,128,0,-1--1--1,,1|(1934,685)|
+1,243,224,231,0,0,0,0,0,128,0,-1--1--1,,1|(1860,241)|
+1,244,224,232,0,0,0,0,0,128,0,-1--1--1,,1|(1864,270)|
+1,245,224,233,0,0,0,0,0,128,0,-1--1--1,,1|(1861,307)|
+1,246,224,234,0,0,0,0,0,128,0,-1--1--1,,1|(1870,348)|
+1,247,224,235,0,0,0,0,0,128,0,-1--1--1,,1|(1877,385)|
+1,248,224,236,0,0,0,0,0,128,0,-1--1--1,,1|(1875,433)|
+1,249,236,58,0,0,0,0,0,128,0,-1--1--1,,1|(1651,703)|
+1,250,235,57,0,0,0,0,0,128,0,-1--1--1,,1|(1657,612)|
+1,251,234,56,0,0,0,0,0,128,0,-1--1--1,,1|(1652,535)|
+1,252,233,55,0,0,0,0,0,128,0,-1--1--1,,1|(1646,448)|
+1,253,232,54,0,0,0,0,0,128,0,-1--1--1,,1|(1649,370)|
+1,254,231,53,0,0,0,0,0,128,0,-1--1--1,,1|(1632,306)|
+10,255,Initial Effect of Supply Shortage on Decoupling,1719,-511,77,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+1,256,255,77,0,0,0,0,0,128,1,-1--1--1,,1|(1755,-466)|
+10,257,CO2 emissions of natural gas,2479,236,62,19,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|0||128-128-128
+10,258,CO2 emissions of Oil,2470,334,54,19,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|0||128-128-128
+10,259,CO2 emmissions of coal,2491,413,59,19,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|0||128-128-128
+10,260,Costs CO2 emmissions,2175,192,55,19,8,3,0,0,0,0,0,0
+1,261,260,200,0,0,0,0,0,128,0,-1--1--1,,1|(2250,238)|
+1,262,260,201,0,0,0,0,0,128,0,-1--1--1,,1|(2251,278)|
+1,263,260,202,0,0,0,0,0,128,0,-1--1--1,,1|(2255,319)|
+1,264,257,200,0,0,0,0,0,128,0,-1--1--1,,1|(2415,261)|
+1,265,258,201,0,0,0,0,0,128,0,-1--1--1,,1|(2412,351)|
+1,266,259,202,0,0,0,0,0,128,0,-1--1--1,,1|(2423,433)|
+\\\---/// Sketch information - do not modify anything except names
+V300  Do not put anything below this section - it will be ignored
+*CO2 emissions
+$192-192-192,0,Times New Roman|12||0-0-0|0-0-0|0-0-255|-1--1--1|-1--1--1|96,96,100,0
+10,1,CO2 emmissions of coal,86,379,55,19,8,3,0,5,0,0,0,0,0-128-0,0-128-0,|0||0-128-255
+10,2,CO2 emissions of natural gas,82,212,57,19,8,3,0,4,0,0,0,0,-1--1--1,0-128-0,|0||0-0-0
+10,3,CO2 emissions of Oil,75,303,49,19,8,3,0,4,0,0,0,0,-1--1--1,0-128-0,|0||0-0-0
+10,4,Available Gas,585,219,53,11,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|0||128-128-128
+10,5,"Energy Demand - Gas",425,135,56,19,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|0||128-128-128
+10,6,"Resource consumption - Oil",430,295,62,19,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|0||128-128-128
+10,7,"Resource consumption - Coal",434,378,68,19,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|0||128-128-128
+10,8,"Resource consumption - Gas",421,220,60,19,8,3,0,0,0,0,0,0
+1,9,4,8,0,0,0,0,0,128,0,-1--1--1,,1|(513,219)|
+1,10,5,8,0,0,0,0,0,128,0,-1--1--1,,1|(423,170)|
+10,11,CO2 emissions,242,295,48,11,8,3,0,0,0,0,0,0
+1,12,8,11,0,0,0,0,0,128,0,-1--1--1,,1|(328,258)|
+1,13,2,11,0,0,0,0,0,128,0,-1--1--1,,1|(162,254)|
+1,14,1,11,0,0,0,0,0,128,0,-1--1--1,,1|(164,336)|
+1,15,7,11,0,0,0,0,0,128,0,-1--1--1,,1|(335,335)|
+1,16,3,11,0,0,0,0,0,128,0,-1--1--1,,1|(152,299)|
+1,17,6,11,0,0,0,0,0,128,0,-1--1--1,,1|(336,295)|
+\\\---/// Sketch information - do not modify anything except names
+V300  Do not put anything below this section - it will be ignored
+*LNG Capacity
+$192-192-192,0,Times New Roman|12||0-0-0|0-0-0|0-0-255|-1--1--1|-1--1--1|96,96,75,0
+///---\\\
+:L<%^E!@
+1:test.vdf
+1:Updatedprices.vdf
+1:new3.vdf
+9:test
+15:0,0,0,0,0,0
+19:5,0
+27:0,
+34:0,
+4:Time
+5:"Deterioration of unused capacity - Gas"
+35:Date
+36:YYYY-MM-DD
+37:2000
+38:1
+39:1
+40:0
+41:0
+42:1
+24:2010
+25:2050
+26:2050

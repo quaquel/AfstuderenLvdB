@@ -1,0 +1,1854 @@
+{UTF-8}
+Changes in fictional prices Nuclear AP=
+	(Fictional prices Nuclear AP-Shadow fictional prices Nuclear AP)/Short term period
+	~	dollar/(bbtu*year)
+	~		|
+
+Energy resource prices Nuclear AP= INTEG (
+	Change in energy resource prices Nuclear AP,
+		Initial energy resource prices Nuclear AP)
+	~	dollar/bbtu
+	~		|
+
+Change in energy resource prices Nuclear ME=
+	Energy resource prices Nuclear ME*Relative change in fictional prices Nuclear ME
+	~	dollar/(bbtu*year)
+	~		|
+
+Change in energy resource prices Gas AF=
+	Energy resource prices Gas AF*Relative change in fictional prices Gas AF
+	~	dollar/(bbtu*year)
+	~		|
+
+Change in energy resource prices Gas AP=
+	Energy resource prices Gas AP*Relative change in fictional prices Gas AP
+	~	dollar/(bbtu*year)
+	~		|
+
+Changes in fictional prices Gas AP=
+	(Fictional prices Gas AP-Shadow fictional prices Gas AP)/Short term period
+	~	dollar/(bbtu*year)
+	~		|
+
+Energy resource prices Gas ME= INTEG (
+	Change in energy resource prices Gas ME,
+		Initial energy resource prices Gas ME)
+	~	dollar/bbtu
+	~		|
+
+Change in energy resource prices Gas ME=
+	Energy resource prices Gas ME*Relative change in fictional prices Gas ME
+	~	dollar/(bbtu*year)
+	~		|
+
+Change in energy resource prices other Renewables AP=
+	Energy resource prices other Renewables AP*Relative change in fictional prices other Renewables AP
+	~	dollar/(bbtu*year)
+	~		|
+
+Changes in fictional prices other Renewables AP=
+	(Fictional prices other Renewables AP-Shadow fictional prices other Renewables AP)/Short term period
+	~	dollar/(bbtu*year)
+	~		|
+
+Energy resource prices other Renewables AP= INTEG (
+	Change in energy resource prices other Renewables AP,
+		Initial energy resource prices other Renewables AP)
+	~	dollar/bbtu
+	~		|
+
+Change in energy resource prices Nuclear AF=
+	Energy resource prices Nuclear AF*Relative change in fictional prices Nuclear AF
+	~	dollar/(bbtu*year)
+	~		|
+
+Change in energy resource prices Nuclear AP=
+	Energy resource prices Nuclear AP*Relative change in fictional prices Nuclear AP
+	~	dollar/(bbtu*year)
+	~		|
+
+Energy resource prices Nuclear AF= INTEG (
+	Change in energy resource prices Nuclear AF,
+		Initial energy resource prices Nuclear AF)
+	~	dollar/bbtu
+	~		|
+
+Fictional prices Nuclear AF=
+	17345.5
+	~	dollar/bbtu
+	~		|
+
+Fictional prices Nuclear AP=
+	17345.5
+	~	dollar/bbtu
+	~		|
+
+Changes in fictional prices Nuclear ME=
+	(Fictional prices Nuclear ME-Shadow fictional prices Nuclear ME)/Short term period
+	~	dollar/(bbtu*year)
+	~		|
+
+Changes in fictional prices Gas AF=
+	(Fictional prices Gas AF-Shadow fictional prices Gas AF)/Short term period
+	~	dollar/(bbtu*year)
+	~		|
+
+Energy resource prices Gas AF= INTEG (
+	Change in energy resource prices Gas AF,
+		Initial energy resource prices Gas AF)
+	~	dollar/bbtu
+	~		|
+
+Energy resource prices Gas AP= INTEG (
+	Change in energy resource prices Gas AP,
+		Initial energy resource prices Gas AP)
+	~	dollar/bbtu
+	~		|
+
+Change in energy resource prices other Renewables AF=
+	Energy resource prices other Renewables AF*Relative change in fictional prices other Renewables AF
+	~	dollar/(bbtu*year)
+	~		|
+
+Changes in fictional prices Gas ME=
+	(Fictional prices Gas ME-Shadow fictional prices Gas ME)/Short term period
+	~	dollar/(bbtu*year)
+	~		|
+
+Relative change in fictional prices Gas ME=
+	ZIDZ(Changes in fictional prices Gas ME, Shadow fictional prices Gas ME)
+	~	1/year
+	~		|
+
+Fictional prices Gas ME=
+	6700.64
+	~	dollar/bbtu
+	~		|
+
+Change in energy resource prices other Renewables ME=
+	Energy resource prices other Renewables ME*Relative change in fictional prices other Renewables ME
+	~	dollar/(bbtu*year)
+	~		|
+
+Changes in fictional prices Nuclear AF=
+	(Fictional prices Nuclear AF-Shadow fictional prices Nuclear AF)/Short term period
+	~	dollar/(bbtu*year)
+	~		|
+
+Energy resource prices other Renewables ME= INTEG (
+	Change in energy resource prices other Renewables ME,
+		Initial energy resource prices other Renewables ME)
+	~	dollar/bbtu
+	~		|
+
+Fictional prices other Renewables ME=
+	6711.62
+	~	dollar/bbtu
+	~		|
+
+Initial energy resource prices Nuclear AF=
+	17345.5
+	~	dollar/bbtu
+	~		|
+
+Initial energy resource prices Nuclear AP=
+	17345.5
+	~	dollar/bbtu
+	~		|
+
+Energy resource prices Nuclear ME= INTEG (
+	Change in energy resource prices Nuclear ME,
+		Initial energy resource prices Nuclear ME)
+	~	dollar/bbtu
+	~		|
+
+Fictional prices Nuclear ME=
+	17345.5
+	~	dollar/bbtu
+	~		|
+
+Fictional prices Gas AF=
+	6700.64
+	~	dollar/bbtu
+	~		|
+
+Fictional prices Gas AP=
+	6700.64
+	~	dollar/bbtu
+	~		|
+
+Changes in fictional prices other Renewables AF=
+	(Fictional prices other Renewables AF-Shadow fictional prices other Renewables AF)/Short term period
+	~	dollar/(bbtu*year)
+	~		|
+
+Energy resource prices other Renewables AF= INTEG (
+	Change in energy resource prices other Renewables AF,
+		Initial energy resource prices other Renewables AF)
+	~	dollar/bbtu
+	~		|
+
+Fictional prices other Renewables AF=
+	6711.62
+	~	dollar/bbtu
+	~		|
+
+Fictional prices other Renewables AP=
+	6711.62
+	~	dollar/bbtu
+	~		|
+
+Changes in fictional prices other Renewables ME=
+	(Fictional prices other Renewables ME-Shadow fictional prices other Renewables ME)/Short term period
+	~	dollar/(bbtu*year)
+	~		|
+
+Initial shadow fictional prices other Renewables AP=
+	6711.62
+	~	dollar/bbtu
+	~		|
+
+Relative change in fictional prices other Renewables AP=
+	ZIDZ(Changes in fictional prices other Renewables AP, Shadow fictional prices other Renewables AP\
+		)
+	~	1/year
+	~		|
+
+Initial energy resource prices other Renewables ME=
+	21982
+	~	dollar/bbtu
+	~		|
+
+Initial shadow fictional prices Nuclear AF=
+	17345.5
+	~	dollar/bbtu
+	~		|
+
+Initial shadow fictional prices Nuclear AP=
+	17345.5
+	~	dollar/bbtu
+	~		|
+
+Relative change in fictional prices Nuclear AP=
+	ZIDZ(Changes in fictional prices Nuclear AP, Shadow fictional prices Nuclear AP)
+	~	1/year
+	~		|
+
+Initial energy resource prices Nuclear ME=
+	17345.5
+	~	dollar/bbtu
+	~		|
+
+Initial energy resource prices Gas AF=
+	11000
+	~	dollar/bbtu
+	~		|
+
+Initial energy resource prices Gas AP=
+	11000
+	~	dollar/bbtu
+	~		|
+
+Initial shadow fictional prices Gas AP=
+	6700.64
+	~	dollar/bbtu
+	~		|
+
+Relative change in fictional prices Gas AP=
+	ZIDZ(Changes in fictional prices Gas AP, Shadow fictional prices Gas AP)
+	~	1/year
+	~		|
+
+Initial energy resource prices Gas ME=
+	11000
+	~	dollar/bbtu
+	~		|
+
+Initial energy resource prices other Renewables AP=
+	21982
+	~	dollar/bbtu
+	~		|
+
+Shadow fictional prices Gas ME= INTEG (
+	Changes in fictional prices Gas ME,
+		Initial shadow fictional prices Gas ME)
+	~	dollar/bbtu
+	~		|
+
+Shadow fictional prices other Renewables AF= INTEG (
+	Changes in fictional prices other Renewables AF,
+		Initial shadow fictional prices other Renewables AF)
+	~	dollar/bbtu
+	~		|
+
+Shadow fictional prices other Renewables AP= INTEG (
+	Changes in fictional prices other Renewables AP,
+		Initial shadow fictional prices other Renewables AP)
+	~	dollar/bbtu
+	~		|
+
+Initial shadow fictional prices other Renewables ME=
+	6711.62
+	~	dollar/bbtu
+	~		|
+
+Relative change in fictional prices Nuclear AF=
+	ZIDZ(Changes in fictional prices Nuclear AF, Shadow fictional prices Nuclear AF)
+	~	1/year
+	~		|
+
+Shadow fictional prices Nuclear AF= INTEG (
+	Changes in fictional prices Nuclear AF,
+		Initial shadow fictional prices Nuclear AF)
+	~	dollar/bbtu
+	~		|
+
+Shadow fictional prices Nuclear AP= INTEG (
+	Changes in fictional prices Nuclear AP,
+		Initial shadow fictional prices Nuclear AP)
+	~	dollar/bbtu
+	~		|
+
+Initial shadow fictional prices Nuclear ME=
+	17345.5
+	~	dollar/bbtu
+	~		|
+
+Initial shadow fictional prices Gas AF=
+	6700.64
+	~	dollar/bbtu
+	~		|
+
+Relative change in fictional prices Gas AF=
+	ZIDZ(Changes in fictional prices Gas AF, Shadow fictional prices Gas AF)
+	~	1/year
+	~		|
+
+Shadow fictional prices Gas AF= INTEG (
+	Changes in fictional prices Gas AF,
+		Initial shadow fictional prices Gas AF)
+	~	dollar/bbtu
+	~		|
+
+Initial energy resource prices other Renewables AF=
+	21982
+	~	dollar/bbtu
+	~		|
+
+Initial shadow fictional prices Gas ME=
+	6700.64
+	~	dollar/bbtu
+	~		|
+
+Relative change in fictional prices other Renewables AF=
+	ZIDZ(Changes in fictional prices other Renewables AF, Shadow fictional prices other Renewables AF\
+		)
+	~	1/year
+	~		|
+
+Relative change in fictional prices other Renewables ME=
+	ZIDZ(Changes in fictional prices other Renewables ME, Shadow fictional prices other Renewables ME\
+		)
+	~	1/year
+	~		|
+
+Relative change in fictional prices Nuclear ME=
+	ZIDZ(Changes in fictional prices Nuclear ME, Shadow fictional prices Nuclear ME)
+	~	1/year
+	~		|
+
+Shadow fictional prices Nuclear ME= INTEG (
+	Changes in fictional prices Nuclear ME,
+		Initial shadow fictional prices Nuclear ME)
+	~	dollar/bbtu
+	~		|
+
+Shadow fictional prices other Renewables ME= INTEG (
+	Changes in fictional prices other Renewables ME,
+		Initial shadow fictional prices other Renewables ME)
+	~	dollar/bbtu
+	~		|
+
+Initial shadow fictional prices other Renewables AF=
+	6711.62
+	~	dollar/bbtu
+	~		|
+
+Shadow fictional prices Gas AP= INTEG (
+	Changes in fictional prices Gas AP,
+		Initial shadow fictional prices Gas AP)
+	~	dollar/bbtu
+	~		|
+
+Change in energy resource prices Biofuels=
+	Energy resource prices Biofuels*Relative change in fictional prices Biofuels
+	~	dollar/(bbtu*year)
+	~		|
+
+Change in energy resource prices Coal=
+	Energy resource prices Coal*Relative change in fictional prices Coal
+	~	dollar/(bbtu*year)
+	~		|
+
+Change in energy resource prices Gas NA=
+	Energy resource prices Gas NA*Relative change in fictional prices Gas NA
+	~	dollar/(bbtu*year)
+	~		|
+
+Change in energy resource prices Gas SCA=
+	Energy resource prices Gas SCA*Relative change in fictional prices Gas SCA
+	~	dollar/(bbtu*year)
+	~		|
+
+Change in energy resource prices Gas E=
+	Energy resource prices Gas E*Relative change in fictional prices Gas E
+	~	dollar/(bbtu*year)
+	~		|
+
+Change in energy resource prices Gas CIS=
+	Energy resource prices Gas CIS*Relative change in fictional prices Gas CIS
+	~	dollar/(bbtu*year)
+	~		|
+
+Change in energy resource prices Gas=
+	Energy resource prices Gas*Relative change in fictional prices Gas
+	~	dollar/(bbtu*year)
+	~		|
+
+Change in energy resource prices Nuclear NA=
+	Energy resource prices Nuclear NA*Relative change in fictional prices Nuclear NA
+	~	dollar/(bbtu*year)
+	~		|
+
+Change in energy resource prices Nuclear SCA=
+	Energy resource prices Nuclear SCA*Relative change in fictional prices Nuclear SCA
+	~	dollar/(bbtu*year)
+	~		|
+
+Change in energy resource prices Nuclear E=
+	Energy resource prices Nuclear E*Relative change in fictional prices Nuclear E
+	~	dollar/(bbtu*year)
+	~		|
+
+Change in energy resource prices Nuclear CIS=
+	Energy resource prices Nuclear CIS*Relative change in fictional prices Nuclear CIS
+	~	dollar/(bbtu*year)
+	~		|
+
+Change in energy resource prices Nuclear=
+	Energy resource prices Nuclear*Relative change in fictional prices Nuclear
+	~	dollar/(bbtu*year)
+	~		|
+
+Change in energy resource prices Oil=
+	Energy resource prices Oil*Relative change in fictional prices Oil
+	~	dollar/(bbtu*year)
+	~		|
+
+Change in energy resource prices other Renewables NA=
+	Energy resource prices other Renewables NA*Relative change in fictional prices other Renewables NA
+	~	dollar/(bbtu*year)
+	~		|
+
+Change in energy resource prices other Renewables SCA=
+	Energy resource prices other Renewables SCA*Relative change in fictional prices other Renewables SCA
+	~	dollar/(bbtu*year)
+	~		|
+
+Change in energy resource prices other Renewables E=
+	Energy resource prices other Renewables E*Relative change in fictional prices other Renewables E
+	~	dollar/(bbtu*year)
+	~		|
+
+Change in energy resource prices other Renewables CIS=
+	Energy resource prices other Renewables CIS*Relative change in fictional prices other Renewables CIS
+	~	dollar/(bbtu*year)
+	~		|
+
+Change in energy resource prices other Renewables=
+	Energy resource prices other Renewables*Relative change in fictional prices other Renewables
+	~	dollar/(bbtu*year)
+	~		|
+
+Changes in fictional prices Biofuels=
+	(Fictional prices Biofuels-Shadow fictional prices Biofuels)/Short term period
+	~	dollar/(bbtu*year)
+	~		|
+
+Changes in fictional prices Coal=
+	(Fictional prices Coal-Shadow fictional prices Coal)/Short term period
+	~	dollar/(bbtu*year)
+	~		|
+
+Changes in fictional prices Gas NA=
+	(Fictional prices Gas NA-Shadow fictional prices Gas NA)/Short term period
+	~	dollar/(bbtu*year)
+	~		|
+
+Changes in fictional prices Gas SCA=
+	(Fictional prices Gas SCA-Shadow fictional prices Gas SCA)/Short term period
+	~	dollar/(bbtu*year)
+	~		|
+
+Changes in fictional prices Gas E=
+	(Fictional prices Gas E-Shadow fictional prices Gas E)/Short term period
+	~	dollar/(bbtu*year)
+	~		|
+
+Changes in fictional prices Gas CIS=
+	(Fictional prices Gas CIS-Shadow fictional prices Gas CIS)/Short term period
+	~	dollar/(bbtu*year)
+	~		|
+
+Changes in fictional prices Gas=
+	(Fictional prices Gas-Shadow fictional prices Gas)/Short term period
+	~	dollar/(bbtu*year)
+	~		|
+
+Changes in fictional prices Nuclear NA=
+	(Fictional prices Nuclear NA-Shadow fictional prices Nuclear NA)/Short term period
+	~	dollar/(bbtu*year)
+	~		|
+
+Changes in fictional prices Nuclear SCA=
+	(Fictional prices Nuclear SCA-Shadow fictional prices Nuclear SCA)/Short term period
+	~	dollar/(bbtu*year)
+	~		|
+
+Changes in fictional prices Nuclear E=
+	(Fictional prices Nuclear E-Shadow fictional prices Nuclear E)/Short term period
+	~	dollar/(bbtu*year)
+	~		|
+
+Changes in fictional prices Nuclear CIS=
+	(Fictional prices Nuclear CIS-Shadow fictional prices Nuclear CIS)/Short term period
+	~	dollar/(bbtu*year)
+	~		|
+
+Changes in fictional prices Nuclear=
+	(Fictional prices Nuclear-Shadow fictional prices Nuclear)/Short term period
+	~	dollar/(bbtu*year)
+	~		|
+
+Changes in fictional prices Oil=
+	(Fictional prices Oil-Shadow fictional prices Oil)/Short term period
+	~	dollar/(bbtu*year)
+	~		|
+
+Changes in fictional prices other Renewables NA=
+	(Fictional prices other Renewables NA-Shadow fictional prices other Renewables NA)/Short term period
+	~	dollar/(bbtu*year)
+	~		|
+
+Changes in fictional prices other Renewables SCA=
+	(Fictional prices other Renewables SCA-Shadow fictional prices other Renewables SCA)\
+		/Short term period
+	~	dollar/(bbtu*year)
+	~		|
+
+Changes in fictional prices other Renewables E=
+	(Fictional prices other Renewables E-Shadow fictional prices other Renewables E)/Short term period
+	~	dollar/(bbtu*year)
+	~		|
+
+Changes in fictional prices other Renewables CIS=
+	(Fictional prices other Renewables CIS-Shadow fictional prices other Renewables CIS)\
+		/Short term period
+	~	dollar/(bbtu*year)
+	~		|
+
+Changes in fictional prices other Renewables=
+	(Fictional prices other Renewables-Shadow fictional prices other Renewables)/Short term period
+	~	dollar/(bbtu*year)
+	~		|
+
+Energy resource prices Biofuels= INTEG (
+	Change in energy resource prices Biofuels,
+		Initial energy resource prices Biofuels)
+	~	dollar/bbtu
+	~		|
+
+Energy resource prices Coal= INTEG (
+	Change in energy resource prices Coal,
+		Initial energy resource prices Coal)
+	~	dollar/bbtu
+	~		|
+
+Energy resource prices Gas NA= INTEG (
+	Change in energy resource prices Gas NA,
+		Initial energy resource prices Gas NA)
+	~	dollar/bbtu
+	~		|
+
+Energy resource prices Gas SCA= INTEG (
+	Change in energy resource prices Gas SCA,
+		Initial energy resource prices Gas SCA)
+	~	dollar/bbtu
+	~		|
+
+Energy resource prices Gas E= INTEG (
+	Change in energy resource prices Gas E,
+		Initial energy resource prices Gas E)
+	~	dollar/bbtu
+	~		|
+
+Energy resource prices Gas CIS= INTEG (
+	Change in energy resource prices Gas CIS,
+		Initial energy resource prices Gas CIS)
+	~	dollar/bbtu
+	~		|
+
+Energy resource prices Gas= INTEG (
+	Change in energy resource prices Gas,
+		Initial energy resource prices Gas)
+	~	dollar/bbtu
+	~		|
+
+Energy resource prices Nuclear NA= INTEG (
+	Change in energy resource prices Nuclear NA,
+		Initial energy resource prices Nuclear NA)
+	~	dollar/bbtu
+	~		|
+
+Energy resource prices Nuclear SCA= INTEG (
+	Change in energy resource prices Nuclear SCA,
+		Initial energy resource prices Nuclear SCA)
+	~	dollar/bbtu
+	~		|
+
+Energy resource prices Nuclear E= INTEG (
+	Change in energy resource prices Nuclear E,
+		Initial energy resource prices Nuclear E)
+	~	dollar/bbtu
+	~		|
+
+Energy resource prices Nuclear CIS= INTEG (
+	Change in energy resource prices Nuclear CIS,
+		Initial energy resource prices Nuclear CIS)
+	~	dollar/bbtu
+	~		|
+
+Energy resource prices Nuclear= INTEG (
+	Change in energy resource prices Nuclear,
+		Initial energy resource prices Nuclear)
+	~	dollar/bbtu
+	~		|
+
+Energy resource prices Oil= INTEG (
+	Change in energy resource prices Oil,
+		Initial energy resource prices Oil)
+	~	dollar/bbtu
+	~		|
+
+Energy resource prices other Renewables NA= INTEG (
+	Change in energy resource prices other Renewables NA,
+		Initial energy resource prices other Renewables NA)
+	~	dollar/bbtu
+	~		|
+
+Energy resource prices other Renewables SCA= INTEG (
+	Change in energy resource prices other Renewables SCA,
+		Initial energy resource prices other Renewables SCA)
+	~	dollar/bbtu
+	~		|
+
+Energy resource prices other Renewables E= INTEG (
+	Change in energy resource prices other Renewables E,
+		Initial energy resource prices other Renewables E)
+	~	dollar/bbtu
+	~		|
+
+Energy resource prices other Renewables CIS= INTEG (
+	Change in energy resource prices other Renewables CIS,
+		Initial energy resource prices other Renewables CIS)
+	~	dollar/bbtu
+	~		|
+
+Energy resource prices other Renewables= INTEG (
+	Change in energy resource prices other Renewables,
+		Initial energy resource prices other Renewables)
+	~	dollar/bbtu
+	~		|
+
+Fictional prices Biofuels=
+	33988.9
+	~	dollar/bbtu
+	~		|
+
+Fictional prices Coal=
+	1577.6
+	~	dollar/bbtu
+	~		|
+
+Fictional prices Gas NA=
+	7650.53
+	~	dollar/bbtu
+	~		|
+
+Fictional prices Gas SCA=
+	14628.7
+	~	dollar/bbtu
+	~		|
+
+Fictional prices Gas E=
+	10903.4
+	~	dollar/bbtu
+	~		|
+
+Fictional prices Gas CIS=
+	6700.64
+	~	dollar/bbtu
+	~		|
+
+Fictional prices Gas=
+	10903.4
+	~	dollar/bbtu
+	~		|
+
+Fictional prices Nuclear NA=
+	17345.5
+	~	dollar/bbtu
+	~		|
+
+Fictional prices Nuclear SCA=
+	17345.5
+	~	dollar/bbtu
+	~		|
+
+Fictional prices Nuclear E=
+	17345.5
+	~	dollar/bbtu
+	~		|
+
+Fictional prices Nuclear CIS=
+	17345.5
+	~	dollar/bbtu
+	~		|
+
+Fictional prices Nuclear=
+	17345.5
+	~	dollar/bbtu
+	~		|
+
+Fictional prices Oil=
+	5598.52
+	~	dollar/bbtu
+	~		|
+
+Fictional prices other Renewables NA=
+	6711.62
+	~	dollar/bbtu
+	~		|
+
+Fictional prices other Renewables SCA=
+	6711.62
+	~	dollar/bbtu
+	~		|
+
+Fictional prices other Renewables E=
+	6711.62
+	~	dollar/bbtu
+	~		|
+
+Fictional prices other Renewables CIS=
+	6711.62
+	~	dollar/bbtu
+	~		|
+
+Fictional prices other Renewables=
+	6711.62
+	~	dollar/bbtu
+	~		|
+
+Initial energy resource prices Biofuels=
+	33988.9
+	~	dollar/bbtu
+	~		|
+
+Initial energy resource prices Coal=
+	3767
+	~	dollar/bbtu
+	~		|
+
+Initial energy resource prices Gas NA=
+	4330
+	~	dollar/bbtu
+	~		|
+
+Initial energy resource prices Gas SCA=
+	11000
+	~	dollar/bbtu
+	~		|
+
+Initial energy resource prices Gas E=
+	8895
+	~	dollar/bbtu
+	~		|
+
+Initial energy resource prices Gas CIS=
+	11000
+	~	dollar/bbtu
+	~		|
+
+Initial energy resource prices Gas=
+	8895
+	~	dollar/bbtu
+	~		|
+
+Initial energy resource prices Nuclear NA=
+	17345.5
+	~	dollar/bbtu
+	~		|
+
+Initial energy resource prices Nuclear SCA=
+	17345.5
+	~	dollar/bbtu
+	~		|
+
+Initial energy resource prices Nuclear E=
+	17345.5
+	~	dollar/bbtu
+	~		|
+
+Initial energy resource prices Nuclear CIS=
+	17345.5
+	~	dollar/bbtu
+	~		|
+
+Initial energy resource prices Nuclear=
+	17345.5
+	~	dollar/bbtu
+	~		|
+
+Initial energy resource prices Oil=
+	14106.4
+	~	dollar/bbtu
+	~		|
+
+Initial energy resource prices other Renewables NA=
+	21982
+	~	dollar/bbtu
+	~		|
+
+Initial energy resource prices other Renewables SCA=
+	21982
+	~	dollar/bbtu
+	~		|
+
+Initial energy resource prices other Renewables E=
+	21982
+	~	dollar/bbtu
+	~		|
+
+Initial energy resource prices other Renewables CIS=
+	21982
+	~	dollar/bbtu
+	~		|
+
+Initial energy resource prices other Renewables=
+	21982
+	~	dollar/bbtu
+	~		|
+
+Initial shadow fictional prices Biofuels=
+	33988.9
+	~	dollar/bbtu
+	~		|
+
+Initial shadow fictional prices Coal=
+	1577.6
+	~	dollar/bbtu
+	~		|
+
+Initial shadow fictional prices Gas NA=
+	7650.53
+	~	dollar/bbtu
+	~		|
+
+Initial shadow fictional prices Gas SCA=
+	14628.7
+	~	dollar/bbtu
+	~		|
+
+Initial shadow fictional prices Gas E=
+	10903.4
+	~	dollar/bbtu
+	~		|
+
+Initial shadow fictional prices Gas CIS=
+	6700.64
+	~	dollar/bbtu
+	~		|
+
+Initial shadow fictional prices Gas=
+	10903.4
+	~	dollar/bbtu
+	~		|
+
+Initial shadow fictional prices Nuclear NA=
+	17345.5
+	~	dollar/bbtu
+	~		|
+
+Initial shadow fictional prices Nuclear SCA=
+	17345.5
+	~	dollar/bbtu
+	~		|
+
+Initial shadow fictional prices Nuclear E=
+	17345.5
+	~	dollar/bbtu
+	~		|
+
+Initial shadow fictional prices Nuclear CIS=
+	17345.5
+	~	dollar/bbtu
+	~		|
+
+Initial shadow fictional prices Nuclear=
+	17345.5
+	~	dollar/bbtu
+	~		|
+
+Initial shadow fictional prices Oil=
+	5598.52
+	~	dollar/bbtu
+	~		|
+
+Initial shadow fictional prices other Renewables NA=
+	6711.62
+	~	dollar/bbtu
+	~		|
+
+Initial shadow fictional prices other Renewables SCA=
+	6711.62
+	~	dollar/bbtu
+	~		|
+
+Initial shadow fictional prices other Renewables E=
+	6711.62
+	~	dollar/bbtu
+	~		|
+
+Initial shadow fictional prices other Renewables CIS=
+	6711.62
+	~	dollar/bbtu
+	~		|
+
+Initial shadow fictional prices other Renewables=
+	6711.62
+	~	dollar/bbtu
+	~		|
+
+Relative change in fictional prices Biofuels=
+	ZIDZ(Changes in fictional prices Biofuels, Shadow fictional prices Biofuels)
+	~	1/year
+	~		|
+
+Relative change in fictional prices Coal=
+	ZIDZ(Changes in fictional prices Coal, Shadow fictional prices Coal)
+	~	1/year
+	~		|
+
+Relative change in fictional prices Gas NA=
+	ZIDZ(Changes in fictional prices Gas NA, Shadow fictional prices Gas NA)
+	~	1/year
+	~		|
+
+Relative change in fictional prices Gas SCA=
+	ZIDZ(Changes in fictional prices Gas SCA, Shadow fictional prices Gas SCA)
+	~	1/year
+	~		|
+
+Relative change in fictional prices Gas E=
+	ZIDZ(Changes in fictional prices Gas E, Shadow fictional prices Gas E)
+	~	1/year
+	~		|
+
+Relative change in fictional prices Gas CIS=
+	ZIDZ(Changes in fictional prices Gas CIS, Shadow fictional prices Gas CIS)
+	~	1/year
+	~		|
+
+Relative change in fictional prices Gas=
+	ZIDZ(Changes in fictional prices Gas, Shadow fictional prices Gas)
+	~	1/year
+	~		|
+
+Relative change in fictional prices Nuclear NA=
+	ZIDZ(Changes in fictional prices Nuclear NA, Shadow fictional prices Nuclear NA)
+	~	1/year
+	~		|
+
+Relative change in fictional prices Nuclear SCA=
+	ZIDZ(Changes in fictional prices Nuclear SCA, Shadow fictional prices Nuclear SCA)
+	~	1/year
+	~		|
+
+Relative change in fictional prices Nuclear E=
+	ZIDZ(Changes in fictional prices Nuclear E, Shadow fictional prices Nuclear E)
+	~	1/year
+	~		|
+
+Relative change in fictional prices Nuclear CIS=
+	ZIDZ(Changes in fictional prices Nuclear CIS, Shadow fictional prices Nuclear CIS)
+	~	1/year
+	~		|
+
+Relative change in fictional prices Nuclear=
+	ZIDZ(Changes in fictional prices Nuclear, Shadow fictional prices Nuclear)
+	~	1/year
+	~		|
+
+Relative change in fictional prices Oil=
+	ZIDZ(Changes in fictional prices Oil, Shadow fictional prices Oil)
+	~	1/year
+	~		|
+
+Relative change in fictional prices other Renewables NA=
+	ZIDZ(Changes in fictional prices other Renewables NA, Shadow fictional prices other Renewables NA\
+		)
+	~	1/year
+	~		|
+
+Relative change in fictional prices other Renewables SCA=
+	ZIDZ(Changes in fictional prices other Renewables SCA, Shadow fictional prices other Renewables SCA\
+		)
+	~	1/year
+	~		|
+
+Relative change in fictional prices other Renewables E=
+	ZIDZ(Changes in fictional prices other Renewables E, Shadow fictional prices other Renewables E\
+		)
+	~	1/year
+	~		|
+
+Relative change in fictional prices other Renewables CIS=
+	ZIDZ(Changes in fictional prices other Renewables CIS, Shadow fictional prices other Renewables CIS\
+		)
+	~	1/year
+	~		|
+
+Relative change in fictional prices other Renewables=
+	ZIDZ(Changes in fictional prices other Renewables, Shadow fictional prices other Renewables\
+		)
+	~	1/year
+	~		|
+
+Shadow fictional prices Biofuels= INTEG (
+	Changes in fictional prices Biofuels,
+		Initial shadow fictional prices Biofuels)
+	~	dollar/bbtu
+	~		|
+
+Shadow fictional prices Coal= INTEG (
+	Changes in fictional prices Coal,
+		Initial shadow fictional prices Coal)
+	~	dollar/bbtu
+	~		|
+
+Shadow fictional prices Gas NA= INTEG (
+	Changes in fictional prices Gas NA,
+		Initial shadow fictional prices Gas NA)
+	~	dollar/bbtu
+	~		|
+
+Shadow fictional prices Gas SCA= INTEG (
+	Changes in fictional prices Gas SCA,
+		Initial shadow fictional prices Gas SCA)
+	~	dollar/bbtu
+	~		|
+
+Shadow fictional prices Gas E= INTEG (
+	Changes in fictional prices Gas E,
+		Initial shadow fictional prices Gas E)
+	~	dollar/bbtu
+	~		|
+
+Shadow fictional prices Gas CIS= INTEG (
+	Changes in fictional prices Gas CIS,
+		Initial shadow fictional prices Gas CIS)
+	~	dollar/bbtu
+	~		|
+
+Shadow fictional prices Gas= INTEG (
+	Changes in fictional prices Gas,
+		Initial shadow fictional prices Gas)
+	~	dollar/bbtu
+	~		|
+
+Shadow fictional prices Nuclear NA= INTEG (
+	Changes in fictional prices Nuclear NA,
+		Initial shadow fictional prices Nuclear NA)
+	~	dollar/bbtu
+	~		|
+
+Shadow fictional prices Nuclear SCA= INTEG (
+	Changes in fictional prices Nuclear SCA,
+		Initial shadow fictional prices Nuclear SCA)
+	~	dollar/bbtu
+	~		|
+
+Shadow fictional prices Nuclear E= INTEG (
+	Changes in fictional prices Nuclear E,
+		Initial shadow fictional prices Nuclear E)
+	~	dollar/bbtu
+	~		|
+
+Shadow fictional prices Nuclear CIS= INTEG (
+	Changes in fictional prices Nuclear CIS,
+		Initial shadow fictional prices Nuclear CIS)
+	~	dollar/bbtu
+	~		|
+
+Shadow fictional prices Nuclear= INTEG (
+	Changes in fictional prices Nuclear,
+		Initial shadow fictional prices Nuclear)
+	~	dollar/bbtu
+	~		|
+
+Shadow fictional prices Oil= INTEG (
+	Changes in fictional prices Oil,
+		Initial shadow fictional prices Oil)
+	~	dollar/bbtu
+	~		|
+
+Shadow fictional prices other Renewables NA= INTEG (
+	Changes in fictional prices other Renewables NA,
+		Initial shadow fictional prices other Renewables NA)
+	~	dollar/bbtu
+	~		|
+
+Shadow fictional prices other Renewables SCA= INTEG (
+	Changes in fictional prices other Renewables SCA,
+		Initial shadow fictional prices other Renewables SCA)
+	~	dollar/bbtu
+	~		|
+
+Shadow fictional prices other Renewables E= INTEG (
+	Changes in fictional prices other Renewables E,
+		Initial shadow fictional prices other Renewables E)
+	~	dollar/bbtu
+	~		|
+
+Shadow fictional prices other Renewables CIS= INTEG (
+	Changes in fictional prices other Renewables CIS,
+		Initial shadow fictional prices other Renewables CIS)
+	~	dollar/bbtu
+	~		|
+
+Shadow fictional prices other Renewables= INTEG (
+	Changes in fictional prices other Renewables,
+		Initial shadow fictional prices other Renewables)
+	~	dollar/bbtu
+	~		|
+
+Short term period=
+	0.25
+	~	year
+	~		|
+
+********************************************************
+	.Control
+********************************************************~
+		Simulation Control Parameters
+	|
+
+FINAL TIME  = 2050
+	~	year
+	~	The final time for the simulation.
+	|
+
+INITIAL TIME  = 2010
+	~	year
+	~	The initial time for the simulation.
+	|
+
+SAVEPER  = 
+        TIME STEP
+	~	year [0,?]
+	~	The frequency with which output is stored.
+	|
+
+TIME STEP  = 0.0625
+	~	year [0,?]
+	~	The time step for the simulation.
+	|
+
+\\\---/// Sketch information - do not modify anything except names
+V300  Do not put anything below this section - it will be ignored
+*World Prices
+$192-192-192,0,Times New Roman|12||0-0-0|0-0-0|0-0-255|-1--1--1|-1--1--1|96,96,100,0
+10,1,Fictional prices Oil,149,228,59,11,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,2,Shadow fictional prices Oil,538,202,60,30,3,131,0,0,0,0,0,0
+12,3,48,293,202,10,8,0,3,0,0,-1,0,0,0
+1,4,6,2,4,0,0,22,0,0,0,-1--1--1,,1|(437,202)|
+1,5,6,3,100,0,0,22,0,0,0,-1--1--1,,1|(343,202)|
+11,6,48,390,202,6,8,34,3,0,0,1,0,0,0
+10,7,Changes in fictional prices Oil,390,229,61,19,40,3,0,0,-1,0,0,0
+10,8,Relative change in fictional prices Oil,542,305,57,19,8,3,0,0,0,0,0,0
+1,9,1,7,0,0,0,0,0,128,0,-1--1--1,,1|(261,228)|
+1,10,7,8,0,0,0,0,0,128,0,-1--1--1,,1|(459,263)|
+1,11,2,8,0,0,0,0,0,128,0,-1--1--1,,1|(539,251)|
+1,12,2,7,0,0,0,0,0,128,0,-1--1--1,,1|(471,213)|
+10,13,Initial shadow fictional prices Oil,535,132,57,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+1,14,13,2,0,0,0,0,0,128,1,-1--1--1,,1|(535,154)|
+10,15,Energy resource prices Oil,884,196,55,29,3,131,0,0,0,0,0,0
+12,16,48,658,192,10,8,0,3,0,0,-1,0,0,0
+1,17,19,15,4,0,0,22,0,0,0,-1--1--1,,1|(791,192)|
+1,18,19,16,100,0,0,22,0,0,0,-1--1--1,,1|(705,192)|
+11,19,48,748,192,6,8,34,3,0,0,1,0,0,0
+10,20,Change in energy resource prices Oil,748,219,60,19,40,3,0,0,-1,0,0,0
+1,21,8,20,0,0,0,0,0,128,0,-1--1--1,,1|(638,264)|
+1,22,15,20,0,0,0,0,0,128,0,-1--1--1,,1|(825,205)|
+10,23,Initial energy resource prices Oil,877,112,60,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+1,24,23,15,0,0,0,0,0,128,1,-1--1--1,,1|(878,142)|
+10,25,Short term period,388,132,56,11,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+1,26,25,7,0,0,0,0,0,128,0,-1--1--1,,1|(388,169)|
+10,27,Fictional prices Coal,143,496,48,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,28,Initial shadow fictional prices Coal,529,411,63,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,29,Relative change in fictional prices Coal,518,570,63,19,8,3,0,0,0,0,0,0
+10,30,Initial energy resource prices Coal,862,409,66,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,31,Shadow fictional prices Coal,529,483,65,28,3,131,0,0,0,0,0,0
+10,32,Energy resource prices Coal,874,484,63,29,3,131,0,0,0,0,0,0
+12,33,48,295,478,10,8,0,3,0,0,-1,0,0,0
+1,34,36,31,4,0,0,22,0,0,0,-1--1--1,,1|(431,476)|
+1,35,36,33,100,0,0,22,0,0,0,-1--1--1,,1|(345,476)|
+11,36,48,392,476,6,8,34,3,0,0,1,0,0,0
+10,37,Changes in fictional prices Coal,392,503,61,19,40,3,0,0,-1,0,0,0
+12,38,48,657,477,10,8,0,3,0,0,-1,0,0,0
+1,39,41,32,4,0,0,22,0,0,0,-1--1--1,,1|(768,480)|
+1,40,41,38,100,0,0,22,0,0,0,-1--1--1,,1|(690,480)|
+11,41,48,719,480,6,8,34,3,0,0,1,0,0,0
+10,42,Change in energy resource prices Coal,719,507,66,19,40,3,0,0,-1,0,0,0
+1,43,27,37,0,0,0,0,0,128,0,-1--1--1,,1|(254,498)|
+1,44,28,31,0,0,0,0,0,128,1,-1--1--1,,1|(529,435)|
+1,45,31,37,0,0,0,0,0,128,0,-1--1--1,,1|(465,491)|
+1,46,37,29,0,0,0,0,0,128,0,-1--1--1,,1|(448,533)|
+1,47,31,29,0,0,0,0,0,128,0,-1--1--1,,1|(524,524)|
+1,48,29,42,0,0,0,0,0,128,0,-1--1--1,,1|(611,540)|
+1,49,32,42,0,0,0,0,0,128,0,-1--1--1,,1|(804,493)|
+1,50,30,32,0,0,0,0,0,128,1,-1--1--1,,1|(865,434)|
+10,51,Short term period,385,411,69,17,8,130,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+1,52,51,37,0,0,0,0,0,128,0,-1--1--1,,1|(387,449)|
+10,53,Fictional prices Biofuels,142,731,48,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,54,Initial shadow fictional prices Biofuels,528,646,70,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,55,Relative change in fictional prices Biofuels,517,805,73,19,8,3,0,0,0,0,0,0
+10,56,Initial energy resource prices Biofuels,875,645,70,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,57,Shadow fictional prices Biofuels,528,718,65,28,3,131,0,0,0,0,0,0
+10,58,Energy resource prices Biofuels,873,719,63,29,3,131,0,0,0,0,0,0
+12,59,48,294,713,10,8,0,3,0,0,-1,0,0,0
+1,60,62,57,4,0,0,22,0,0,0,-1--1--1,,1|(430,711)|
+1,61,62,59,100,0,0,22,0,0,0,-1--1--1,,1|(344,711)|
+11,62,48,391,711,6,8,34,3,0,0,1,0,0,0
+10,63,Changes in fictional prices Biofuels,391,738,61,19,40,3,0,0,-1,0,0,0
+12,64,48,630,714,10,8,0,3,0,0,-1,0,0,0
+1,65,67,58,4,0,0,22,0,0,0,-1--1--1,,1|(767,715)|
+1,66,67,64,100,0,0,22,0,0,0,-1--1--1,,1|(676,715)|
+11,67,48,718,715,6,8,34,3,0,0,1,0,0,0
+10,68,Change in energy resource prices Biofuels,718,748,76,19,40,131,0,0,-1,0,0,0
+1,69,53,63,0,0,0,0,0,128,0,-1--1--1,,1|(253,733)|
+1,70,54,57,0,0,0,0,0,128,1,-1--1--1,,1|(528,670)|
+1,71,57,63,0,0,0,0,0,128,0,-1--1--1,,1|(464,726)|
+1,72,63,55,0,0,0,0,0,128,0,-1--1--1,,1|(447,768)|
+1,73,57,55,0,0,0,0,0,128,0,-1--1--1,,1|(523,759)|
+1,74,55,68,0,0,0,0,0,128,0,-1--1--1,,1|(610,778)|
+1,75,58,68,0,0,0,0,0,128,0,-1--1--1,,1|(808,730)|
+1,76,56,58,0,0,0,0,0,128,1,-1--1--1,,1|(874,670)|
+10,77,Short term period,384,646,39,19,8,130,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+1,78,77,63,0,0,0,0,0,128,0,-1--1--1,,1|(386,685)|
+\\\---/// Sketch information - do not modify anything except names
+V300  Do not put anything below this section - it will be ignored
+*Regional Prices E
+$192-192-192,0,Times New Roman|12||0-0-0|0-0-0|0-0-255|-1--1--1|-1--1--1|96,96,100,0
+10,1,Fictional prices Nuclear E,119,-73,48,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,2,Initial shadow fictional prices Nuclear E,505,-158,70,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,3,Relative change in fictional prices Nuclear E,494,1,80,19,8,3,0,0,0,0,0,0
+10,4,Initial energy resource prices Nuclear E,838,-160,70,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,5,Shadow fictional prices Nuclear E,505,-86,65,28,3,131,0,0,0,0,0,0
+10,6,Energy resource prices Nuclear E,850,-85,63,29,3,131,0,0,0,0,0,0
+12,7,48,271,-91,10,8,0,3,0,0,-1,0,0,0
+1,8,10,5,4,0,0,22,0,0,0,-1--1--1,,1|(407,-93)|
+1,9,10,7,100,0,0,22,0,0,0,-1--1--1,,1|(321,-93)|
+11,10,48,368,-93,6,8,34,3,0,0,1,0,0,0
+10,11,Changes in fictional prices Nuclear E,368,-66,61,19,40,3,0,0,-1,0,0,0
+12,12,48,633,-92,10,8,0,3,0,0,-1,0,0,0
+1,13,15,6,4,0,0,22,0,0,0,-1--1--1,,1|(744,-89)|
+1,14,15,12,100,0,0,22,0,0,0,-1--1--1,,1|(666,-89)|
+11,15,48,695,-89,6,8,34,3,0,0,1,0,0,0
+10,16,Change in energy resource prices Nuclear E,695,-62,83,19,40,3,0,0,-1,0,0,0
+1,17,1,11,0,0,0,0,0,128,0,-1--1--1,,1|(230,-69)|
+1,18,2,5,0,0,0,0,0,128,1,-1--1--1,,1|(505,-133)|
+1,19,5,11,0,0,0,0,0,128,0,-1--1--1,,1|(441,-77)|
+1,20,11,3,0,0,0,0,0,128,0,-1--1--1,,1|(424,-35)|
+1,21,5,3,0,0,0,0,0,128,0,-1--1--1,,1|(500,-44)|
+1,22,3,16,0,0,0,0,0,128,0,-1--1--1,,1|(587,-28)|
+1,23,6,16,0,0,0,0,0,128,0,-1--1--1,,1|(789,-76)|
+1,24,4,6,0,0,0,0,0,128,1,-1--1--1,,1|(841,-134)|
+10,25,Short term period,361,-158,39,19,8,130,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+1,26,25,11,0,0,0,0,0,128,0,-1--1--1,,1|(363,-118)|
+10,27,Fictional prices other Renewables E,122,192,67,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,28,Initial shadow fictional prices other Renewables E,508,107,85,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,29,Relative change in fictional prices other Renewables E,511,269,85,19,8,3,0,0,0,0,0,0
+10,30,Initial energy resource prices other Renewables E,841,105,85,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,31,Shadow fictional prices other Renewables E,508,179,65,28,3,131,0,0,0,0,0,0
+10,32,Energy resource prices other Renewables E,853,180,63,29,3,131,0,0,0,0,0,0
+12,33,48,268,171,10,8,0,3,0,0,-1,0,0,0
+1,34,36,31,4,0,0,22,0,0,0,-1--1--1,,1|(400,173)|
+1,35,36,33,100,0,0,22,0,0,0,-1--1--1,,1|(312,173)|
+11,36,48,352,173,6,8,34,3,0,0,1,0,0,0
+10,37,Changes in fictional prices other Renewables E,352,200,85,19,40,3,0,0,-1,0,0,0
+12,38,48,636,173,10,8,0,3,0,0,-1,0,0,0
+1,39,41,32,4,0,0,22,0,0,0,-1--1--1,,1|(747,176)|
+1,40,41,38,100,0,0,22,0,0,0,-1--1--1,,1|(669,176)|
+11,41,48,698,176,6,8,34,3,0,0,1,0,0,0
+10,42,Change in energy resource prices other Renewables E,698,203,85,19,40,3,0,0,-1,0,0,0
+1,43,27,37,0,0,0,0,0,128,0,-1--1--1,,1|(221,195)|
+1,44,28,31,0,0,0,0,0,128,1,-1--1--1,,1|(508,131)|
+1,45,31,37,0,0,0,0,0,128,0,-1--1--1,,1|(446,186)|
+1,46,37,29,0,0,0,0,0,128,0,-1--1--1,,1|(424,231)|
+1,47,31,29,0,0,0,0,0,128,0,-1--1--1,,1|(508,221)|
+1,48,29,42,0,0,0,0,0,128,0,-1--1--1,,1|(597,238)|
+1,49,32,42,0,0,0,0,0,128,0,-1--1--1,,1|(793,188)|
+1,50,30,32,0,0,0,0,0,128,1,-1--1--1,,1|(844,130)|
+10,51,Short term period,344,111,39,19,8,130,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+1,52,51,37,0,0,0,0,0,128,0,-1--1--1,,1|(346,148)|
+10,53,Fictional prices Gas E,130,471,48,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,54,Initial shadow fictional prices Gas E,516,386,70,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,55,Relative change in fictional prices Gas E,505,545,67,19,8,3,0,0,0,0,0,0
+10,56,Initial energy resource prices Gas E,849,384,70,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,57,Shadow fictional prices Gas E,516,458,65,28,3,131,0,0,0,0,0,0
+10,58,Energy resource prices Gas E,861,459,63,29,3,131,0,0,0,0,0,0
+12,59,48,282,453,10,8,0,3,0,0,-1,0,0,0
+1,60,62,57,4,0,0,22,0,0,0,-1--1--1,,1|(418,451)|
+1,61,62,59,100,0,0,22,0,0,0,-1--1--1,,1|(332,451)|
+11,62,48,379,451,6,8,34,3,0,0,1,0,0,0
+10,63,Changes in fictional prices Gas E,379,478,61,19,40,3,0,0,-1,0,0,0
+12,64,48,644,452,10,8,0,3,0,0,-1,0,0,0
+1,65,67,58,4,0,0,22,0,0,0,-1--1--1,,1|(755,455)|
+1,66,67,64,100,0,0,22,0,0,0,-1--1--1,,1|(677,455)|
+11,67,48,706,455,6,8,34,3,0,0,1,0,0,0
+10,68,Change in energy resource prices Gas E,706,482,70,19,40,3,0,0,-1,0,0,0
+1,69,53,63,0,0,0,0,0,128,0,-1--1--1,,1|(241,473)|
+1,70,54,57,0,0,0,0,0,128,1,-1--1--1,,1|(516,410)|
+1,71,57,63,0,0,0,0,0,128,0,-1--1--1,,1|(452,466)|
+1,72,63,55,0,0,0,0,0,128,0,-1--1--1,,1|(435,508)|
+1,73,57,55,0,0,0,0,0,128,0,-1--1--1,,1|(511,499)|
+1,74,55,68,0,0,0,0,0,128,0,-1--1--1,,1|(598,515)|
+1,75,58,68,0,0,0,0,0,128,0,-1--1--1,,1|(793,468)|
+1,76,56,58,0,0,0,0,0,128,1,-1--1--1,,1|(852,409)|
+10,77,Short term period,372,386,39,19,8,130,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+1,78,77,63,0,0,0,0,0,128,0,-1--1--1,,1|(374,425)|
+\\\---/// Sketch information - do not modify anything except names
+V300  Do not put anything below this section - it will be ignored
+*Regional Prices NA
+$192-192-192,0,Times New Roman|12||0-0-0|0-0-0|0-0-255|-1--1--1|-1--1--1|96,96,100,0
+10,1,Fictional prices Nuclear NA,17,-73,48,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,2,Initial shadow fictional prices Nuclear NA,403,-158,70,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,3,Relative change in fictional prices Nuclear NA,392,1,73,28,8,3,0,0,0,0,0,0
+10,4,Initial energy resource prices Nuclear NA,736,-160,70,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,5,Shadow fictional prices Nuclear NA,403,-86,65,28,3,131,0,0,0,0,0,0
+10,6,Energy resource prices Nuclear NA,748,-85,63,29,3,131,0,0,0,0,0,0
+12,7,48,169,-91,10,8,0,3,0,0,-1,0,0,0
+1,8,10,5,4,0,0,22,0,0,0,-1--1--1,,1|(305,-93)|
+1,9,10,7,100,0,0,22,0,0,0,-1--1--1,,1|(219,-93)|
+11,10,48,266,-93,6,8,34,3,0,0,1,0,0,0
+10,11,Changes in fictional prices Nuclear NA,266,-66,61,19,40,3,0,0,-1,0,0,0
+12,12,48,531,-92,10,8,0,3,0,0,-1,0,0,0
+1,13,15,6,4,0,0,22,0,0,0,-1--1--1,,1|(642,-89)|
+1,14,15,12,100,0,0,22,0,0,0,-1--1--1,,1|(564,-89)|
+11,15,48,593,-89,6,8,34,3,0,0,1,0,0,0
+10,16,Change in energy resource prices Nuclear NA,593,-62,76,28,40,3,0,0,-1,0,0,0
+1,17,1,11,0,0,0,0,0,128,0,-1--1--1,,1|(128,-69)|
+1,18,2,5,0,0,0,0,0,128,1,-1--1--1,,1|(403,-133)|
+1,19,5,11,0,0,0,0,0,128,0,-1--1--1,,1|(339,-77)|
+1,20,11,3,0,0,0,0,0,128,0,-1--1--1,,1|(313,-40)|
+1,21,5,3,0,0,0,0,0,128,0,-1--1--1,,1|(398,-49)|
+1,22,3,16,0,0,0,0,0,128,0,-1--1--1,,1|(484,-27)|
+1,23,6,16,0,0,0,0,0,128,0,-1--1--1,,1|(683,-75)|
+1,24,4,6,0,0,0,0,0,128,1,-1--1--1,,1|(739,-134)|
+10,25,Short term period,259,-158,39,19,8,130,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+1,26,25,11,0,0,0,0,0,128,0,-1--1--1,,1|(261,-118)|
+10,27,Fictional prices other Renewables NA,20,192,67,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,28,Initial shadow fictional prices other Renewables NA,406,107,78,28,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,29,Relative change in fictional prices other Renewables NA,409,269,92,19,8,3,0,0,0,0,0,0
+10,30,Initial energy resource prices other Renewables NA,739,105,78,28,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,31,Shadow fictional prices other Renewables NA,406,179,65,28,3,131,0,0,0,0,0,0
+10,32,Energy resource prices other Renewables NA,751,180,63,29,3,131,0,0,0,0,0,0
+12,33,48,166,171,10,8,0,3,0,0,-1,0,0,0
+1,34,36,31,4,0,0,22,0,0,0,-1--1--1,,1|(298,173)|
+1,35,36,33,100,0,0,22,0,0,0,-1--1--1,,1|(210,173)|
+11,36,48,250,173,6,8,34,3,0,0,1,0,0,0
+10,37,Changes in fictional prices other Renewables NA,250,200,82,19,40,3,0,0,-1,0,0,0
+12,38,48,534,173,10,8,0,3,0,0,-1,0,0,0
+1,39,41,32,4,0,0,22,0,0,0,-1--1--1,,1|(645,176)|
+1,40,41,38,100,0,0,22,0,0,0,-1--1--1,,1|(567,176)|
+11,41,48,596,176,6,8,34,3,0,0,1,0,0,0
+10,42,Change in energy resource prices other Renewables NA,596,203,92,19,40,3,0,0,-1,0,0,0
+1,43,27,37,0,0,0,0,0,128,0,-1--1--1,,1|(120,195)|
+1,44,28,31,0,0,0,0,0,128,1,-1--1--1,,1|(406,136)|
+1,45,31,37,0,0,0,0,0,128,0,-1--1--1,,1|(343,186)|
+1,46,37,29,0,0,0,0,0,128,0,-1--1--1,,1|(322,231)|
+1,47,31,29,0,0,0,0,0,128,0,-1--1--1,,1|(406,221)|
+1,48,29,42,0,0,0,0,0,128,0,-1--1--1,,1|(495,238)|
+1,49,32,42,0,0,0,0,0,128,0,-1--1--1,,1|(688,189)|
+1,50,30,32,0,0,0,0,0,128,1,-1--1--1,,1|(743,135)|
+10,51,Short term period,242,111,39,19,8,130,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+1,52,51,37,0,0,0,0,0,128,0,-1--1--1,,1|(244,148)|
+10,53,Fictional prices Gas NA,28,471,48,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,54,Initial shadow fictional prices Gas NA,414,386,70,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,55,Relative change in fictional prices Gas NA,403,545,74,19,8,3,0,0,0,0,0,0
+10,56,Initial energy resource prices Gas NA,747,384,70,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,57,Shadow fictional prices Gas NA,419,458,65,28,3,131,0,0,0,0,0,0
+10,58,Energy resource prices Gas NA,759,459,63,29,3,131,0,0,0,0,0,0
+12,59,48,180,453,10,8,0,3,0,0,-1,0,0,0
+1,60,62,57,4,0,0,22,0,0,0,-1--1--1,,1|(318,451)|
+1,61,62,59,100,0,0,22,0,0,0,-1--1--1,,1|(230,451)|
+11,62,48,277,451,6,8,34,3,0,0,1,0,0,0
+10,63,Changes in fictional prices Gas NA,277,478,61,19,40,3,0,0,-1,0,0,0
+12,64,48,542,452,10,8,0,3,0,0,-1,0,0,0
+1,65,67,58,4,0,0,22,0,0,0,-1--1--1,,1|(653,455)|
+1,66,67,64,100,0,0,22,0,0,0,-1--1--1,,1|(575,455)|
+11,67,48,604,455,6,8,34,3,0,0,1,0,0,0
+10,68,Change in energy resource prices Gas NA,604,482,78,19,40,3,0,0,-1,0,0,0
+1,69,53,63,0,0,0,0,0,128,0,-1--1--1,,1|(139,473)|
+1,70,54,57,0,0,0,0,0,128,1,-1--1--1,,1|(415,410)|
+1,71,57,63,0,0,0,0,0,128,0,-1--1--1,,1|(352,467)|
+1,72,63,55,0,0,0,0,0,128,0,-1--1--1,,1|(333,508)|
+1,73,57,55,0,0,0,0,0,128,0,-1--1--1,,1|(411,499)|
+1,74,55,68,0,0,0,0,0,128,0,-1--1--1,,1|(496,515)|
+1,75,58,68,0,0,0,0,0,128,0,-1--1--1,,1|(695,468)|
+1,76,56,58,0,0,0,0,0,128,1,-1--1--1,,1|(750,409)|
+10,77,Short term period,270,386,39,19,8,130,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+1,78,77,63,0,0,0,0,0,128,0,-1--1--1,,1|(272,425)|
+\\\---/// Sketch information - do not modify anything except names
+V300  Do not put anything below this section - it will be ignored
+*Regional Prices SCA
+$192-192-192,0,Times New Roman|12||0-0-0|0-0-0|0-0-255|-1--1--1|-1--1--1|96,96,100,0
+10,1,Fictional prices Nuclear SCA,85,-39,48,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,2,Initial shadow fictional prices Nuclear SCA,471,-124,70,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,3,Relative change in fictional prices Nuclear SCA,460,35,73,28,8,3,0,0,0,0,0,0
+10,4,Initial energy resource prices Nuclear SCA,804,-126,70,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,5,Shadow fictional prices Nuclear SCA,471,-52,65,28,3,131,0,0,0,0,0,0
+10,6,Energy resource prices Nuclear SCA,816,-51,63,29,3,131,0,0,0,0,0,0
+12,7,48,237,-57,10,8,0,3,0,0,-1,0,0,0
+1,8,10,5,4,0,0,22,0,0,0,-1--1--1,,1|(373,-59)|
+1,9,10,7,100,0,0,22,0,0,0,-1--1--1,,1|(287,-59)|
+11,10,48,334,-59,6,8,34,3,0,0,1,0,0,0
+10,11,Changes in fictional prices Nuclear SCA,334,-32,65,19,40,3,0,0,-1,0,0,0
+12,12,48,599,-58,10,8,0,3,0,0,-1,0,0,0
+1,13,15,6,4,0,0,22,0,0,0,-1--1--1,,1|(710,-55)|
+1,14,15,12,100,0,0,22,0,0,0,-1--1--1,,1|(632,-55)|
+11,15,48,661,-55,6,8,34,3,0,0,1,0,0,0
+10,16,Change in energy resource prices Nuclear SCA,661,-28,76,28,40,3,0,0,-1,0,0,0
+1,17,1,11,0,0,0,0,0,128,0,-1--1--1,,1|(194,-35)|
+1,18,2,5,0,0,0,0,0,128,1,-1--1--1,,1|(471,-99)|
+1,19,5,11,0,0,0,0,0,128,0,-1--1--1,,1|(409,-43)|
+1,20,11,3,0,0,0,0,0,128,0,-1--1--1,,1|(381,-6)|
+1,21,5,3,0,0,0,0,0,128,0,-1--1--1,,1|(466,-15)|
+1,22,3,16,0,0,0,0,0,128,0,-1--1--1,,1|(552,6)|
+1,23,6,16,0,0,0,0,0,128,0,-1--1--1,,1|(751,-41)|
+1,24,4,6,0,0,0,0,0,128,1,-1--1--1,,1|(807,-100)|
+10,25,Short term period,327,-124,39,19,8,130,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+1,26,25,11,0,0,0,0,0,128,0,-1--1--1,,1|(329,-84)|
+10,27,Fictional prices other Renewables SCA,88,226,67,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,28,Initial shadow fictional prices other Renewables SCA,474,141,78,28,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,29,Relative change in fictional prices other Renewables SCA,477,303,83,28,8,3,0,0,0,0,0,0
+10,30,Initial energy resource prices other Renewables SCA,807,139,78,28,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,31,Shadow fictional prices other Renewables SCA,474,213,65,28,3,131,0,0,0,0,0,0
+10,32,Energy resource prices other Renewables SCA,819,214,63,29,3,131,0,0,0,0,0,0
+12,33,48,234,205,10,8,0,3,0,0,-1,0,0,0
+1,34,36,31,4,0,0,22,0,0,0,-1--1--1,,1|(366,207)|
+1,35,36,33,100,0,0,22,0,0,0,-1--1--1,,1|(278,207)|
+11,36,48,318,207,6,8,34,3,0,0,1,0,0,0
+10,37,Changes in fictional prices other Renewables SCA,318,234,82,19,40,3,0,0,-1,0,0,0
+12,38,48,602,207,10,8,0,3,0,0,-1,0,0,0
+1,39,41,32,4,0,0,22,0,0,0,-1--1--1,,1|(713,210)|
+1,40,41,38,100,0,0,22,0,0,0,-1--1--1,,1|(635,210)|
+11,41,48,664,210,6,8,34,3,0,0,1,0,0,0
+10,42,Change in energy resource prices other Renewables SCA,664,237,84,28,40,3,0,0,-1,0,0,0
+1,43,27,37,0,0,0,0,0,128,0,-1--1--1,,1|(188,229)|
+1,44,28,31,0,0,0,0,0,128,1,-1--1--1,,1|(474,170)|
+1,45,31,37,0,0,0,0,0,128,0,-1--1--1,,1|(411,220)|
+1,46,37,29,0,0,0,0,0,128,0,-1--1--1,,1|(380,261)|
+1,47,31,29,0,0,0,0,0,128,0,-1--1--1,,1|(474,251)|
+1,48,29,42,0,0,0,0,0,128,0,-1--1--1,,1|(563,272)|
+1,49,32,42,0,0,0,0,0,128,0,-1--1--1,,1|(758,222)|
+1,50,30,32,0,0,0,0,0,128,1,-1--1--1,,1|(811,169)|
+10,51,Short term period,310,145,39,19,8,130,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+1,52,51,37,0,0,0,0,0,128,0,-1--1--1,,1|(312,182)|
+10,53,Fictional prices Gas SCA,96,505,48,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,54,Initial shadow fictional prices Gas SCA,482,420,70,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,55,Relative change in fictional prices Gas SCA,471,579,79,19,8,3,0,0,0,0,0,0
+10,56,Initial energy resource prices Gas SCA,815,418,70,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,57,Shadow fictional prices Gas SCA,482,492,65,28,3,131,0,0,0,0,0,0
+10,58,Energy resource prices Gas SCA,827,493,63,29,3,131,0,0,0,0,0,0
+12,59,48,248,487,10,8,0,3,0,0,-1,0,0,0
+1,60,62,57,4,0,0,22,0,0,0,-1--1--1,,1|(384,485)|
+1,61,62,59,100,0,0,22,0,0,0,-1--1--1,,1|(298,485)|
+11,62,48,345,485,6,8,34,3,0,0,1,0,0,0
+10,63,Changes in fictional prices Gas SCA,345,512,61,19,40,3,0,0,-1,0,0,0
+12,64,48,610,486,10,8,0,3,0,0,-1,0,0,0
+1,65,67,58,4,0,0,22,0,0,0,-1--1--1,,1|(721,489)|
+1,66,67,64,100,0,0,22,0,0,0,-1--1--1,,1|(643,489)|
+11,67,48,672,489,6,8,34,3,0,0,1,0,0,0
+10,68,Change in energy resource prices Gas SCA,672,516,82,19,40,3,0,0,-1,0,0,0
+1,69,53,63,0,0,0,0,0,128,0,-1--1--1,,1|(207,507)|
+1,70,54,57,0,0,0,0,0,128,1,-1--1--1,,1|(482,444)|
+1,71,57,63,0,0,0,0,0,128,0,-1--1--1,,1|(418,500)|
+1,72,63,55,0,0,0,0,0,128,0,-1--1--1,,1|(401,542)|
+1,73,57,55,0,0,0,0,0,128,0,-1--1--1,,1|(477,533)|
+1,74,55,68,0,0,0,0,0,128,0,-1--1--1,,1|(564,549)|
+1,75,58,68,0,0,0,0,0,128,0,-1--1--1,,1|(765,501)|
+1,76,56,58,0,0,0,0,0,128,1,-1--1--1,,1|(818,443)|
+10,77,Short term period,338,420,39,19,8,130,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+1,78,77,63,0,0,0,0,0,128,0,-1--1--1,,1|(340,459)|
+\\\---/// Sketch information - do not modify anything except names
+V300  Do not put anything below this section - it will be ignored
+*Regional Prices CIS
+$192-192-192,0,Times New Roman|12||0-0-0|0-0-0|0-0-255|-1--1--1|-1--1--1|96,96,100,0
+10,1,Fictional prices Nuclear CIS,170,199,48,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,2,Initial shadow fictional prices Nuclear CIS,556,114,70,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,3,Relative change in fictional prices Nuclear CIS,545,273,73,28,8,3,0,0,0,0,0,0
+10,4,Initial energy resource prices Nuclear CIS,889,112,70,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,5,Shadow fictional prices Nuclear CIS,556,186,65,28,3,131,0,0,0,0,0,0
+10,6,Energy resource prices Nuclear CIS,901,187,63,29,3,131,0,0,0,0,0,0
+12,7,48,322,181,10,8,0,3,0,0,-1,0,0,0
+1,8,10,5,4,0,0,22,0,0,0,-1--1--1,,1|(458,179)|
+1,9,10,7,100,0,0,22,0,0,0,-1--1--1,,1|(372,179)|
+11,10,48,419,179,6,8,34,3,0,0,1,0,0,0
+10,11,Changes in fictional prices Nuclear CIS,419,206,62,19,40,3,0,0,-1,0,0,0
+12,12,48,684,180,10,8,0,3,0,0,-1,0,0,0
+1,13,15,6,4,0,0,22,0,0,0,-1--1--1,,1|(795,183)|
+1,14,15,12,100,0,0,22,0,0,0,-1--1--1,,1|(717,183)|
+11,15,48,746,183,6,8,34,3,0,0,1,0,0,0
+10,16,Change in energy resource prices Nuclear CIS,746,210,76,28,40,3,0,0,-1,0,0,0
+1,17,1,11,0,0,0,0,0,128,0,-1--1--1,,1|(280,201)|
+1,18,2,5,0,0,0,0,0,128,1,-1--1--1,,1|(556,138)|
+1,19,5,11,0,0,0,0,0,128,0,-1--1--1,,1|(492,194)|
+1,20,11,3,0,0,0,0,0,128,0,-1--1--1,,1|(466,231)|
+1,21,5,3,0,0,0,0,0,128,0,-1--1--1,,1|(551,222)|
+1,22,3,16,0,0,0,0,0,128,0,-1--1--1,,1|(637,244)|
+1,23,6,16,0,0,0,0,0,128,0,-1--1--1,,1|(836,196)|
+1,24,4,6,0,0,0,0,0,128,1,-1--1--1,,1|(892,137)|
+10,25,Short term period,412,114,39,19,8,130,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+1,26,25,11,0,0,0,0,0,128,0,-1--1--1,,1|(414,153)|
+10,27,Fictional prices other Renewables CIS,173,464,67,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,28,Initial shadow fictional prices other Renewables CIS,559,379,78,28,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,29,Relative change in fictional prices other Renewables CIS,562,541,93,19,8,3,0,0,0,0,0,0
+10,30,Initial energy resource prices other Renewables CIS,892,377,78,28,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,31,Shadow fictional prices other Renewables CIS,559,451,65,28,3,131,0,0,0,0,0,0
+10,32,Energy resource prices other Renewables CIS,904,452,63,29,3,131,0,0,0,0,0,0
+12,33,48,319,443,10,8,0,3,0,0,-1,0,0,0
+1,34,36,31,4,0,0,22,0,0,0,-1--1--1,,1|(451,445)|
+1,35,36,33,100,0,0,22,0,0,0,-1--1--1,,1|(363,445)|
+11,36,48,403,445,6,8,34,3,0,0,1,0,0,0
+10,37,Changes in fictional prices other Renewables CIS,403,472,82,19,40,3,0,0,-1,0,0,0
+12,38,48,687,445,10,8,0,3,0,0,-1,0,0,0
+1,39,41,32,4,0,0,22,0,0,0,-1--1--1,,1|(798,448)|
+1,40,41,38,100,0,0,22,0,0,0,-1--1--1,,1|(720,448)|
+11,41,48,749,448,6,8,34,3,0,0,1,0,0,0
+10,42,Change in energy resource prices other Renewables CIS,749,475,93,19,40,3,0,0,-1,0,0,0
+1,43,27,37,0,0,0,0,0,128,0,-1--1--1,,1|(273,467)|
+1,44,28,31,0,0,0,0,0,128,1,-1--1--1,,1|(559,408)|
+1,45,31,37,0,0,0,0,0,128,0,-1--1--1,,1|(496,458)|
+1,46,37,29,0,0,0,0,0,128,0,-1--1--1,,1|(475,503)|
+1,47,31,29,0,0,0,0,0,128,0,-1--1--1,,1|(559,493)|
+1,48,29,42,0,0,0,0,0,128,0,-1--1--1,,1|(648,510)|
+1,49,32,42,0,0,0,0,0,128,0,-1--1--1,,1|(848,459)|
+1,50,30,32,0,0,0,0,0,128,1,-1--1--1,,1|(896,407)|
+10,51,Short term period,395,383,39,19,8,130,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+1,52,51,37,0,0,0,0,0,128,0,-1--1--1,,1|(397,420)|
+10,53,Fictional prices Gas CIS,181,743,48,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,54,Initial shadow fictional prices Gas CIS,567,658,70,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,55,Relative change in fictional prices Gas CIS,556,817,75,19,8,3,0,0,0,0,0,0
+10,56,Initial energy resource prices Gas CIS,900,656,70,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,57,Shadow fictional prices Gas CIS,567,730,65,28,3,131,0,0,0,0,0,0
+10,58,Energy resource prices Gas CIS,912,731,63,29,3,131,0,0,0,0,0,0
+12,59,48,333,725,10,8,0,3,0,0,-1,0,0,0
+1,60,62,57,4,0,0,22,0,0,0,-1--1--1,,1|(469,723)|
+1,61,62,59,100,0,0,22,0,0,0,-1--1--1,,1|(383,723)|
+11,62,48,430,723,6,8,34,3,0,0,1,0,0,0
+10,63,Changes in fictional prices Gas CIS,430,750,61,19,40,3,0,0,-1,0,0,0
+12,64,48,695,724,10,8,0,3,0,0,-1,0,0,0
+1,65,67,58,4,0,0,22,0,0,0,-1--1--1,,1|(806,727)|
+1,66,67,64,100,0,0,22,0,0,0,-1--1--1,,1|(728,727)|
+11,67,48,757,727,6,8,34,3,0,0,1,0,0,0
+10,68,Change in energy resource prices Gas CIS,757,754,79,19,40,3,0,0,-1,0,0,0
+1,69,53,63,0,0,0,0,0,128,0,-1--1--1,,1|(292,745)|
+1,70,54,57,0,0,0,0,0,128,1,-1--1--1,,1|(567,682)|
+1,71,57,63,0,0,0,0,0,128,0,-1--1--1,,1|(503,738)|
+1,72,63,55,0,0,0,0,0,128,0,-1--1--1,,1|(486,780)|
+1,73,57,55,0,0,0,0,0,128,0,-1--1--1,,1|(562,771)|
+1,74,55,68,0,0,0,0,0,128,0,-1--1--1,,1|(649,787)|
+1,75,58,68,0,0,0,0,0,128,0,-1--1--1,,1|(849,739)|
+1,76,56,58,0,0,0,0,0,128,1,-1--1--1,,1|(903,681)|
+10,77,Short term period,423,658,39,19,8,130,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+1,78,77,63,0,0,0,0,0,128,0,-1--1--1,,1|(425,697)|
+\\\---/// Sketch information - do not modify anything except names
+V300  Do not put anything below this section - it will be ignored
+*Regional Prices ME
+$192-192-192,0,Times New Roman|12||0-0-0|0-0-0|0-0-255|-1--1--1|-1--1--1|96,96,100,0
+10,1,Fictional prices Nuclear ME,170,199,48,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,2,Initial shadow fictional prices Nuclear ME,556,114,70,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,3,Relative change in fictional prices Nuclear ME,545,273,73,28,8,3,0,0,0,0,0,0
+10,4,Initial energy resource prices Nuclear ME,889,112,70,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,5,Shadow fictional prices Nuclear ME,556,186,65,28,3,131,0,0,0,0,0,0
+10,6,Energy resource prices Nuclear ME,901,187,63,29,3,131,0,0,0,0,0,0
+12,7,48,322,181,10,8,0,3,0,0,-1,0,0,0
+1,8,10,5,4,0,0,22,0,0,0,-1--1--1,,1|(458,179)|
+1,9,10,7,100,0,0,22,0,0,0,-1--1--1,,1|(372,179)|
+11,10,48,419,179,6,8,34,3,0,0,1,0,0,0
+10,11,Changes in fictional prices Nuclear ME,419,206,61,19,40,3,0,0,-1,0,0,0
+12,12,48,684,180,10,8,0,3,0,0,-1,0,0,0
+1,13,15,6,4,0,0,22,0,0,0,-1--1--1,,1|(795,183)|
+1,14,15,12,100,0,0,22,0,0,0,-1--1--1,,1|(717,183)|
+11,15,48,746,183,6,8,34,3,0,0,1,0,0,0
+10,16,Change in energy resource prices Nuclear ME,746,210,76,28,40,3,0,0,-1,0,0,0
+1,17,1,11,0,0,0,0,0,128,0,-1--1--1,,1|(281,201)|
+1,18,2,5,0,0,0,0,0,128,1,-1--1--1,,1|(556,138)|
+1,19,5,11,0,0,0,0,0,128,0,-1--1--1,,1|(492,194)|
+1,20,11,3,0,0,0,0,0,128,0,-1--1--1,,1|(466,231)|
+1,21,5,3,0,0,0,0,0,128,0,-1--1--1,,1|(551,222)|
+1,22,3,16,0,0,0,0,0,128,0,-1--1--1,,1|(637,244)|
+1,23,6,16,0,0,0,0,0,128,0,-1--1--1,,1|(836,196)|
+1,24,4,6,0,0,0,0,0,128,1,-1--1--1,,1|(892,137)|
+10,25,Short term period,412,114,39,19,8,130,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+1,26,25,11,0,0,0,0,0,128,0,-1--1--1,,1|(414,153)|
+10,27,Fictional prices other Renewables ME,173,464,67,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,28,Initial shadow fictional prices other Renewables ME,559,379,78,28,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,29,Relative change in fictional prices other Renewables ME,562,541,92,19,8,3,0,0,0,0,0,0
+10,30,Initial energy resource prices other Renewables ME,892,377,78,28,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,31,Shadow fictional prices other Renewables ME,559,451,65,28,3,131,0,0,0,0,0,0
+10,32,Energy resource prices other Renewables ME,904,452,63,29,3,131,0,0,0,0,0,0
+12,33,48,319,443,10,8,0,3,0,0,-1,0,0,0
+1,34,36,31,4,0,0,22,0,0,0,-1--1--1,,1|(451,445)|
+1,35,36,33,100,0,0,22,0,0,0,-1--1--1,,1|(363,445)|
+11,36,48,403,445,6,8,34,3,0,0,1,0,0,0
+10,37,Changes in fictional prices other Renewables ME,403,472,82,19,40,3,0,0,-1,0,0,0
+12,38,48,687,445,10,8,0,3,0,0,-1,0,0,0
+1,39,41,32,4,0,0,22,0,0,0,-1--1--1,,1|(798,448)|
+1,40,41,38,100,0,0,22,0,0,0,-1--1--1,,1|(720,448)|
+11,41,48,749,448,6,8,34,3,0,0,1,0,0,0
+10,42,Change in energy resource prices other Renewables ME,749,475,92,19,40,3,0,0,-1,0,0,0
+1,43,27,37,0,0,0,0,0,128,0,-1--1--1,,1|(273,467)|
+1,44,28,31,0,0,0,0,0,128,1,-1--1--1,,1|(559,408)|
+1,45,31,37,0,0,0,0,0,128,0,-1--1--1,,1|(496,458)|
+1,46,37,29,0,0,0,0,0,128,0,-1--1--1,,1|(475,503)|
+1,47,31,29,0,0,0,0,0,128,0,-1--1--1,,1|(559,493)|
+1,48,29,42,0,0,0,0,0,128,0,-1--1--1,,1|(648,510)|
+1,49,32,42,0,0,0,0,0,128,0,-1--1--1,,1|(841,461)|
+1,50,30,32,0,0,0,0,0,128,1,-1--1--1,,1|(896,407)|
+10,51,Short term period,395,383,39,19,8,130,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+1,52,51,37,0,0,0,0,0,128,0,-1--1--1,,1|(397,420)|
+10,53,Fictional prices Gas ME,181,743,48,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,54,Initial shadow fictional prices Gas ME,567,658,70,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,55,Relative change in fictional prices Gas ME,556,817,74,19,8,3,0,0,0,0,0,0
+10,56,Initial energy resource prices Gas ME,900,656,70,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,57,Shadow fictional prices Gas ME,567,730,65,28,3,131,0,0,0,0,0,0
+10,58,Energy resource prices Gas ME,912,731,63,29,3,131,0,0,0,0,0,0
+12,59,48,333,725,10,8,0,3,0,0,-1,0,0,0
+1,60,62,57,4,0,0,22,0,0,0,-1--1--1,,1|(469,723)|
+1,61,62,59,100,0,0,22,0,0,0,-1--1--1,,1|(383,723)|
+11,62,48,430,723,6,8,34,3,0,0,1,0,0,0
+10,63,Changes in fictional prices Gas ME,430,750,61,19,40,3,0,0,-1,0,0,0
+12,64,48,695,724,10,8,0,3,0,0,-1,0,0,0
+1,65,67,58,4,0,0,22,0,0,0,-1--1--1,,1|(806,727)|
+1,66,67,64,100,0,0,22,0,0,0,-1--1--1,,1|(728,727)|
+11,67,48,757,727,6,8,34,3,0,0,1,0,0,0
+10,68,Change in energy resource prices Gas ME,757,754,78,19,40,3,0,0,-1,0,0,0
+1,69,53,63,0,0,0,0,0,128,0,-1--1--1,,1|(292,745)|
+1,70,54,57,0,0,0,0,0,128,1,-1--1--1,,1|(567,682)|
+1,71,57,63,0,0,0,0,0,128,0,-1--1--1,,1|(503,738)|
+1,72,63,55,0,0,0,0,0,128,0,-1--1--1,,1|(486,780)|
+1,73,57,55,0,0,0,0,0,128,0,-1--1--1,,1|(562,771)|
+1,74,55,68,0,0,0,0,0,128,0,-1--1--1,,1|(649,787)|
+1,75,58,68,0,0,0,0,0,128,0,-1--1--1,,1|(848,740)|
+1,76,56,58,0,0,0,0,0,128,1,-1--1--1,,1|(903,681)|
+10,77,Short term period,423,658,39,19,8,130,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+1,78,77,63,0,0,0,0,0,128,0,-1--1--1,,1|(425,697)|
+\\\---/// Sketch information - do not modify anything except names
+V300  Do not put anything below this section - it will be ignored
+*Regional Prices AF
+$192-192-192,0,Times New Roman|12||0-0-0|0-0-0|0-0-255|-1--1--1|-1--1--1|96,96,100,0
+10,1,Fictional prices Nuclear AF,170,-73,48,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,2,Initial shadow fictional prices Nuclear AF,556,-158,70,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,3,Relative change in fictional prices Nuclear AF,545,1,73,28,8,3,0,0,0,0,0,0
+10,4,Initial energy resource prices Nuclear AF,889,-160,70,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,5,Shadow fictional prices Nuclear AF,556,-86,65,28,3,131,0,0,0,0,0,0
+10,6,Energy resource prices Nuclear AF,901,-85,63,29,3,131,0,0,0,0,0,0
+12,7,48,322,-91,10,8,0,3,0,0,-1,0,0,0
+1,8,10,5,4,0,0,22,0,0,0,-1--1--1,,1|(458,-93)|
+1,9,10,7,100,0,0,22,0,0,0,-1--1--1,,1|(372,-93)|
+11,10,48,419,-93,6,8,34,3,0,0,1,0,0,0
+10,11,Changes in fictional prices Nuclear AF,419,-66,61,19,40,3,0,0,-1,0,0,0
+12,12,48,684,-92,10,8,0,3,0,0,-1,0,0,0
+1,13,15,6,4,0,0,22,0,0,0,-1--1--1,,1|(795,-89)|
+1,14,15,12,100,0,0,22,0,0,0,-1--1--1,,1|(717,-89)|
+11,15,48,746,-89,6,8,34,3,0,0,1,0,0,0
+10,16,Change in energy resource prices Nuclear AF,746,-62,76,28,40,3,0,0,-1,0,0,0
+1,17,1,11,0,0,0,0,0,128,0,-1--1--1,,1|(281,-69)|
+1,18,2,5,0,0,0,0,0,128,1,-1--1--1,,1|(556,-133)|
+1,19,5,11,0,0,0,0,0,128,0,-1--1--1,,1|(492,-77)|
+1,20,11,3,0,0,0,0,0,128,0,-1--1--1,,1|(466,-40)|
+1,21,5,3,0,0,0,0,0,128,0,-1--1--1,,1|(551,-49)|
+1,22,3,16,0,0,0,0,0,128,0,-1--1--1,,1|(637,-28)|
+1,23,6,16,0,0,0,0,0,128,0,-1--1--1,,1|(836,-75)|
+1,24,4,6,0,0,0,0,0,128,1,-1--1--1,,1|(892,-134)|
+10,25,Short term period,412,-158,39,19,8,130,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+1,26,25,11,0,0,0,0,0,128,0,-1--1--1,,1|(414,-118)|
+10,27,Fictional prices other Renewables AF,173,192,67,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,28,Initial shadow fictional prices other Renewables AF,559,107,78,28,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,29,Relative change in fictional prices other Renewables AF,562,269,91,19,8,3,0,0,0,0,0,0
+10,30,Initial energy resource prices other Renewables AF,892,105,78,28,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,31,Shadow fictional prices other Renewables AF,559,179,65,28,3,131,0,0,0,0,0,0
+10,32,Energy resource prices other Renewables AF,904,180,63,29,3,131,0,0,0,0,0,0
+12,33,48,319,171,10,8,0,3,0,0,-1,0,0,0
+1,34,36,31,4,0,0,22,0,0,0,-1--1--1,,1|(451,173)|
+1,35,36,33,100,0,0,22,0,0,0,-1--1--1,,1|(363,173)|
+11,36,48,403,173,6,8,34,3,0,0,1,0,0,0
+10,37,Changes in fictional prices other Renewables AF,403,200,82,19,40,3,0,0,-1,0,0,0
+12,38,48,687,173,10,8,0,3,0,0,-1,0,0,0
+1,39,41,32,4,0,0,22,0,0,0,-1--1--1,,1|(798,176)|
+1,40,41,38,100,0,0,22,0,0,0,-1--1--1,,1|(720,176)|
+11,41,48,749,176,6,8,34,3,0,0,1,0,0,0
+10,42,Change in energy resource prices other Renewables AF,749,203,91,19,40,3,0,0,-1,0,0,0
+1,43,27,37,0,0,0,0,0,128,0,-1--1--1,,1|(273,195)|
+1,44,28,31,0,0,0,0,0,128,1,-1--1--1,,1|(559,136)|
+1,45,31,37,0,0,0,0,0,128,0,-1--1--1,,1|(496,186)|
+1,46,37,29,0,0,0,0,0,128,0,-1--1--1,,1|(475,231)|
+1,47,31,29,0,0,0,0,0,128,0,-1--1--1,,1|(559,221)|
+1,48,29,42,0,0,0,0,0,128,0,-1--1--1,,1|(648,238)|
+1,49,32,42,0,0,0,0,0,128,0,-1--1--1,,1|(847,189)|
+1,50,30,32,0,0,0,0,0,128,1,-1--1--1,,1|(896,135)|
+10,51,Short term period,395,111,39,19,8,130,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+1,52,51,37,0,0,0,0,0,128,0,-1--1--1,,1|(397,148)|
+10,53,Fictional prices Gas AF,181,471,48,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,54,Initial shadow fictional prices Gas AF,567,386,70,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,55,Relative change in fictional prices Gas AF,556,545,73,19,8,3,0,0,0,0,0,0
+10,56,Initial energy resource prices Gas AF,900,384,70,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,57,Shadow fictional prices Gas AF,567,458,65,28,3,131,0,0,0,0,0,0
+10,58,Energy resource prices Gas AF,912,459,63,29,3,131,0,0,0,0,0,0
+12,59,48,333,453,10,8,0,3,0,0,-1,0,0,0
+1,60,62,57,4,0,0,22,0,0,0,-1--1--1,,1|(469,451)|
+1,61,62,59,100,0,0,22,0,0,0,-1--1--1,,1|(383,451)|
+11,62,48,430,451,6,8,34,3,0,0,1,0,0,0
+10,63,Changes in fictional prices Gas AF,430,478,61,19,40,3,0,0,-1,0,0,0
+12,64,48,695,452,10,8,0,3,0,0,-1,0,0,0
+1,65,67,58,4,0,0,22,0,0,0,-1--1--1,,1|(806,455)|
+1,66,67,64,100,0,0,22,0,0,0,-1--1--1,,1|(728,455)|
+11,67,48,757,455,6,8,34,3,0,0,1,0,0,0
+10,68,Change in energy resource prices Gas AF,757,482,76,19,40,3,0,0,-1,0,0,0
+1,69,53,63,0,0,0,0,0,128,0,-1--1--1,,1|(292,473)|
+1,70,54,57,0,0,0,0,0,128,1,-1--1--1,,1|(567,410)|
+1,71,57,63,0,0,0,0,0,128,0,-1--1--1,,1|(503,466)|
+1,72,63,55,0,0,0,0,0,128,0,-1--1--1,,1|(486,508)|
+1,73,57,55,0,0,0,0,0,128,0,-1--1--1,,1|(562,499)|
+1,74,55,68,0,0,0,0,0,128,0,-1--1--1,,1|(649,515)|
+1,75,58,68,0,0,0,0,0,128,0,-1--1--1,,1|(847,468)|
+1,76,56,58,0,0,0,0,0,128,1,-1--1--1,,1|(903,409)|
+10,77,Short term period,423,386,39,19,8,130,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+1,78,77,63,0,0,0,0,0,128,0,-1--1--1,,1|(425,425)|
+\\\---/// Sketch information - do not modify anything except names
+V300  Do not put anything below this section - it will be ignored
+*Regional Prices AP
+$192-192-192,0,Times New Roman|12||0-0-0|0-0-0|0-0-255|-1--1--1|-1--1--1|96,96,100,0
+10,1,Fictional prices Nuclear AP,170,-22,48,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,2,Initial shadow fictional prices Nuclear AP,556,-107,70,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,3,Relative change in fictional prices Nuclear AP,545,52,73,28,8,3,0,0,0,0,0,0
+10,4,Initial energy resource prices Nuclear AP,889,-109,70,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,5,Shadow fictional prices Nuclear AP,556,-35,65,28,3,131,0,0,0,0,0,0
+10,6,Energy resource prices Nuclear AP,901,-34,63,29,3,131,0,0,0,0,0,0
+12,7,48,322,-40,10,8,0,3,0,0,-1,0,0,0
+1,8,10,5,4,0,0,22,0,0,0,-1--1--1,,1|(458,-42)|
+1,9,10,7,100,0,0,22,0,0,0,-1--1--1,,1|(372,-42)|
+11,10,48,419,-42,6,8,34,3,0,0,1,0,0,0
+10,11,Changes in fictional prices Nuclear AP,419,-15,61,19,40,3,0,0,-1,0,0,0
+12,12,48,684,-41,10,8,0,3,0,0,-1,0,0,0
+1,13,15,6,4,0,0,22,0,0,0,-1--1--1,,1|(795,-38)|
+1,14,15,12,100,0,0,22,0,0,0,-1--1--1,,1|(717,-38)|
+11,15,48,746,-38,6,8,34,3,0,0,1,0,0,0
+10,16,Change in energy resource prices Nuclear AP,746,-11,76,28,40,3,0,0,-1,0,0,0
+1,17,1,11,0,0,0,0,0,128,0,-1--1--1,,1|(281,-18)|
+1,18,2,5,0,0,0,0,0,128,1,-1--1--1,,1|(556,-82)|
+1,19,5,11,0,0,0,0,0,128,0,-1--1--1,,1|(492,-26)|
+1,20,11,3,0,0,0,0,0,128,0,-1--1--1,,1|(466,10)|
+1,21,5,3,0,0,0,0,0,128,0,-1--1--1,,1|(551,1)|
+1,22,3,16,0,0,0,0,0,128,0,-1--1--1,,1|(637,23)|
+1,23,6,16,0,0,0,0,0,128,0,-1--1--1,,1|(836,-24)|
+1,24,4,6,0,0,0,0,0,128,1,-1--1--1,,1|(892,-83)|
+10,25,Short term period,412,-107,39,19,8,130,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+1,26,25,11,0,0,0,0,0,128,0,-1--1--1,,1|(414,-67)|
+10,27,Fictional prices other Renewables AP,173,243,67,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,28,Initial shadow fictional prices other Renewables AP,559,158,78,28,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,29,Relative change in fictional prices other Renewables AP,562,320,91,19,8,3,0,0,0,0,0,0
+10,30,Initial energy resource prices other Renewables AP,892,156,78,28,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,31,Shadow fictional prices other Renewables AP,559,230,65,28,3,131,0,0,0,0,0,0
+10,32,Energy resource prices other Renewables AP,904,231,63,29,3,131,0,0,0,0,0,0
+12,33,48,319,222,10,8,0,3,0,0,-1,0,0,0
+1,34,36,31,4,0,0,22,0,0,0,-1--1--1,,1|(451,224)|
+1,35,36,33,100,0,0,22,0,0,0,-1--1--1,,1|(363,224)|
+11,36,48,403,224,6,8,34,3,0,0,1,0,0,0
+10,37,Changes in fictional prices other Renewables AP,403,251,82,19,40,3,0,0,-1,0,0,0
+12,38,48,687,224,10,8,0,3,0,0,-1,0,0,0
+1,39,41,32,4,0,0,22,0,0,0,-1--1--1,,1|(798,227)|
+1,40,41,38,100,0,0,22,0,0,0,-1--1--1,,1|(720,227)|
+11,41,48,749,227,6,8,34,3,0,0,1,0,0,0
+10,42,Change in energy resource prices other Renewables AP,749,254,91,19,40,3,0,0,-1,0,0,0
+1,43,27,37,0,0,0,0,0,128,0,-1--1--1,,1|(273,246)|
+1,44,28,31,0,0,0,0,0,128,1,-1--1--1,,1|(559,187)|
+1,45,31,37,0,0,0,0,0,128,0,-1--1--1,,1|(496,237)|
+1,46,37,29,0,0,0,0,0,128,0,-1--1--1,,1|(475,282)|
+1,47,31,29,0,0,0,0,0,128,0,-1--1--1,,1|(559,272)|
+1,48,29,42,0,0,0,0,0,128,0,-1--1--1,,1|(648,289)|
+1,49,32,42,0,0,0,0,0,128,0,-1--1--1,,1|(847,240)|
+1,50,30,32,0,0,0,0,0,128,1,-1--1--1,,1|(896,186)|
+10,51,Short term period,395,162,39,19,8,130,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+1,52,51,37,0,0,0,0,0,128,0,-1--1--1,,1|(397,199)|
+10,53,Fictional prices Gas AP,181,522,48,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,54,Initial shadow fictional prices Gas AP,567,437,70,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,55,Relative change in fictional prices Gas AP,556,596,73,19,8,3,0,0,0,0,0,0
+10,56,Initial energy resource prices Gas AP,900,435,70,19,8,3,0,2,0,0,0,0,-1--1--1,0-0-0,|12||0-128-255
+10,57,Shadow fictional prices Gas AP,567,509,65,28,3,131,0,0,0,0,0,0
+10,58,Energy resource prices Gas AP,912,510,63,29,3,131,0,0,0,0,0,0
+12,59,48,333,504,10,8,0,3,0,0,-1,0,0,0
+1,60,62,57,4,0,0,22,0,0,0,-1--1--1,,1|(469,502)|
+1,61,62,59,100,0,0,22,0,0,0,-1--1--1,,1|(383,502)|
+11,62,48,430,502,6,8,34,3,0,0,1,0,0,0
+10,63,Changes in fictional prices Gas AP,430,529,61,19,40,3,0,0,-1,0,0,0
+12,64,48,695,503,10,8,0,3,0,0,-1,0,0,0
+1,65,67,58,4,0,0,22,0,0,0,-1--1--1,,1|(806,506)|
+1,66,67,64,100,0,0,22,0,0,0,-1--1--1,,1|(728,506)|
+11,67,48,757,506,6,8,34,3,0,0,1,0,0,0
+10,68,Change in energy resource prices Gas AP,757,533,76,19,40,3,0,0,-1,0,0,0
+1,69,53,63,0,0,0,0,0,128,0,-1--1--1,,1|(292,524)|
+1,70,54,57,0,0,0,0,0,128,1,-1--1--1,,1|(567,461)|
+1,71,57,63,0,0,0,0,0,128,0,-1--1--1,,1|(503,517)|
+1,72,63,55,0,0,0,0,0,128,0,-1--1--1,,1|(486,559)|
+1,73,57,55,0,0,0,0,0,128,0,-1--1--1,,1|(562,550)|
+1,74,55,68,0,0,0,0,0,128,0,-1--1--1,,1|(649,566)|
+1,75,58,68,0,0,0,0,0,128,0,-1--1--1,,1|(847,519)|
+1,76,56,58,0,0,0,0,0,128,1,-1--1--1,,1|(903,460)|
+10,77,Short term period,423,437,39,19,8,130,0,3,-1,0,0,0,128-128-128,0-0-0,|12||128-128-128
+1,78,77,63,0,0,0,0,0,128,0,-1--1--1,,1|(425,476)|
+///---\\\
+:L<%^E!@
+1:Current.vdf
+9:Current
+15:0,0,0,0,0,0
+19:100,0
+27:0,
+34:0,
+4:Time
+5:Energy resource prices Gas ME
+35:Date
+36:YYYY-MM-DD
+37:2000
+38:1
+39:1
+40:0
+41:0
+42:1
+24:2010
+25:2050
+26:2050

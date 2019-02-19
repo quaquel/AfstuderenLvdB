@@ -102,24 +102,14 @@ def main():
                         
 
     hybridmodel.levers = [IntegerParameter("EnergyUnion", 0, 1),
-                     IntegerParameter("CO2Cost", 0, 2)]
-
-
-# In[ ]:
-
+                          IntegerParameter("CO2Cost", 0, 2)]
 
     ema_logging.log_to_stderr(ema_logging.INFO)
     with MultiprocessingEvaluator(hybridmodel) as evaluator:
-        results = evaluator.perform_experiments(scenarios=2000, policies=6, levers_sampling='ff')
+        results = evaluator.perform_experiments(scenarios=200, policies=6, levers_sampling='ff')
 
+    save_results(results, './results/1200 runs V30.tar.gz')
 
-# In[1]:
-
-
-    save_results(results, r'./12000 runs V30.tar.gz')
-
-
-# In[ ]:
 
 if __name__ == "__main__":
     main()

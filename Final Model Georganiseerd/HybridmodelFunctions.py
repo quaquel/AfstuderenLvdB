@@ -1123,8 +1123,8 @@ def runnetlogo(agent_gas, netlogo, ncountries, netlogoglobals):
 # In[5]:
 
 def hybridloop(inputpowerfactor, inputLNGprice, inputtransferprice, 
-#                DemandBalanceSupplyEnergyPrice, 
-               MaximumChangeinDemand,
+               DemandBalanceSupplyEnergyPrice, 
+#                MaximumChangeinDemand,
                SupplyElasticityGas, 
                SupplyElasticityOil, SupplyElasticityCoal, Variancepower,
                SupplyElasticityNuclear, SupplyElasticityBiofuel, SupplyElasticityOR,
@@ -1132,7 +1132,7 @@ def hybridloop(inputpowerfactor, inputLNGprice, inputtransferprice,
                inputLNGCapincreasetime, EconomicGrowthScenario, EnergyIntensityScenario,
                CO2coal, CO2oil, EnergyUnion, CO2Cost,
                POil, PCoal, PBio, PNuc, POR, PGasE, PGasNA, PGasSCA, PGasCIS, PGasME,
-               PGasAF, PGasAP):
+               PGasAF, PGasAP, AutonomousEnergyIntensityDecrease):
     
     years = 40
     pricechecktime = 1
@@ -1276,7 +1276,7 @@ def hybridloop(inputpowerfactor, inputLNGprice, inputtransferprice,
             value.update(priceinputAP)    
                
     for i in range(ncountries):
-        inputdict[i]['Maximum Change in Demand'] = MaximumChangeinDemand
+        inputdict[i]['Maximum Change in Demand'] = DemandBalanceSupplyEnergyPrice
         inputdict[i]['Supply elasticity Gas'] = SupplyElasticityGas
         inputdict[i]['Supply elasticity Oil'] = SupplyElasticityOil
         inputdict[i]['Supply elasticity Coal'] = SupplyElasticityCoal
@@ -1287,6 +1287,7 @@ def hybridloop(inputpowerfactor, inputLNGprice, inputtransferprice,
         inputdict[i]['CO2 emissions of coal'] = CO2coal
         inputdict[i]['Variance power'] = Variancepower 
         inputdict[i]['Previous Demand Factor'] = 0
+        inputdict[i]['Autonomous Energy Intensity Decrease'] = AutonomousEnergyIntensityDecrease
         if EconomicGrowthScenario == 1:
             inputdict[i]['Autonomous Economic Growth Factor'] = scenariodict[i]['AEGFL']
         elif EconomicGrowthScenario == 2:
@@ -1447,11 +1448,17 @@ def hybridloop(inputpowerfactor, inputLNGprice, inputtransferprice,
             elif value['Region'] == 6:
                 value.update(priceinputAF)
             elif value['Region'] == 7:
-                value.update(priceinputAP)                
-            if EnergyUnion == 0 and i <28 and CO2Cost == 1: #change
-                value['Costs CO2 emissions'] = 10 + n
-            elif EnergyUnion == 1 and i == 0 and CO2Cost == 1:
-                value['Costs CO2 emissions'] = 10 + n
+                value.update(priceinputAP) 
+            if CO2Cost == 1:
+                if EnergyUnion == 0 and i <28: #change
+                    value['Costs CO2 emissions'] = 10 + n
+                elif EnergyUnion == 1 and i == 0:
+                    value['Costs CO2 emissions'] = 10 + n
+            elif CO2Cost == 2:
+                if EnergyUnion == 0 and i <28: #change
+                    value['Costs CO2 emissions'] = 10 + 2*n
+                elif EnergyUnion == 1 and i == 0:
+                    value['Costs CO2 emissions'] = 10 + 2*n
     
         pricemodelinputdict = resultstodict(countryresults, ncountries, initialrun, priceinputdict)
     
@@ -1525,6 +1532,7 @@ def hybridloop(inputpowerfactor, inputLNGprice, inputtransferprice,
     Gas_PriceE = prices['Energy resource prices Nuclear E']
     Nuc_PriceE = prices['Energy resource prices other Renewables E']
     OR_PriceE = prices['Energy resource prices Gas E']
+    Gas_PriceCIS = prices['Energy resource prices Nuclear CIS']
     
     if EnergyUnion == 0:  
         EU_GasSup = results[27]['Available Gas']
@@ -1665,4 +1673,5 @@ def hybridloop(inputpowerfactor, inputLNGprice, inputtransferprice,
         'Bio_Price': Bio_Price,
         'Gas_PriceE': Gas_PriceE,
         'Nuc_PriceE': Nuc_PriceE,
-        'OR_PriceE': OR_PriceE}
+        'OR_PriceE': OR_PriceE,
+        'Gas_PriceCIS': Gas_PriceCIS}

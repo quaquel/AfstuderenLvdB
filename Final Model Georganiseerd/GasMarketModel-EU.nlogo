@@ -186,7 +186,7 @@ LNGroutes-own [
 ]
 
 to setup
-  show ("SETUP Energy Union")
+ ; show ("SETUP Energy Union")
   clear-all
   reset-ticks
   ask links [die]

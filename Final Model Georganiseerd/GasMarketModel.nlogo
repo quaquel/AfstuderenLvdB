@@ -186,7 +186,7 @@ LNGroutes-own [
 ]
 
 to setup
-  show ("SETUP")
+ ; show ("SETUP")
   clear-all
   reset-ticks
   ask links [die]

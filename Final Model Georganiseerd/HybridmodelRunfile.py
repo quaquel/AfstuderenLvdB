@@ -33,8 +33,7 @@ def main():
                             IntegerParameter("inputCapincreasetime", 1, 2),
                             IntegerParameter("inputLNGCapincrease", 1000, 3000),
                             IntegerParameter("inputLNGCapincreasetime", 1, 2),
-#                             RealParameter("DemandBalanceSupplyEnergyPrice", 0.4, 0.7),
-                            RealParameter("MaximumChangeinDemand", 0.4, 0.7), 
+                            RealParameter("DemandBalanceSupplyEnergyPrice", 0.4, 0.7),
                             RealParameter("SupplyElasticityGas", 0.06, 0.07),
                             RealParameter("SupplyElasticityOil", 0.1, 0.2),
                             RealParameter("SupplyElasticityCoal", 0.1, 0.2),
@@ -46,6 +45,7 @@ def main():
                             RealParameter("CO2coal", 93.46, 113.67),
                             RealParameter("CO2oil", 59.58, 102.12),
                             RealParameter("Variancepower", -5.0, -0.1),
+                            RealParameter("AutonomousEnergyIntensityDecrease", 0, 0.02),
                              
                             IntegerParameter("POil", 8900, 9100),
                             IntegerParameter("PCoal", 2800, 3100),
@@ -97,11 +97,12 @@ def main():
                         TimeSeriesOutcome("OR_PriceE"),
                         TimeSeriesOutcome("FuncpriceGas"),
                         TimeSeriesOutcome("FuncpriceOil"),
-                        TimeSeriesOutcome("FuncpriceCoal")]
+                        TimeSeriesOutcome("FuncpriceCoal"),
+                        TimeSeriesOutcome("Gas_PriceCIS")]
                         
 
     hybridmodel.levers = [IntegerParameter("EnergyUnion", 0, 1),
-                     IntegerParameter("CO2Cost", 0, 1)]
+                     IntegerParameter("CO2Cost", 0, 2)]
 
 
 # In[ ]:
@@ -109,7 +110,7 @@ def main():
 
     ema_logging.log_to_stderr(ema_logging.INFO)
     with MultiprocessingEvaluator(hybridmodel) as evaluator:
-        results = evaluator.perform_experiments(scenarios=2500, policies=4, levers_sampling='ff')
+        results = evaluator.perform_experiments(scenarios=2000, policies=6, levers_sampling='ff')
 
 
 # In[1]:

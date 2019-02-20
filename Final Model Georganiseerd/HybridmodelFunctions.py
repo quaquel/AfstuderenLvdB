@@ -1536,22 +1536,22 @@ def hybridloop(inputpowerfactor, inputLNGprice, inputtransferprice,
     
     if EnergyUnion == 0:  
         EU_GasSup = results[27]['Available Gas']
-        EU_GasDem = results[27]['New Energy Demand Gas']
-        EU_GasCon = results[27]['Resource consumption Gas']
+#         EU_GasDem = results[27]['New Energy Demand Gas']
+#         EU_GasCon = results[27]['Resource consumption Gas']
         EU_OilSup = results[27]['Available resources from stocks Oil']
-        EU_OilDem = results[27]['New Energy Demand Oil']
-        EU_OilCon = results[27]['Resource consumption Oil']
+#         EU_OilDem = results[27]['New Energy Demand Oil']
+#         EU_OilCon = results[27]['Resource consumption Oil']
         EU_CoalSup = results[27]['Available resources from stocks Coal']
-        EU_CoalDem = results[27]['New Energy Demand Coal']
-        EU_CoalCon = results[27]['Resource consumption Coal']
+#         EU_CoalDem = results[27]['New Energy Demand Coal']
+#         EU_CoalCon = results[27]['Resource consumption Coal']
         EU_NucSup = results[27]['Extraction capacity installed Nuclear']
-        EU_NucDem = results[27]['New Energy Demand Nuclear']
+#         EU_NucDem = results[27]['New Energy Demand Nuclear']
 #         EU_NucCon = results[27]['Extraction capacity installed Nuclear']
         EU_BioSup = results[27]['Available resources from stocks Biofuels']
-        EU_BioDem = results[27]['New Energy Demand Biofuels']
-        EU_BioCon = results[27]['Resource consumption Biofuels']
+#         EU_BioDem = results[27]['New Energy Demand Biofuels']
+#         EU_BioCon = results[27]['Resource consumption Biofuels']
         EU_ORSup = results[27]['Extraction capacity installed other Renewables']
-        EU_ORDem = results[27]['New Energy Demand other Renewables']
+#         EU_ORDem = results[27]['New Energy Demand other Renewables']
 #         EU_ORCon = results[27]['Extraction capacity installed other Renewables']
         
         EU_EDem = results[27]['Energy Demand']
@@ -1565,22 +1565,22 @@ def hybridloop(inputpowerfactor, inputLNGprice, inputtransferprice,
         
         for i in range(27):
             EU_GasSup += results[i]['Available Gas']
-            EU_GasDem += results[i]['New Energy Demand Gas']
-            EU_GasCon += results[i]['Resource consumption Gas']
+#             EU_GasDem += results[i]['New Energy Demand Gas']
+#             EU_GasCon += results[i]['Resource consumption Gas']
             EU_OilSup += results[i]['Available resources from stocks Oil']
-            EU_OilDem += results[i]['New Energy Demand Oil']
-            EU_OilCon += results[i]['Resource consumption Oil']
+#             EU_OilDem += results[i]['New Energy Demand Oil']
+#             EU_OilCon += results[i]['Resource consumption Oil']
             EU_CoalSup += results[i]['Available resources from stocks Coal']
-            EU_CoalDem += results[i]['New Energy Demand Coal']
-            EU_CoalCon += results[i]['Resource consumption Coal']
+#             EU_CoalDem += results[i]['New Energy Demand Coal']
+#             EU_CoalCon += results[i]['Resource consumption Coal']
             EU_NucSup += results[i]['Extraction capacity installed Nuclear']
-            EU_NucDem += results[i]['New Energy Demand Nuclear']
+#             EU_NucDem += results[i]['New Energy Demand Nuclear']
     #         EU_NucCon += results[i]['Extraction capacity installed Nuclear']
             EU_BioSup += results[i]['Available resources from stocks Biofuels']
-            EU_BioDem += results[i]['New Energy Demand Biofuels']
-            EU_BioCon += results[i]['Resource consumption Biofuels']
+#             EU_BioDem += results[i]['New Energy Demand Biofuels']
+#             EU_BioCon += results[i]['Resource consumption Biofuels']
             EU_ORSup += results[i]['Extraction capacity installed other Renewables']
-            EU_ORDem += results[i]['New Energy Demand other Renewables']
+#             EU_ORDem += results[i]['New Energy Demand other Renewables']
     #         EU_ORCon += results[i]['Extraction capacity installed other Renewables']
         
             EU_EDem += results[i]['Energy Demand']
@@ -1594,22 +1594,22 @@ def hybridloop(inputpowerfactor, inputLNGprice, inputtransferprice,
         
     elif EnergyUnion == 1:
         EU_GasSup = results[0]['Available Gas']
-        EU_GasDem = results[0]['New Energy Demand Gas']
-        EU_GasCon = results[0]['Resource consumption Gas']
+#         EU_GasDem = results[0]['New Energy Demand Gas']
+#         EU_GasCon = results[0]['Resource consumption Gas']
         EU_OilSup = results[0]['Available resources from stocks Oil']
-        EU_OilDem = results[0]['New Energy Demand Oil']
-        EU_OilCon = results[0]['Resource consumption Oil']
+#         EU_OilDem = results[0]['New Energy Demand Oil']
+#         EU_OilCon = results[0]['Resource consumption Oil']
         EU_CoalSup = results[0]['Available resources from stocks Coal']
-        EU_CoalDem = results[0]['New Energy Demand Coal']
-        EU_CoalCon = results[0]['Resource consumption Coal']
+#         EU_CoalDem = results[0]['New Energy Demand Coal']
+#         EU_CoalCon = results[0]['Resource consumption Coal']
         EU_NucSup = results[0]['Extraction capacity installed Nuclear']
-        EU_NucDem = results[0]['New Energy Demand Nuclear']
+#         EU_NucDem = results[0]['New Energy Demand Nuclear']
 #         EU_NucCon = results[0]['Extraction capacity installed Nuclear']
         EU_BioSup = results[0]['Available resources from stocks Biofuels']
-        EU_BioDem = results[0]['New Energy Demand Biofuels']
-        EU_BioCon = results[0]['Resource consumption Biofuels']
+#         EU_BioDem = results[0]['New Energy Demand Biofuels']
+#         EU_BioCon = results[0]['Resource consumption Biofuels']
         EU_ORSup = results[0]['Extraction capacity installed other Renewables']
-        EU_ORDem = results[0]['New Energy Demand other Renewables']
+#         EU_ORDem = results[0]['New Energy Demand other Renewables']
 #         EU_ORCon = results[0]['Extraction capacity installed other Renewables']
         
         EU_EDem = results[0]['Energy Demand']
@@ -1621,37 +1621,37 @@ def hybridloop(inputpowerfactor, inputLNGprice, inputtransferprice,
         EU_EUGI = results[0]['EUgasimport']
         EU_GIC = results[0]['Gas Import Costs']
         
-    EU_RGperAG = EU_RusGas/EU_GasSup
-    EU_RGperTES = EU_RusGas/EU_ESup
-    EU_RGperGC = EU_RusGas/EU_GasCon
+#     EU_RGperAG = EU_RusGas/EU_GasSup
+#     EU_RGperTES = EU_RusGas/EU_ESup
+#     EU_RGperGC = EU_RusGas/EU_GasCon
     
-    EU_GICperBBTU = EU_GIC/EU_EUGI   
+#     EU_GICperBBTU = EU_GIC/EU_EUGI   
     
-    FuncpriceGas = results[0]['Functional Energy Price Gas']
-    FuncpriceOil = results[0]['Functional Energy Price Oil']
-    FuncpriceCoal = results[0]['Functional Energy Price Coal']
+#     FuncpriceGas = results[0]['Functional Energy Price Gas']
+#     FuncpriceOil = results[0]['Functional Energy Price Oil']
+#     FuncpriceCoal = results[0]['Functional Energy Price Coal']
     
     return {
-        'FuncpriceGas': FuncpriceGas,
-        'FuncpriceOil': FuncpriceOil,
-        'FuncpriceCoal': FuncpriceCoal,
+#         'FuncpriceGas': FuncpriceGas,
+#         'FuncpriceOil': FuncpriceOil,
+#         'FuncpriceCoal': FuncpriceCoal,
         'EU_GasSup': EU_GasSup,
-        'EU_GasDem': EU_GasDem, 
-        'EU_GasCon': EU_GasCon, 
+#         'EU_GasDem': EU_GasDem, 
+#         'EU_GasCon': EU_GasCon, 
         'EU_OilSup': EU_OilSup, 
-        'EU_OilDem': EU_OilDem, 
-        'EU_OilCon': EU_OilCon, 
+#         'EU_OilDem': EU_OilDem, 
+#         'EU_OilCon': EU_OilCon, 
         'EU_CoalSup': EU_CoalSup, 
-        'EU_CoalDem': EU_CoalDem, 
-        'EU_CoalCon': EU_CoalCon,
+#         'EU_CoalDem': EU_CoalDem, 
+#         'EU_CoalCon': EU_CoalCon,
         'EU_NucSup': EU_NucSup, 
-        'EU_NucDem': EU_NucDem, 
+#         'EU_NucDem': EU_NucDem, 
 #         'EU_NucCon': EU_NucCon,  
         'EU_BioSup': EU_BioSup, 
-        'EU_BioDem': EU_BioDem, 
-        'EU_BioCon': EU_BioCon,  
+#         'EU_BioDem': EU_BioDem, 
+#         'EU_BioCon': EU_BioCon,  
         'EU_ORSup': EU_ORSup, 
-        'EU_ORDem': EU_ORDem, 
+#         'EU_ORDem': EU_ORDem, 
 #         'EU_ORCon': EU_ORCon,  
        
         'EU_EDem': EU_EDem,
@@ -1663,10 +1663,10 @@ def hybridloop(inputpowerfactor, inputLNGprice, inputtransferprice,
         'EU_EUGI': EU_EUGI,
         'EU_GIC':  EU_GIC,
         
-        'EU_RGperAG': EU_RGperAG,
-        'EU_RGperTES': EU_RGperTES,
-        'EU_RGperGC': EU_RGperGC,
-        'EU_GICperBBTU': EU_GICperBBTU,
+#         'EU_RGperAG': EU_RGperAG,
+#         'EU_RGperTES': EU_RGperTES,
+#         'EU_RGperGC': EU_RGperGC,
+#         'EU_GICperBBTU': EU_GICperBBTU,
         
         'Oil_Price': Oil_Price,
         'Coal_Price': Coal_Price,

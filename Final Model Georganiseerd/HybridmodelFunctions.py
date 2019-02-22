@@ -1163,7 +1163,7 @@ def hybridloop(inputpowerfactor, inputLNGprice, inputtransferprice,
     
     if EnergyUnion == 0:
         netlogo = pyNetLogo.NetLogoLink(gui=False)
-        netlogo.load_model(r'GasMarketModel.nlogo')
+        netlogo.load_model('GasMarketModel.nlogo')
         netlogo.command('setup')
         modelinput = pd.read_csv("CountryInput.csv")
         inputdict = modelinput.to_dict('index')

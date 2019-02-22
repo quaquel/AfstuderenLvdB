@@ -105,19 +105,13 @@ def main():
                           IntegerParameter("CO2Cost", 0, 2)]
 
     ema_logging.log_to_stderr(ema_logging.INFO)
-    with MultiprocessingEvaluator(hybridmodel, n_processes=10) as evaluator:
-        results = evaluator.perform_experiments(scenarios=200, policies=6, levers_sampling='ff')
+    with MultiprocessingEvaluator(hybridmodel, n_processes=24) as evaluator:
+        results = evaluator.perform_experiments(scenarios=200,
+                                                policies=6,
+                                                levers_sampling='ff')
 
     save_results(results, './results/1200 runs V30.tar.gz')
 
 
 if __name__ == "__main__":
     main()
-
-
-
-# In[ ]:
-
-
-
-

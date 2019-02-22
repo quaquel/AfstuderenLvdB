@@ -22,7 +22,19 @@ from ema_workbench import (Model, RealParameter, IntegerParameter, ScalarOutcome
 
 
 # In[2]:
-
+resultstosave = ['Available Gas',
+                 'Available resources from stocks Oil',
+                 'Available resources from stocks Coal',
+                 'Extraction capacity installed Nuclear',
+                 'Available resources from stocks Biofuels',
+                 'Extraction capacity installed other Renewables',
+                 'Energy Demand',
+                 'Total Energy Supply',
+                 'GDP',
+                 'CO2 emissions',
+                 'Russian Gas',
+                 'EUgasimport',
+                 'Gas Import Costs']
 
 priceinputlist_E = ['Initial energy resource prices Oil',
                      'Initial energy resource prices Coal',
@@ -1364,6 +1376,7 @@ def hybridloop(inputpowerfactor, inputLNGprice, inputtransferprice,
     priceresults = price_model.run(params=pricemodelinputdict)
         
     countryresults = []
+    countryresultstosave = []
     for value, gi, ge, ci, ce, oi, oe, bi, be, rg, gic, eugi in zip(inputdict.values(), Gasimport, Gasexport, Coalimport, Coalexport, Oilimport, Oilexport, Biofuelimport, Biofuelexport, Russiangasimport, Gasimportcosts, EUgasimport):
         value['INITIAL TIME'] = initialtime
         value['FINAL TIME'] = initialtime+pricechecktime
@@ -1378,9 +1391,13 @@ def hybridloop(inputpowerfactor, inputLNGprice, inputtransferprice,
         value['Russian Gas'] = rg
         value['Gas Import Costs'] = gic
         value['EUgasimport'] = eugi
-        countryresults.append(sd_model.run(params=value))
+        singleregionresults = sd_model.run(params=value)
+        countryresults.append(singleregionresults)
+        singleregionresultstosave = []  
+        singleregionresultstosave.append(singleregionresults[resultstosave])
+        countryresultstosave.append(singleregionresultstosave)
         
-    combresults = [countryresults]
+    combresults = [countryresultstosave]
     combprices = [priceresults]
     
     for n in range(pricechecktime, years, pricechecktime):
@@ -1473,6 +1490,7 @@ def hybridloop(inputpowerfactor, inputLNGprice, inputtransferprice,
         priceresults = price_model.run(params=pricemodelinputdict)
         
         countryresults = []
+        countryresultstosave = []
 
         for value, gi, ge, ci, ce, oi, oe, bi, be, rg, gic, eugi in zip(dictdict.values(), Gasimport, Gasexport, Coalimport, Coalexport, Oilimport, Oilexport, Biofuelimport, Biofuelexport, Russiangasimport, Gasimportcosts, EUgasimport):
             value['FINAL TIME'] = value['INITIAL TIME'] + pricechecktime
@@ -1487,9 +1505,13 @@ def hybridloop(inputpowerfactor, inputLNGprice, inputtransferprice,
             value['Russian Gas'] = rg
             value['Gas Import Costs'] = gic
             value['EUgasimport'] = eugi
-            countryresults.append(sd_model.run(params=value))
+            singleregionresults = sd_model.run(params=value)
+            countryresults.append(singleregionresults)
+            singleregionresultstosave = []
+            singleregionresultstosave.append(singleregionresults[resultstosave])
+            countryresultstosave.append(singleregionresultstosave)
         
-        combresults.append(countryresults)
+        combresults.append(countryresultstosave)
         combprices.append(priceresults)
         
         if n%dealtime == 0:
@@ -1524,7 +1546,7 @@ def hybridloop(inputpowerfactor, inputLNGprice, inputtransferprice,
             Gasimport, Gasexport, Coalimport, Coalexport, Oilimport, Oilexport, Biofuelimport, Biofuelexport, Russiangasimport, Gasimportcosts, EUgasimport = runnetlogo(agent_gas, netlogo, ncountries,netlogoglobals)
                     
     prices = pd.concat(combprices)
-    results = [pd.concat([entry[n] for entry in combresults]) for n in range(ncountries)]        
+    results = [pd.concat([entry[n][0] for entry in combresults]) for n in range(ncountries)]        
 
     Oil_Price = prices['Energy resource prices Oil']
     Coal_Price = prices['Energy resource prices Coal']

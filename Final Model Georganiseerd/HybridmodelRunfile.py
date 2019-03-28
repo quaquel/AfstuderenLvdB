@@ -17,7 +17,7 @@ from ema_workbench.em_framework.parameters import create_parameters
 import matplotlib.pyplot as plt
 from ema_workbench.analysis.plotting import lines, envelopes
 
-from HybridmodelFunctions import hybridloop
+from HybridmodelFunctions22Feb import hybridloop
 
 
 # In[3]:
@@ -45,20 +45,20 @@ def main():
                             RealParameter("CO2coal", 95, 105),
                             RealParameter("CO2oil", 65, 95),
                             RealParameter("Variancepower", -5.0, -0.1),
-                            RealParameter("AutonomousEnergyIntensityDecrease", 0, 0.02)]
+                            RealParameter("AutonomousEnergyIntensityDecrease", 0, 0.02),
                              
-#                             IntegerParameter("POil", 8900, 9100),
-#                             IntegerParameter("PCoal", 2800, 3100),
-#                             IntegerParameter("PBio", 29000, 32000),
-#                             IntegerParameter("PNuc", 16000, 17000),
-#                             IntegerParameter("POR", 19000, 22000),
-#                             IntegerParameter("PGasE", 6500, 7000),
-#                             IntegerParameter("PGasNA", 2500, 2700),
-#                             IntegerParameter("PGasSCA", 2500, 2700),
-#                             IntegerParameter("PGasCIS", 6500, 7000),
-#                             IntegerParameter("PGasME", 7000, 8000),
-#                             IntegerParameter("PGasAF", 7000, 8000),
-#                             IntegerParameter("PGasAP", 7000, 8000)]
+                            IntegerParameter("POil", 8900, 9100),
+                            IntegerParameter("PCoal", 2800, 3100),
+                            IntegerParameter("PBio", 29000, 32000),
+                            IntegerParameter("PNuc", 16000, 17000),
+                            IntegerParameter("POR", 19000, 22000),
+                            IntegerParameter("PGasE", 6500, 7000),
+                            IntegerParameter("PGasNA", 2500, 2700),
+                            IntegerParameter("PGasSCA", 2500, 2700),
+                            IntegerParameter("PGasCIS", 6500, 7000),
+                            IntegerParameter("PGasME", 7000, 8000),
+                            IntegerParameter("PGasAF", 7000, 8000),
+                            IntegerParameter("PGasAP", 7000, 8000)]
 
     hybridmodel.outcomes = [TimeSeriesOutcome("EU_GasSup"),
 #                         TimeSeriesOutcome("EU_GasDem"),

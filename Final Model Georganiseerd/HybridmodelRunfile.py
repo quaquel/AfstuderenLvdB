@@ -110,7 +110,7 @@ def main():
                                                 policies=6,
                                                 levers_sampling='ff')
 
-    save_results(results, './results/1200 runs V30.tar.gz')
+    save_results(results, './results/1200 runs V40.tar.gz')
 
 
 if __name__ == "__main__":

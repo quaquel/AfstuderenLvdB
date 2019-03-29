@@ -1143,9 +1143,8 @@ def hybridloop(inputpowerfactor, inputLNGprice, inputtransferprice,
                inputCapincrease, inputCapincreasetime, inputLNGCapincrease,
                inputLNGCapincreasetime, EconomicGrowthScenario, EnergyIntensityScenario,
                CO2coal, CO2oil, EnergyUnion, CO2Cost,
-#                POil, PCoal, PBio, PNuc, POR, PGasE, PGasNA, PGasSCA, PGasCIS, PGasME,
-#                PGasAF, PGasAP, 
-               AutonomousEnergyIntensityDecrease):
+               POil, PCoal, PBio, PNuc, POR, PGasE, PGasNA, PGasSCA, PGasCIS, PGasME,
+               PGasAF, PGasAP, AutonomousEnergyIntensityDecrease):
     
     years = 40
     pricechecktime = 1
@@ -1164,7 +1163,7 @@ def hybridloop(inputpowerfactor, inputLNGprice, inputtransferprice,
     
     if EnergyUnion == 0:
         netlogo = pyNetLogo.NetLogoLink(gui=False)
-        netlogo.load_model('GasMarketModel.nlogo')
+        netlogo.load_model(r'GasMarketModel.nlogo')
         netlogo.command('setup')
         modelinput = pd.read_csv("CountryInput.csv")
         inputdict = modelinput.to_dict('index')
@@ -1181,58 +1180,58 @@ def hybridloop(inputpowerfactor, inputLNGprice, inputtransferprice,
         scenarioinput = pd.read_csv("scenarioinput-EnUn.csv")
         scenariodict = scenarioinput.to_dict('index')
     
-    priceinput = pd.read_csv("startpricesonly5.csv")
-    priceinputdict = priceinput.to_dict('index')[0]
-#     priceinputdict = {'Initial energy resource prices Oil': POil,
-#                       'Initial energy resource prices Coal': PCoal,
-#                       'Initial energy resource prices Biofuels': PBio,
-#                       'Initial energy resource prices Nuclear E': PNuc,
-#                       'Initial energy resource prices other Renewables E': POR,
-#                       'Initial energy resource prices Gas E': PGasE,
-#                       'Initial energy resource prices Nuclear NA': PNuc,
-#                       'Initial energy resource prices other Renewables NA': POR,
-#                       'Initial energy resource prices Gas NA': PGasNA,
-#                       'Initial energy resource prices Nuclear SCA': PNuc,
-#                       'Initial energy resource prices other Renewables SCA': POR,
-#                       'Initial energy resource prices Gas SCA': PGasSCA,
-#                       'Initial energy resource prices Nuclear CIS': PNuc,
-#                       'Initial energy resource prices other Renewables CIS': POR,
-#                       'Initial energy resource prices Gas CIS': PGasCIS,
-#                       'Initial energy resource prices Nuclear ME': PNuc,
-#                       'Initial energy resource prices other Renewables ME': POR,
-#                       'Initial energy resource prices Gas ME': PGasME,
-#                       'Initial energy resource prices Nuclear AF': PNuc,
-#                       'Initial energy resource prices other Renewables AF': POR,
-#                       'Initial energy resource prices Gas AF': PGasAF,
-#                       'Initial energy resource prices Nuclear AP': PNuc,
-#                       'Initial energy resource prices other Renewables AP': POR,
-#                       'Initial energy resource prices Gas AP': PGasAP}
+#     priceinput = pd.read_csv("startpricesonly3.csv")
+#     priceinputdict = priceinput.to_dict('index')[0]
+    priceinputdict = {'Initial energy resource prices Oil': POil,
+                      'Initial energy resource prices Coal': PCoal,
+                      'Initial energy resource prices Biofuels': PBio,
+                      'Initial energy resource prices Nuclear E': PNuc,
+                      'Initial energy resource prices other Renewables E': POR,
+                      'Initial energy resource prices Gas E': PGasE,
+                      'Initial energy resource prices Nuclear NA': PNuc,
+                      'Initial energy resource prices other Renewables NA': POR,
+                      'Initial energy resource prices Gas NA': PGasNA,
+                      'Initial energy resource prices Nuclear SCA': PNuc,
+                      'Initial energy resource prices other Renewables SCA': POR,
+                      'Initial energy resource prices Gas SCA': PGasSCA,
+                      'Initial energy resource prices Nuclear CIS': PNuc,
+                      'Initial energy resource prices other Renewables CIS': POR,
+                      'Initial energy resource prices Gas CIS': PGasCIS,
+                      'Initial energy resource prices Nuclear ME': PNuc,
+                      'Initial energy resource prices other Renewables ME': POR,
+                      'Initial energy resource prices Gas ME': PGasME,
+                      'Initial energy resource prices Nuclear AF': PNuc,
+                      'Initial energy resource prices other Renewables AF': POR,
+                      'Initial energy resource prices Gas AF': PGasAF,
+                      'Initial energy resource prices Nuclear AP': PNuc,
+                      'Initial energy resource prices other Renewables AP': POR,
+                      'Initial energy resource prices Gas AP': PGasAP}
     
-#     priceinputdata = {'Initial energy resource prices Oil': [POil],
-#                       'Initial energy resource prices Coal': [PCoal],
-#                       'Initial energy resource prices Biofuels': [PBio],
-#                       'Initial energy resource prices Nuclear E': [PNuc],
-#                       'Initial energy resource prices other Renewables E': [POR],
-#                       'Initial energy resource prices Gas E': [PGasE],
-#                       'Initial energy resource prices Nuclear NA': [PNuc],
-#                       'Initial energy resource prices other Renewables NA': [POR],
-#                       'Initial energy resource prices Gas NA': [PGasNA],
-#                       'Initial energy resource prices Nuclear SCA': [PNuc],
-#                       'Initial energy resource prices other Renewables SCA': [POR],
-#                       'Initial energy resource prices Gas SCA': [PGasSCA],
-#                       'Initial energy resource prices Nuclear CIS': [PNuc],
-#                       'Initial energy resource prices other Renewables CIS': [POR],
-#                       'Initial energy resource prices Gas CIS': [PGasCIS],
-#                       'Initial energy resource prices Nuclear ME': [PNuc],
-#                       'Initial energy resource prices other Renewables ME': [POR],
-#                       'Initial energy resource prices Gas ME': [PGasME],
-#                       'Initial energy resource prices Nuclear AF': [PNuc],
-#                       'Initial energy resource prices other Renewables AF': [POR],
-#                       'Initial energy resource prices Gas AF': [PGasAF],
-#                       'Initial energy resource prices Nuclear AP': [PNuc],
-#                       'Initial energy resource prices other Renewables AP': [POR],
-#                       'Initial energy resource prices Gas AP': [PGasAP]}
-#     priceinput = pd.DataFrame(data=priceinputdata)
+    priceinputdata = {'Initial energy resource prices Oil': [POil],
+                      'Initial energy resource prices Coal': [PCoal],
+                      'Initial energy resource prices Biofuels': [PBio],
+                      'Initial energy resource prices Nuclear E': [PNuc],
+                      'Initial energy resource prices other Renewables E': [POR],
+                      'Initial energy resource prices Gas E': [PGasE],
+                      'Initial energy resource prices Nuclear NA': [PNuc],
+                      'Initial energy resource prices other Renewables NA': [POR],
+                      'Initial energy resource prices Gas NA': [PGasNA],
+                      'Initial energy resource prices Nuclear SCA': [PNuc],
+                      'Initial energy resource prices other Renewables SCA': [POR],
+                      'Initial energy resource prices Gas SCA': [PGasSCA],
+                      'Initial energy resource prices Nuclear CIS': [PNuc],
+                      'Initial energy resource prices other Renewables CIS': [POR],
+                      'Initial energy resource prices Gas CIS': [PGasCIS],
+                      'Initial energy resource prices Nuclear ME': [PNuc],
+                      'Initial energy resource prices other Renewables ME': [POR],
+                      'Initial energy resource prices Gas ME': [PGasME],
+                      'Initial energy resource prices Nuclear AF': [PNuc],
+                      'Initial energy resource prices other Renewables AF': [POR],
+                      'Initial energy resource prices Gas AF': [PGasAF],
+                      'Initial energy resource prices Nuclear AP': [PNuc],
+                      'Initial energy resource prices other Renewables AP': [POR],
+                      'Initial energy resource prices Gas AP': [PGasAP]}
+    priceinput = pd.DataFrame(data=priceinputdata)
     
     
     netlogoglobals = pd.read_csv("netlogoglobals.csv")  

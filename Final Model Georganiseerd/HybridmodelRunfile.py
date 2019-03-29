@@ -17,7 +17,7 @@ from ema_workbench.em_framework.parameters import create_parameters
 import matplotlib.pyplot as plt
 from ema_workbench.analysis.plotting import lines, envelopes
 
-from HybridmodelFunctions import hybridloop
+from HybridmodelFunctions22Feb import hybridloop
 
 
 # In[3]:
@@ -42,8 +42,8 @@ def main():
                             RealParameter("SupplyElasticityOR", 0.15, 0.3),
                             IntegerParameter("EconomicGrowthScenario", 1, 3),
                             IntegerParameter("EnergyIntensityScenario", 1, 3),
-                            RealParameter("CO2coal", 93.46, 113.67),
-                            RealParameter("CO2oil", 59.58, 102.12),
+                            RealParameter("CO2coal", 95, 105),
+                            RealParameter("CO2oil", 65, 95),
                             RealParameter("Variancepower", -5.0, -0.1),
                             RealParameter("AutonomousEnergyIntensityDecrease", 0, 0.02),
                              
